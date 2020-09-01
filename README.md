@@ -1,12 +1,14 @@
 # Jekyll site
 
-then run:
+read docs https://jekyllrb.com/docs/installation/
+
+for update bundle run:
 
 ```bash
 bundle update jekyll
 ```
 
-followed by:
+install new bundle:
 
 ```bash
 bundle install
