@@ -1,0 +1,23 @@
+{
+  "name": "newtonteach.me",
+  "version": "0.0.1",
+  "description": "read docs https://jekyllrb.com/docs/installation/",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.26.12"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alexsab/newtonteach.me.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alexsab/newtonteach.me/issues"
+  },
+  "homepage": "https://github.com/Alexsab/newtonteach.me#readme"
+}
