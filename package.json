@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
+    "bootstrap": "^4.5.2",
     "browser-sync": "^2.26.12"
   },
   "scripts": {
