@@ -33,6 +33,7 @@ github_username:  jekyll
 # Build settings
 theme: minima
 plugins:
+  - jekyll-sitemap
   - jekyll-feed
   - jekyll-seo-tag
 # Exclude from processing.
