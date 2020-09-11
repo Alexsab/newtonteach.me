@@ -50,3 +50,7 @@ $on-laptop:        800px !default;
 //   "minima/syntax-highlighting",
 //   "minima/base"
 // ;
+
+@import '../node_modules/bootstrap/scss/bootstrap-reboot.scss'; // Bootstrap Reboot collection
+@import '../node_modules/bootstrap/scss/mixins/_breakpoints.scss'; // Bootstrap Breakpoints mixin
+@import '../node_modules/bootstrap/scss/bootstrap-grid.scss'; // Optional Bootstrap Grid
