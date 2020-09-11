@@ -43,3 +43,10 @@ $on-laptop:        800px !default;
   font-size: $base-font-size * $ratio;
 }
 
+// Import partials.
+@import
+  "libs",
+  // "minima/layout",
+  // "minima/syntax-highlighting",
+  // "minima/base"
+;
