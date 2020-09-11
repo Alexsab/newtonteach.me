@@ -4,8 +4,8 @@ _site
 .jekyll-metadata
 vendor
 /minima-2.5.1/
-# !/node_modules/bootstrap
-# /node_modules/
+/node_modules/*
+!/node_modules/bootstrap/
 /.git/
 /**/Thumbs.db
 /**/*.DS_Store
