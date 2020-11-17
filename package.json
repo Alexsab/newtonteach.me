@@ -1,24 +1,22 @@
 {
-  "name": "newtonteach.me",
-  "version": "0.0.1",
-  "description": "read docs https://jekyllrb.com/docs/installation/",
-  "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {
-    "bootstrap": "^4.5.2",
-    "browser-sync": "^2.26.12"
-  },
+  "name": "kmu",
+  "version": "1.0.0",
+  "description": "kmu-samara.ru",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Alexsab/newtonteach.me.git"
+    "url": "git+https://github.com/newstreetpunk/kmu.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Alexsab/newtonteach.me/issues"
+    "url": "https://github.com/newstreetpunk/kmu/issues"
   },
-  "homepage": "https://github.com/Alexsab/newtonteach.me#readme"
+  "homepage": "https://github.com/newstreetpunk/kmu#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.13"
+  }
 }

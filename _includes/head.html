@@ -1,11 +1,28 @@
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  {%- seo -%}
-  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-  <!-- { %- feed_meta -% } -->
-  {%- if jekyll.environment == 'production' and site.google_analytics -%}
-    {%- include google-analytics.html -%}
-  {%- endif -%}
-</head>
+<meta charset="utf-8">
+<!-- <base href=""> -->
+<!-- <meta name="robots" content="noindex"> -->
+
+<title>{{ page.title }}</title>
+<meta name="description" content="{{ page.description }}" />
+
+{%- if page.canonical -%}
+<link rel="canonical" href="{{ page.canonical | relative_url }}">
+{%- endif -%}
+
+<meta property="og:url" content="{{ page.url | relative_url }}" />
+<meta property="og:title" content="{{ page.title }}" />
+<meta property="og:description" content="{{ page.description }}" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="{{ page.metaimg | relative_url }}" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Custom Browsers Color Start -->
+<meta name="theme-color" content="#fff">
+<!-- Custom Browsers Color End -->
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="{{ '/img/favicon.png' | relative_url }}" type="image/x-icon">
+<!-- Style -->
+<link rel="stylesheet" href="{{ '/css/styles.css' | relative_url }}">
