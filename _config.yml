@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Бумеранг АвтоТранс
+title: Newtonteach UI
 # phone: 8 (846) 972-25-55
 # email: bat.smr63@yandex.ru
 description: >- # this means to ignore newlines until "baseurl:"
