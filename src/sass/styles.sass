@@ -1,3 +1,4 @@
+@import "_mixins/functions"
 @import "vars"
 @import "fonts"
 @import "libs"
@@ -6,27 +7,29 @@
 	color: #666
 
 ::selection
-	background-color: $accent
+	background-color: $turquoiseS
 	color: #fff
 
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
 body
-	font-size: 16px
+	font-family: $userfont
+	font-size: em($fontsize)
+	font-weight: 400
+	line-height: $lineheight
+	color: $textcolor
 	min-width: 320px
 	position: relative
-	line-height: 1.6
-	font-family: $default-font
 	overflow-x: hidden
-	font-weight: 300
-	color: $text
-	&.no-scroll
-		overflow: hidden
-	input, textarea
-		border: #666 1px solid
-		outline: none
-		&:focus:required:invalid
-			border-color: red
-		&:required:valid
-			border-color: green
+
+
+@import "components/components"
+@import "blocks/blocks"
 
 
 @import "media"
