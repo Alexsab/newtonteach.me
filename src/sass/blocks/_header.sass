@@ -1,0 +1,63 @@
+.header
+	width: 100%
+	position: fixed
+	left: 0
+	top: 0
+	background-color: $turquoiseXS
+	color: $white
+	padding-left: 260px
+	&__top
+		min-height: 120px
+		padding: 0 15px
+		position: relative
+		display: flex
+		align-items: center
+		justify-content: center
+	&__bottom
+		padding: 0 15px
+		nav
+			height: 100%
+			> ul
+				height: 100%
+				padding: 0
+				margin: 0
+				list-style: none
+				display: flex
+				align-items: center
+				> li
+					margin-right: 30px
+					height: 100%
+					&.active a:after
+						width: 100%
+					> a
+						padding: 5px 0
+						position: relative
+						font-size: em(17px)
+						&:after
+							content: ''
+							display: block
+							position: absolute
+							bottom: 0
+							left: 0
+							height: 4px
+							width: 0
+							background-color: $white
+							transition: width .3s ease-in-out
+						&:hover
+							&:after
+								width: 100%
+	h1, a
+		color: $white
+	.back-link
+		position: absolute
+		left: 15px
+		top: 50%
+		transform: translateY(-50%)
+	.help-link
+		position: absolute
+		top: 50%
+		right: 15px
+		opacity: 0.7
+		transform: translateY(-50%)
+		&:hover
+			opacity: 1

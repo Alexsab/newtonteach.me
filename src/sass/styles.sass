@@ -26,6 +26,16 @@ body
 	min-width: 320px
 	position: relative
 	overflow-x: hidden
+	&:before
+		content: ''
+		display: inline-block
+		height: 1px
+		width: 100%
+		z-index: 3
+		position: absolute
+		left: 0
+		top: 120px
+		background-color: rgba($white, .3)
 
 
 @import "components/components"

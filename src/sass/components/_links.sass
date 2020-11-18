@@ -1,0 +1,30 @@
+a
+	font-weight: 600
+	text-decoration: none
+	transition: all .25s ease-in
+	display: inline-block
+	&:hover
+		text-decoration: none
+
+.back-link
+	color: $white
+	font-size: em(17px)
+	font-weight: normal
+	letter-spacing: -0.03em
+	display: flex
+	align-items: center
+	&:hover
+		img
+			transform: translateX(-2px)
+	img
+		width: 9px
+		height: 18px
+		transition: transform .25s ease-in
+		transform: translateX(0)
+		margin-right: 4px
+
+.help-link
+	img
+		max-width: 24px
+		width: 100%
+		height: auto

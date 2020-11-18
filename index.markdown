@@ -4,7 +4,7 @@
 
 layout: home
 menu: Главная
-title: Заголовок Страницы
+title: Профиль - Юзер
 description: Описание страницы
 exclude: true
 ---
