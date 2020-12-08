@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "ru" }}">
 
-  {%- include head.html -%}
+{%- include head.html -%}
 
-  <body>
+<body>
 
-    {%- include header.html -%}
-    
-    {%- include sidebar.html -%}
+	{%- include header.html -%}
 
-    <h1 class="visually-hidden">{{ page.title }}</h1>
+	{%- include sidebar.html -%}
 
-    <main>
+	<main>
+		<div class="content">
+			{{ content }}
+		</div>
+	</main>
 
-    {{ content }}
+	{%- include footer.html -%}
 
-    </main>
+	<script src="js/scripts.min.js"></script>
 
-    {%- include footer.html -%}
-    
-    <script src="{{ "js/scripts.min.js" | relative_url }}"></script>
+	<!-- edit: alexsab.ru -->
 
-    <!-- edit: alexsab.ru -->
-
-  </body>
+</body>
 
 </html>
