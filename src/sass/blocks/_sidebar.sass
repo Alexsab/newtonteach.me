@@ -1,16 +1,65 @@
 .sidebar
 	background-color: $turquoiseXL
-	width: 260px
 	position: fixed
 	top: 0
 	left: 0
 	bottom: 0
 	overflow-x: hidden
 	z-index: 0
-	padding: 15px 25px 25px
+	width: 70px
+	transition: width .1s
+	padding: 15px 20px 25px
+	hr
+		display: none
+	&.open
+		width: 260px
+		hr
+			display: block
 	&::-webkit-scrollbar 
 		width: 4px
 	&::-webkit-scrollbar-track 
 		box-shadow: none
 	&::-webkit-scrollbar-thumb 
 		background-color: rgba($turquoiseXS, .1)
+
+.sidebar-btn
+	width: 50px
+	height: 50px
+	background-color: transparent
+	border: none
+	cursor: pointer
+	position: absolute
+	right: 8px
+	top: 0
+	outline: none
+	transition: all .04s
+	&:focus
+		outline: none
+	span
+		width: 25px
+		height: 2px
+		background-color: #fff
+		display: block
+		margin: 4px auto
+		transform: rotate(0)
+		opacity: 1
+		transition: all .1s
+	&.active
+		right: -10px
+		top: -10px
+		&:hover
+			span
+				opacity: 0.8
+		span
+			width: 15px
+			opacity: 0.5
+			&:first-child
+				transform: rotate(45deg)
+				position: relative
+				top: 6px
+			&:nth-child(2)
+				opacity: 0
+			&:last-child
+				transform: rotate(-45deg)
+				position: relative
+				top: -6px

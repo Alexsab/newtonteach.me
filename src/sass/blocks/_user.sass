@@ -2,14 +2,16 @@
 	display: flex
 	align-items: center
 	color: $white
-	margin-bottom: 30px
+	margin-bottom: 13.5px
 	&__photo
 		background-color: #ccc
 		border-radius: 100%
 		overflow: hidden
-		margin-right: 25px
-		flex: 1 0 70px
-		height: 70px
+		margin-right: 0
+		margin-left: -14px
+		flex: 0 0 50px
+		height: 50px
+		transform: translateY(30px)
 		img
 			width: 100%
 			height: auto
@@ -19,6 +21,22 @@
 		font-weight: 600
 		font-size: em(17px)
 		line-height: em(22px)
+		white-space: nowrap
+		display: none
 	&__pos
 		font-weight: 400
 		font-size: em(15px)
+		display: none
+
+.sidebar.open
+	.user
+		&__photo
+			flex: 0 0 70px
+			height: 70px
+			margin-right: 25px
+			margin-left: 0
+			transform: translateY(0)
+		&__name
+			display: block
+		&__pos
+			display: block

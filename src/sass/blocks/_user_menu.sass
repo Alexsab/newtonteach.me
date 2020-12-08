@@ -1,5 +1,6 @@
 .user
 	&__menu
+		padding-top: 25px
 		ul
 			padding: 0
 			margin: 0
@@ -11,6 +12,7 @@
 				display: flex
 				align-items: center
 				padding: 10px 0
+				white-space: nowrap
 				&:hover
 					img
 						transform: scale(1.3)
@@ -27,13 +29,28 @@
 				transition: all .25s ease-in-out
 
 .user__menu--row
-	display: flex
-	justify-content: space-between
+	display: block
 	a
-		flex-direction: column
-		font-size: em(11px) !important
-		font-weight: 400 !important
-		text-align: center
 		.user__menu-icon
 			margin-right: 0
-			margin-bottom: 8px
+			margin-bottom: 0
+		.user__menu-title
+			display: none
+
+.sidebar.open
+	.user
+		&__menu
+			padding-top: 0
+			&--row
+				display: flex
+				justify-content: space-between
+				a
+					flex-direction: column
+					font-size: em(11px) !important
+					font-weight: 400 !important
+					text-align: center
+					.user__menu-icon
+						margin-bottom: 8px
+					.user__menu-title
+						display: block
+

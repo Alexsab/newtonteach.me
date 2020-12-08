@@ -5,7 +5,9 @@
 	top: 0
 	background-color: $turquoiseXS
 	color: $white
-	padding-left: 260px
+	padding-left: 70px
+	&.sidebar-open
+		padding-left: 260px
 	&__top
 		min-height: 100px
 		padding: 0 15px
@@ -15,6 +17,7 @@
 		justify-content: center
 	&__bottom
 		padding: 0 15px
+		border-top: 1px solid rgba($white, .3)
 		nav
 			height: 100%
 			> ul
