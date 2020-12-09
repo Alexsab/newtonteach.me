@@ -2,6 +2,8 @@
 	&__menu
 		padding-top: 25px
 		margin-bottom: 50px
+		@media (max-width: 992px)
+			padding-top: 0
 		ul
 			padding: 0
 			margin: 0
@@ -34,11 +36,18 @@
 	a
 		font-size: em(11px) !important
 		font-weight: 400 !important
+		@media (max-width: 992px)
+			font-size: em(20px) !important
+			font-weight: 600 !important
 		.user__menu-icon
 			margin-right: 0
 			margin-bottom: 0
+			@media (max-width: 992px)
+				margin-right: 25px
 		.user__menu-title
 			display: none
+			@media (max-width: 992px)
+				display: block
 
 .sidebar.open
 	.user
@@ -47,11 +56,20 @@
 			&--row
 				display: flex
 				justify-content: space-between
+				@media (max-width: 992px)
+					display: block
 				a
 					flex-direction: column
 					text-align: center
+					@media (max-width: 992px)
+						flex-direction: row
+						text-align: left
 					.user__menu-icon
 						margin-bottom: 8px
+						@media (max-width: 992px)
+							margin-bottom: 0
 					.user__menu-title
 						display: block
+						@media (max-width: 992px)
+							display: inline-block
 

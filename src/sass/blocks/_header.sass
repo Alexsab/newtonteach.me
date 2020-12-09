@@ -6,6 +6,8 @@
 	background-color: $turquoiseXS
 	color: $white
 	padding-left: 70px
+	@media (max-width: 992px)
+		padding-left: 0
 	&.sidebar-open
 		padding-left: 260px
 	&__top
@@ -15,6 +17,10 @@
 		display: flex
 		align-items: center
 		justify-content: center
+		@media (max-width: 992px)
+			min-height: 0
+			height: auto
+			padding: 15px
 	&__bottom
 		padding: 0 15px
 		border-top: 1px solid rgba($white, .3)

@@ -12,6 +12,10 @@
 		flex: 0 0 50px
 		height: 50px
 		transform: translateY(30px)
+		@media (max-width: 992px)
+			transform: translateY(0)
+			margin-right: 25px
+			margin-left: 0
 		img
 			width: 100%
 			height: auto
@@ -23,10 +27,14 @@
 		line-height: em(22px)
 		white-space: nowrap
 		display: none
+		@media (max-width: 992px)
+			display: block
 	&__pos
 		font-weight: 400
 		font-size: em(15px)
 		display: none
+		@media (max-width: 992px)
+			display: block
 
 .sidebar.open
 	.user
@@ -36,6 +44,9 @@
 			margin-right: 25px
 			margin-left: 0
 			transform: translateY(0)
+			@media (max-width: 992px)
+				flex: 0 0 50px
+				height: 50px
 		&__name
 			display: block
 		&__pos
