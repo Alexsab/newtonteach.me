@@ -1,0 +1,57 @@
+.quiz__item
+	max-width: 500px
+	width: auto
+	display: flex !important
+	margin: 0 10px
+	&--img
+		flex: 1 0 130px
+		text-align: center
+		position: relative
+		border-radius: 10px
+		background: $white
+		box-shadow: 0px 0px 10px rgba($black, 0.16)
+		overflow: hidden
+		padding-bottom: 36px
+		img
+			width: 100%
+			height: auto
+			display: block
+	&--content
+		padding: 10px 20px
+	&--title
+		font-weight: 600
+		font-size: em(20px)
+		line-height: 1.2
+		outline: none
+		+media-breakpoint-down(xs)
+			font-size: em(15px)
+	&--text
+		font-size: em(13px)
+		font-weight: normal
+	&--meta
+		font-size: em(11px)
+		font-weight: normal
+		color: $turquoiseL
+	.difficulty
+		position: absolute
+		font-size: em(20px)
+		font-weight: 600
+		color: $white
+		height: 36px
+		line-height: 36px
+		left: 0
+		bottom: 0
+		width: 100%
+	&.easy
+		.difficulty
+			background-color: $greenL
+	&.medium
+		.difficulty
+			background-color: $turquoiseS
+	&.hard
+		.difficulty
+			background-color: $pinkXL
+
+.slider-section
+	.quiz__item
+		max-width: none

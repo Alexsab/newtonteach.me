@@ -23,8 +23,8 @@
 		&--content
 			padding: 10px 20px
 		&--title
-			font-weight: 500
-			font-size: em(17px)
+			font-weight: 600
+			font-size: em(20px)
 			outline: none
 			+media-breakpoint-down(xs)
 				font-size: em(15px)
@@ -36,6 +36,10 @@
 			margin-bottom: 0
 			+media-breakpoint-down(xs)
 				font-size: em(12px)
+		&--meta
+			font-size: em(11px)
+			font-weight: normal
+			color: $turquoiseL
 
 .news__item
 	align-items: flex-start
@@ -58,6 +62,20 @@
 		a
 			font-size: em(13px)
 			outline: none
+
+.slider__item--with-meta
+	border-radius: 0
+	background: $white
+	box-shadow: none
+	position: relative
+	.slider__item--img
+		max-width: none
+		flex: 1 0 170px
+	.slider__item--title
+		padding-right: 10px
+	.slider__item--text
+		margin-bottom: 5px
+		color: $turquoiseL
 
 // Slick Styles
 .slick-prev:before, .slick-next:before
