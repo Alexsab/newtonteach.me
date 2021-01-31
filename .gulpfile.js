@@ -59,7 +59,8 @@ projects.newtonteach_ui = {
 
 	scripts: {
 		src: [
-			basename + '/libs/jquery/dist/jquery.min.js',
+			'../node_modules/jquery/dist/jquery.min.js',
+			'../node_modules/slick-carousel/slick/slick.js',
 			basename + '/js/common.js', // Custom scripts. Always at the end
 		],
 		dest:       basename + '/js',
@@ -81,7 +82,8 @@ projects.newtonteach_ui = {
 
 	scripts_jekyll: {
 		src: [
-			'src/libs/jquery/dist/jquery.min.js',
+			'../node_modules/jquery/dist/jquery.min.js',
+			'../node_modules/slick-carousel/slick/slick.js',
 			'src/js/common.js', // Custom scripts. Always at the end
 		],
 		dest:       'js',

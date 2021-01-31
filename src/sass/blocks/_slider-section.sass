@@ -1,0 +1,108 @@
+.slider
+	&-section
+		margin-left: -10px
+		margin-right: -10px
+		+media-breakpoint-down(sm)
+			padding-top: 25px
+	&__item
+		display: flex !important
+		align-items: center
+		border-radius: 10px
+		background: #f7f7f7
+		box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16)
+		overflow: hidden
+		margin: 0 10px
+		&--img
+			max-width: 30%
+			img
+				max-width: 100%
+				width: auto
+				height: fit-content
+				object-fit: cover
+				object-position: center
+		&--content
+			padding: 10px 20px
+		&--title
+			font-weight: 500
+			font-size: em(17px)
+			outline: none
+			+media-breakpoint-down(xs)
+				font-size: em(15px)
+				line-height: 1.2
+		&--text
+			color: #555
+			font-weight: normal
+			font-size: em(13px)
+			margin-bottom: 0
+			+media-breakpoint-down(xs)
+				font-size: em(12px)
+
+.news__item
+	align-items: flex-start
+	.slider__item--img
+		max-width: none
+		margin: 5px 15px 0 5px
+		img
+			max-width: none
+			width: 35px
+			height: 35px
+			border-radius: 50%
+			object-fit: cover
+			object-position: center
+	.slider__item--content
+		padding-left: 0
+	.slider__item--text
+		color: $turquoiseL
+	.link-wrap
+		text-align: right
+		a
+			font-size: em(13px)
+			outline: none
+
+// Slick Styles
+.slick-prev:before, .slick-next:before
+	display: none
+
+.slick-prev, .slick-next
+	width: 36px
+	height: 36px
+	border: 1px solid rgba(0,0,0,.12)
+	background: #fff
+	left: auto
+	right: -10px
+	z-index: 8
+	transition: all .5s ease
+	+media-breakpoint-down(sm)
+		top: -15px
+		transform: translate(0, 0)
+		right: 10px
+	svg
+		fill: #555
+		width: 15px
+		height: auto
+		opacity: 1
+		transition: all .5s ease
+	&:hover
+		background: #f1f1f1
+	&:focus
+		background: #fff
+
+.slick-prev
+	transform: translate(0, -36px)
+	border-radius: 4px 4px 0 0
+	+media-breakpoint-down(sm)
+		transform: translate(0, 0)
+		right: 46px
+		border-radius: 4px 0 0 4px
+.slick-next
+	transform: translate(0, 0)
+	border-radius: 0 0 4px 4px
+	+media-breakpoint-down(sm)
+		border-radius: 0 4px 4px 0
+	svg
+		transform: rotate(180deg)
+.slick-disabled
+	cursor: default !important
+	background: #fff !important
+	svg
+		opacity: 0.4

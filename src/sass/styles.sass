@@ -27,6 +27,24 @@ body
 	position: relative
 	overflow-x: hidden
 
+main
+	margin-top: 115px
+	padding-left: 70px
+	height: calc(100vh - 115px)
+	&.maxi-top
+		margin-top: 153px
+		height: calc(100vh - 153px)
+	&.sidebar-open
+		padding-left: 260px
+	+media-breakpoint-down(md)
+		padding-left: 0
+		height: auto
+		margin-top: 0
+
+.flex-wrap
+	display: flex
+	flex-wrap: wrap
+
 
 @import "components/components"
 @import "blocks/blocks"

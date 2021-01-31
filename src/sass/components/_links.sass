@@ -1,9 +1,11 @@
 a
 	font-weight: 600
 	text-decoration: none
-	transition: all .25s ease-in
+	transition: all .25s ease
 	display: inline-block
+	color: $turquoiseM
 	&:hover
+		color: $turquoiseL
 		text-decoration: none
 
 .back-link
@@ -29,3 +31,12 @@ a
 		max-width: 24px
 		width: 100%
 		height: auto
+
+.read-more
+	font-size: em(13px)
+	line-height: em(18px)
+	text-transform: capitalize
+	&:hover
+		text-decoration: underline
+	&.pink
+		color: $pinkXL
