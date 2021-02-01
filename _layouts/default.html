@@ -11,6 +11,11 @@
 
 	<main>
 		<div class="content">
+
+{% for item in page %}<div class="page">page: {{ item }}</div>{% endfor %}
+{% for item in site %}<div class="site">site: {{ item }}</div>{% endfor %}
+<div class="site">{{ site.url }}</div>
+
 			{{ content }}
 		</div>
 	</main>
