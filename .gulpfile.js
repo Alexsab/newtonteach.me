@@ -157,6 +157,7 @@ function newtonteach_ui_browsersync_jekyll() {
 	browserSync.init({
 		proxy: '127.0.0.1:' + projects.newtonteach_ui.jekyllPort,
 		notify: false,
+		startPath: '/newtonteach.me/',
 		online: online
 	});
 };
