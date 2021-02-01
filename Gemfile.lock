@@ -107,9 +107,6 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-avatar (0.7.0)
       jekyll (>= 3.0, < 5.0)
-    jekyll-browsersync (1.0.0)
-      jekyll (>= 3.0.0, < 5.0)
-      tty-which (~> 0.4.1)
     jekyll-coffeescript (1.1.1)
       coffee-script (~> 2.2)
       coffee-script-source (~> 1.11.1)
@@ -234,7 +231,7 @@ GEM
       ffi (~> 1.0)
     rexml (3.2.4)
     rouge (3.26.0)
-    ruby-enum (0.8.0)
+    ruby-enum (0.9.0)
       i18n
     ruby2_keywords (0.0.4)
     rubyzip (2.3.0)
@@ -252,7 +249,6 @@ GEM
     terminal-table (1.8.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
     thread_safe (0.3.6)
-    tty-which (0.4.2)
     typhoeus (1.4.0)
       ethon (>= 0.9.0)
     tzinfo (1.2.9)
@@ -273,7 +269,6 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
-  jekyll-browsersync
   jekyll-feed (~> 0.12)
   jekyll-seo-tag (~> 2.6)
   jekyll-sitemap
