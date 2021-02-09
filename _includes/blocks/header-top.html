@@ -1,6 +1,6 @@
 <div class="header__top">
 	{% if page.url != '/home/' %}
-	<a href="/" class="back-link">
+	<a class="back-link" onclick="javascript:history.back(); return false;">
 		<img src="{{ '/img/icons/arrow-left.svg' | relative_url }}" alt="Back">
 		<span>Back</span>
 	</a>
