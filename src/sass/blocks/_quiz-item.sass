@@ -79,19 +79,32 @@
 // 
 .quiz-gradient-bg
 	background: $turquoiseM
-	background: linear-gradient(to top, #79c4d8 0%, #448da5 65.69%, #4899b5 100%)
+	background: linear-gradient(to top, #79c4d8 65%, #4899b5 100%)
+	.content
+		height: 100%
+		padding: 30px 0
 
 // Сам квиз
 .quiz
 	display: flex
-	justify-content: center
 	flex-wrap: wrap
+	justify-content: center
 	align-items: center
 	color: $white
+	height: 100%
+	margin: 0
+	h2, h3, h4 
+		color: $white
 	&-wrap
+		text-align: center
+		max-width: 400px
+		width: auto
+		margin: 0 auto
 	&-meta
 		display: flex
 		align-items: center
+		justify-content: center
+		margin-bottom: 30px
 		&-item
 			display: flex
 			align-items: center
@@ -111,3 +124,78 @@
 			small
 				font-size: em(12px)
 				font-weight: 500
+	&-title
+		font-size: em(34px)
+		font-weight: bold
+		margin-bottom: 20px
+	&-descr
+		max-width: 200px
+		font-size: em(17px)
+		font-weight: 600
+		margin: 0 auto 50px
+	h3
+		font-size: em(20px)
+		font-weight: 600
+		margin-bottom: 30px
+	&-present
+		display: block
+		width: 175px
+		height: 175px
+		border-radius: 50%
+		overflow: hidden
+		margin: 0 auto 40px
+	&-question
+		text-align: left
+		&-img
+			border-radius: 8px
+			overflow: hidden
+			margin-bottom: 30px
+		&-text
+			font-size: em(17px)
+			font-weight: normal
+			color: $turquoiseL
+			margin-bottom: 25px
+	&-answers
+		margin-bottom: 25px
+		text-align: left
+	&-answer
+		input
+			position: absolute
+			width: 0
+			height: 0
+			left: -1000px
+			opacity: 0
+			visibility: hidden
+			&:checked ~ label::before
+				background: $white url(../img/icons/ic_check_circle_green_24px.svg)
+				background-size: cover
+				background-repeat: no-repeat
+				background-position: center
+		label
+			padding: 15px 10px 15px 65px
+			font-size: em(16px)
+			line-height: 1.4
+			font-weight: 600
+			border-radius: 10px
+			background-color: $turquoiseS
+			position: relative
+			width: 100%
+			cursor: pointer
+			transition: all .25s ease
+			margin-bottom: 15px
+			&:hover
+				background-color: rgba($turquoiseS, .8)
+			&::before
+				content: ''
+				position: absolute
+				top: 50%
+				left: 15px
+				width: 30px
+				height: 30px
+				margin-top: -15px
+				border-radius: 50%
+				background: $white
+				transition: all .25s ease
+	&-btn-wrap
+		display: flex
+		justify-content: space-between

@@ -1,0 +1,66 @@
+---
+layout: default
+title: Quiz Question
+permalink: /quiz-question/
+class: quiz-gradient-bg
+---
+
+<section class="quiz">
+	
+	<div class="quiz-wrap">
+		<div class="quiz-question">
+			<img src="{{ 'img/quiz-question.jpg' | relative_url }}" alt="ALT" class="quiz-question-img">
+			<p class="quiz-question-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		</div>
+		<!-- /.quiz-question -->
+
+		<div class="quiz-answers">
+			<div class="quiz-answer">
+				<input type="radio" id="ans1" name="answer">
+				<label for="ans1">Answer</label>
+			</div>
+			<!-- /.quiz-answer -->
+			<div class="quiz-answer">
+				<input type="radio" id="ans2" name="answer">
+				<label for="ans2">Answer</label>
+			</div>
+			<!-- /.quiz-answer -->
+			<div class="quiz-answer">
+				<input type="radio" id="ans3" name="answer">
+				<label for="ans3">Answer</label>
+			</div>
+			<!-- /.quiz-answer -->
+			<div class="quiz-answer">
+				<input type="radio" id="ans4" name="answer">
+				<label for="ans4">Answer</label>
+			</div>
+			<!-- /.quiz-answer -->
+		</div>
+		<!-- /.quiz-answers -->
+
+		<div class="quiz-btn-wrap">
+			<a href="/newtonteach.me/quiz-start/" class="btn btn--o med">Back</a>
+			<button type="button" class="btn btn--green-l med" disabled="true" onclick="go('/newtonteach.me/quiz-finish/')" id="next">Next</button>
+		</div>
+		<!-- /.quiz-btn-wrap -->
+
+	</div>
+
+</section>
+
+<script>
+	//ВРЕМЕННЫЕ СКРИПТЫ
+	const input = document.querySelectorAll('label');
+	const nextBtn = document.getElementById('next');
+
+	input.forEach(function(item){
+		item.addEventListener('click', function(){
+			nextBtn.removeAttribute('disabled');
+		});
+	});
+
+	function go(str){
+		window.location.href = str;
+	}
+	
+</script>
