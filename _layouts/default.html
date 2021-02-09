@@ -9,7 +9,7 @@
 
 	{%- include sidebar.html -%}
 
-	<main>
+	<main{% if page.class %} class="{{page.class}}"{% endif %}>
 		<div class="content">
 
 			{{ content }}

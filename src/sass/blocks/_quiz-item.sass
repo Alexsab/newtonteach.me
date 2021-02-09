@@ -42,6 +42,15 @@
 		left: 0
 		bottom: 0
 		width: 100%
+	&--description
+		max-width: 500px
+		width: auto
+		margin-bottom: 40px
+		h3
+			font-size: em(20px)
+			font-weight: 600
+			color: $turquoiseS
+			margin-bottom: 10px
 	&.easy
 		.difficulty
 			background-color: $greenL
@@ -52,6 +61,53 @@
 		.difficulty
 			background-color: $pinkXL
 
+// Слайдер
 .slider-section
 	.quiz__item
 		max-width: none
+
+// My Quizess Page
+.quizess
+	.quiz__item
+		margin: 0 20px 20px 0
+
+// Quiz Info Page
+.quiz-info
+	.quiz__item
+		margin-bottom: 40px
+
+// 
+.quiz-gradient-bg
+	background: $turquoiseM
+	background: linear-gradient(to top, #79c4d8 0%, #448da5 65.69%, #4899b5 100%)
+
+// Сам квиз
+.quiz
+	display: flex
+	justify-content: center
+	flex-wrap: wrap
+	align-items: center
+	color: $white
+	&-wrap
+	&-meta
+		display: flex
+		align-items: center
+		&-item
+			display: flex
+			align-items: center
+			margin: 0 18px
+			opacity: 0.8
+			img
+				width: 42px
+				height: 42px
+				object-fit: cover
+				object-position: center
+				margin-right: 10px
+			strong
+				display: block
+				font-size: em(20px)
+				font-weight: bold
+				line-height: 1
+			small
+				font-size: em(12px)
+				font-weight: 500
