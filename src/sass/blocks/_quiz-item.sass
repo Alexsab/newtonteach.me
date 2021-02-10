@@ -199,3 +199,156 @@
 	&-btn-wrap
 		display: flex
 		justify-content: space-between
+	&-finish
+		&-pedestal
+			max-width: 260px
+			width: 100%
+			height: auto
+			img
+				width: 100%
+				height: auto
+			span
+				display: block
+				width: 100%
+				height: 60px
+				line-height: 60px
+				font-size: em(20px)
+				font-weight: 600
+				border-radius: 35px
+				text-align: center
+				background-color: $greenS
+		&-result
+			font-size: em(20px)
+			font-weight: 600
+			margin: 50px 0
+		&-btn
+			display: block
+			max-width: 250px
+			width: 100%
+			margin: 0 auto 25px
+			text-align: center
+	&-statistic
+		&-rate
+			font-size: em(34px)
+			font-weight: bold
+			+media-breakpoint-down(xs)
+				font-size: em(20px)
+			span
+				color: $yellowL
+		&-block
+			width: 100%
+			padding: 0 50px
+			display: flex
+			justify-content: center
+			flex-wrap: wrap
+			+media-breakpoint-down(md)
+				padding: 0 20px
+		&-list, &-info
+			max-width: 460px
+			width: 45%
+			margin: 50px 2.5% 0
+			+media-breakpoint-down(sm)
+				max-width: 100%
+				width: 100%
+				margin: 20px 0
+		&-item
+			margin-bottom: 20px
+			cursor: pointer
+			+media-breakpoint-down(sm)
+				margin-bottom: 10px
+			&-header
+				display: flex
+				align-items: flex-end
+				justify-content: space-between
+				flex-wrap: wrap
+				padding-right: 15px
+				+media-breakpoint-down(sm)
+					padding-right: 0
+			&-quest
+				font-size: em(20px)
+				font-weight: 600
+				margin-right: 100px
+				padding-bottom: 8px
+				+media-breakpoint-down(xs)
+					font-size: em(16px)
+					font-weight: normal
+					margin-right: 0
+					width: 100%
+			&-check
+				font-size: em(16px)
+				font-weight: normal
+				transition: all .25s ease
+				padding-bottom: 8px
+				+media-breakpoint-down(xs)
+					font-size: em(14px)
+			&-content
+				font-size: em(16px)
+				font-weight: 600
+				padding: 15px 15px 15px 25px
+				border-radius: 10px
+				position: relative
+				background-color: $turquoiseS
+				transition: all .25s ease
+				&:before
+					content: ''
+					width: 30px
+					height: 30px
+					border-radius: 50%
+					position: absolute
+					right: 15px
+					top: 50%
+					margin-top: -15px
+					background: $white
+					transition: all .25s ease
+			&.success
+				.quiz-statistic-item-content
+					background-color: $greenL
+					&:before
+						background: url(../img/icons/ic_check_circle_white_24px.svg)
+						background-position: center
+			&.error
+				.quiz-statistic-item-content
+					background-color: $pinkXL
+					&:before
+						background: url(../img/icons/ic_circle_error_24px.svg)
+						background-position: center
+			&-time
+				font-size: em(14px)
+				font-weight: normal
+				color: $turquoiseXL
+				text-align: right
+				padding-right: 15px
+				+media-breakpoint-down(sm)
+					padding-right: 0
+			&:hover
+				&.success
+					.quiz-statistic-item-content
+						background-color: rgba($greenL, .8)
+				&.error
+					.quiz-statistic-item-content
+						background-color: rgba($pinkXL, .8)
+				.quiz-statistic-item-check
+					text-decoration: underline
+		&-info
+			.quiz-question-img
+				max-width: 100%
+				width: 100%
+				height: auto
+				display: block
+				+media-breakpoint-down(sm)
+					width: auto
+					margin: 0 auto 30px
+			.quiz-statistic-item
+				cursor: default
+				&:hover
+					&.success
+						.quiz-statistic-item-content
+							background-color: $greenL
+					&.error
+						.quiz-statistic-item-content
+							background-color: $pinkXL
+			.quiz-statistic-item-content
+				padding: 15px 15px 15px 65px
+				&:before
+					right: auto
+					left: 15px
