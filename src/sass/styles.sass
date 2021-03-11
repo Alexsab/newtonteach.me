@@ -33,9 +33,13 @@ main
 	min-height: calc(100vh - 100px)
 	height: auto
 	&.maxi-top
-		margin-top: 153px
-		min-height: calc(100vh - 153px)
+		margin-top: 138px
+		min-height: calc(100vh - 138px)
 		height: auto
+		+media-breakpoint-down(md)
+			margin-top: 0
+			min-height: 0
+
 	&.sidebar-open
 		padding-left: 260px
 	+media-breakpoint-down(md)
@@ -46,6 +50,9 @@ main
 .flex-wrap
 	display: flex
 	flex-wrap: wrap
+
+.text-center
+	text-align: center
 
 
 @import "components/components"

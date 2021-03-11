@@ -56,6 +56,16 @@ exclude:
 #   - vendor/gems/
 #   - vendor/ruby/
 
+video_class_menu:
+  - url: /video-class/
+    name: Video
+  - url: /video-class-notes/
+    name: Notes
+  - url: /video-class-quizzes/
+    name: Quizzes
+  - url: /video-class-about/
+    name: About
+
 defaults:
   -
     scope:

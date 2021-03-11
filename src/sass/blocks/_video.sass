@@ -1,0 +1,130 @@
+.video-wrap
+	.video__item
+		margin-bottom: 25px
+		align-items: flex-start
+		@media screen and (max-width: 1200px)
+			width: 48%
+			margin: 0 1% 20px
+		+media-breakpoint-down(sm)
+			width: 100%
+			.slider__item--img
+				flex: none
+		+media-breakpoint-down(xs)
+			flex-wrap: wrap
+			.slider__item--content
+				padding: 5px
+			.slider__item--img
+				width: 100%
+				img
+					max-width: 90%
+
+.video-class
+	max-width: 1200px
+	width: 100%
+	margin: 0 auto 30px
+	+media-breakpoint-down(sm)
+		margin-top: 15px
+	&__content
+		// max-width: 870px
+		width: 65%
+		margin-right: 2%
+		@media screen and (max-width: 1200px)
+			width: 60%
+		+media-breakpoint-down(md)
+			max-width: 800px
+			width: 100%
+			margin: 0 auto 40px
+	&__sidebar
+		// max-width: 350px
+		width: 33%
+		@media screen and (max-width: 1200px)
+			width: 38%
+		+media-breakpoint-down(md)
+			width: 100%
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
+		.video__item
+			margin: 0 0 20px
+			width: 100%
+			+media-breakpoint-down(md)
+				width: 48%
+			+media-breakpoint-down(sm)
+				width: 100%
+		.slider__item--title
+			font-size: em(18px)
+			line-height: 1.2
+			@media screen and (max-width: 1200px)
+				font-size: em(16px)
+		.slider__item--content
+			padding: 5px 20px
+			@media screen and (max-width: 1200px)
+				padding: 5px
+	&__video
+		&--preview
+			width: 100%
+	&__info
+		display: flex
+		align-items: center
+		padding: 15px
+		background-color: #f7f7f7
+		&--text
+			h2
+				font-size: em(16px)
+				font-weight: normal
+				line-height: 1.4
+				color: #4a4a4a
+		&--meta
+			font-size: em(11px)
+			font-weight: normal
+			line-height: 1.4
+			color: #000
+	&__avatar
+		width: 50px
+		height: 50px
+		border-radius: 50%
+		border: 1px solid #f0f0f0
+		margin-right: 15px
+		img
+			width: 50px
+			height: 50px
+	.note
+		max-width: 400px
+		width: 100%
+		padding: 15px 25px
+		border-radius: 25px
+		background-color: #f7f7f7
+		text-align: left
+		color: $turquoiseM
+		margin: 40px auto
+		h3
+			font-size: em(20px)
+			font-weight: 600
+			line-height: em(24px)
+			color: $turquoiseM
+		p
+			font-size: em(13px)
+			line-height: 1.4
+	&.notes
+		.note
+			max-width: 100%
+			margin: 0 0 20px
+	&.about
+		.video-class__info
+			margin-bottom: 30px
+			flex-wrap: wrap
+			padding-top: 0
+			padding-bottom: 0
+			+media-breakpoint-down(sm)
+				padding-bottom: 15px
+			&--text
+				margin-top: 15px
+				margin-bottom: 15px
+				margin-right: 40px
+				h2
+					margin-bottom: 5px
+				+media-breakpoint-down(sm)
+					margin-right: 0
+				
+
+
