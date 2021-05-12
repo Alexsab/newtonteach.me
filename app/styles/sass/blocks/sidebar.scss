@@ -12,6 +12,9 @@
 			visibility: visible;
 			opacity: 1;
 		}
+		~ .content{
+			padding-left: $sidebarSizeOpen;
+		}
 	}
 }
 
