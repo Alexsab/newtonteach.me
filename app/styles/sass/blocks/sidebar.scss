@@ -1,0 +1,40 @@
+.sidebar{
+	width: $sidebarSize;
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background-color: $primary_light;
+	padding-top: $sidebarSize !important;
+	transition: width .3s ease-out;
+	&.active{
+		width: $sidebarSizeOpen;
+		.sidebar-link__text{
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+}
+
+.sidebar-link{
+	flex-wrap: nowrap;
+	height: 45px;
+}
+
+.sidebar-link__text{
+	visibility: hidden;
+	opacity: 0;
+	transition: all .3s ease;
+}
+
+.sidebar-btn{
+	position: absolute;
+	height: $sidebarSize;
+	width: 100%;
+	left: 0;
+	top: 0;
+	cursor: pointer;
+	transition: background .3s ease-out;
+	&:hover{
+		background-color: darken($primary_light, 2%);
+	}
+}

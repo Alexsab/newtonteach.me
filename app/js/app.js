@@ -8,6 +8,16 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-	// Custom JS
+	function sidebarToggle(){
+
+		// const sideBtn = document.querySelector('.sidebar-btn');
+		const aside   = document.querySelector('.sidebar');
+
+		aside.classList.toggle('active');
+
+	}
+
+	window.sidebarToggle = sidebarToggle;
+	sidebarToggle();
 
 })
