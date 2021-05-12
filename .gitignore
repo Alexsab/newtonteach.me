@@ -1,13 +1,6 @@
-.alexsab
-*.php
-phpmailer
-sftp-config.json
-_site
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
-vendor
 /node_modules/
 /.git/
 /**/Thumbs.db
 /**/*.DS_Store
+/**/package-lock.json
+/**/debug.log
