@@ -1,0 +1,38 @@
+@import libs
+@import mixins
+@import colors
+@import sizes
+@import fonts
+
+ 
+$textcolor: $primary_light
+$userfont: 'SF Pro Display', sans-serif 
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+	color: $color_primary_darker
+
+::selection
+	background-color: $primary_lighter
+	color: $color_primary_lightest
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: $color_danger_dark
+	&:required:valid
+		border-color: $color_success_dark
+
+body
+	font-family: $userfont
+	font-size: $XLsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+	background-color: $backgrount_light
+	+media-breakpoint-down(lg)
+		font-size: $LGsize

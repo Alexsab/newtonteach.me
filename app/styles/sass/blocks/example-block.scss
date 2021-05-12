@@ -1,12 +1,14 @@
 html, body{
 	height: 100%;
-	background-color: #f2f2f2;
+	background: $color_dashboard_time_gradient;
 }
 .container{
 	position: relative;
 	height: 100%;
 	display: flex;
 	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 	h1{
 		width: 100%;
 	}
