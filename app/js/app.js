@@ -3,6 +3,8 @@
 // window.jQuery = $
 // window.$ = $
 
+import bootstrap from 'bootstrap'
+
 // // Import vendor jQuery plugin example (not module)
 // require('~/app/libs/mmenu/dist/mmenu.js')
 
@@ -27,5 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	detectWidth();
 
 	window.addEventListener('resize', detectWidth);
+
+	console.log(bootstrap);
 
 })

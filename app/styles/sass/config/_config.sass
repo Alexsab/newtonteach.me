@@ -19,6 +19,17 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif
 	background-color: $primary_lighter
 	color: $color_primary_lightest
 
+// На время разработки
+a
+	text-decoration: none
+	opacity: 0.5
+	font-family: $userfont
+a[href]
+	opacity: 1
+
+button
+	font-family: $userfont
+
 input, textarea
 	outline: none
 	&:focus:required:invalid
