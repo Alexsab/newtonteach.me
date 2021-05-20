@@ -22,7 +22,7 @@
 		.sidebar-link__text{
 			visibility: visible;
 			opacity: 1;
-			width: auto;
+			display: inline-block;
 		}
 		~ .content{
 			padding-left: $sidebarSizeOpen;
@@ -83,10 +83,11 @@
 }
 
 .sidebar-link__text{
-	width: 0;
+	// width: 0;
 	visibility: hidden;
 	opacity: 0;
-	transition: all .1s ease;
+	transition: all .05s ease;
+	display: none;
 }
 
 .sidebar-btn{
@@ -140,4 +141,19 @@
 	display: block;
 	width: 32px;
 	height: 32px;
+}
+
+.user-link{
+	flex: 0 0 $sidebarSize;
+	display: inline-block;
+	.custom-card-img{
+		img{
+			width: 48px;
+			height: 48px;
+		}		
+	}
+	* {
+		font-size: $fontsize;
+		font-weight: 400;
+	}
 }

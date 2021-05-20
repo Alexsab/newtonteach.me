@@ -18,6 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	window.sidebarToggle = sidebarToggle;
-	sidebarToggle();
+	// sidebarToggle();
 
 })
