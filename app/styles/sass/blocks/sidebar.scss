@@ -59,6 +59,7 @@
 	height: $sidebarSize - 20px;
 	transition: background .2s ease-out;
 	opacity: 0.5;
+	text-decoration: none;
 	&:hover, &.active{
 		// background-color: darken($primary_light, 2%); //Временно
 		text-decoration: none;
