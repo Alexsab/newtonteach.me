@@ -58,6 +58,16 @@
 	flex-wrap: nowrap;
 	height: $sidebarSize - 20px;
 	transition: background .2s ease-out;
+	opacity: 0.5;
+	&:hover, &.active{
+		// background-color: darken($primary_light, 2%); //Временно
+		text-decoration: none;
+	}
+}
+
+//Временно
+.sidebar-link[href]{
+	opacity: 1;	
 	&:hover, &.active{
 		background-color: darken($primary_light, 2%);
 		text-decoration: none;
@@ -86,6 +96,10 @@
 	left: 0;
 	top: 0;
 	cursor: pointer;
+	opacity: 1;
+	&:hover{
+		background-color: darken($primary_light, 2%); //Временно
+	}
 }
 
 .sidebar-menu{
