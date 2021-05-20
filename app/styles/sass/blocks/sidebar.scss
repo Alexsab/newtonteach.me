@@ -1,32 +1,82 @@
 .sidebar{
-	width: $sidebarSize;
+	width: $sidebarSize + 4px;
 	height: 100vh;
 	overflow-x: hidden;
 	overflow-y: auto;
 	background-color: $primary_light;
-	padding-top: $sidebarSize !important;
-	transition: width .3s ease-out;
+	padding-top: $sidebarSize;
+	transition: width .2s ease-out;
+	display: flex;
+	flex-direction: column;
+	&::-webkit-scrollbar{
+		width: 4px
+	}
+	&::-webkit-scrollbar-track{
+		box-shadow: none
+	}
+	&::-webkit-scrollbar-thumb{
+		background-color: rgba($primary_dark, .2)
+	}
 	&.active{
 		width: $sidebarSizeOpen;
 		.sidebar-link__text{
 			visibility: visible;
 			opacity: 1;
+			width: auto;
 		}
 		~ .content{
 			padding-left: $sidebarSizeOpen;
+		}
+		.sidebar-menu__row{
+			height: $sidebarSize;
+			justify-content: center;
+			flex-direction: row;
+			.sidebar-link{
+				height: $sidebarSize;
+				flex-basis: 0;
+				flex-grow: 1;
+				max-width: 100%;
+				flex-direction: column;
+				font-size: 16px;
+				justify-content: center;
+			}
+			.sidebar-link__icon{
+				flex: 0 0 0%;
+				margin-bottom: 8px;
+			}
+		}
+		.sidebar-open{
+			display: block;
+		}
+		.sidebar-close{
+			display: none;
 		}
 	}
 }
 
 .sidebar-link{
 	flex-wrap: nowrap;
-	height: 45px;
+	height: $sidebarSize - 20px;
+	transition: background .2s ease-out;
+	&:hover, &.active{
+		background-color: darken($primary_light, 2%);
+		text-decoration: none;
+	}
+}
+
+.sidebar-link__icon{
+	flex: 0 0 $sidebarSize;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .sidebar-link__text{
+	width: 0;
 	visibility: hidden;
 	opacity: 0;
-	transition: all .3s ease;
+	transition: all .1s ease;
 }
 
 .sidebar-btn{
@@ -36,8 +86,44 @@
 	left: 0;
 	top: 0;
 	cursor: pointer;
-	transition: background .3s ease-out;
-	&:hover{
-		background-color: darken($primary_light, 2%);
+}
+
+.sidebar-menu{
+	padding-bottom: $sidebarSize + 20px;
+	position: relative;
+	flex: 1;
+}
+
+.sidebar-menu__row{
+	height: auto;
+	flex-direction: column;
+	margin-bottom: 25px;
+	.sidebar-link{
+		height: $sidebarSize - 20px;
+		font-size: 16px;
+		justify-content: center;
 	}
+}
+
+.sidebar-menu__bottom{
+	margin-top: 25px;
+}
+
+.sidebar-logo{
+	position: absolute;
+	left: 50%;
+	bottom: 30px;
+	transform: translateX(-50%);
+}
+
+.sidebar-open{
+	display: none;
+	width: 135px;
+	height: auto;
+}
+
+.sidebar-close{
+	display: block;
+	width: 32px;
+	height: 32px;
 }

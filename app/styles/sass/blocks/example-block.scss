@@ -1,7 +1,3 @@
-html, body{
-	height: 100%;
-	background: $color_dashboard_time_gradient;
-}
 .container{
 	position: relative;
 	height: 100%;
@@ -9,6 +5,7 @@ html, body{
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+	padding: 50px 15px;
 	h1{
 		width: 100%;
 	}

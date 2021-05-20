@@ -1,9 +1,14 @@
-<aside class="sidebar fixed-top p-4 text-white" id="sidebar">
+<aside class="sidebar fixed-top text-white" id="sidebar">
 
-	<div class="sidebar-btn sidebar-link d-flex align-items-center pl-4" onclick="sidebarToggle()">
-		<img src="images/dist/icons/menu.svg" alt="" class="sidebar-link__icon mr-3">
+	<div class="sidebar-btn sidebar-link d-flex align-items-center" onclick="sidebarToggle()">
+		<div class="sidebar-link__icon">
+			<img src="images/dist/icons/menu.svg" alt="">
+		</div>
+		<!-- /.sidebar-link__icon -->		
 		<span class="sidebar-link__text fw-600">Menu</span>
 	</div>
 	<!-- /.sidebar-btn -->
+
+	<!--#include virtual="/inc/components/menu/sidebar-menu.html" -->	
 
 </aside>
