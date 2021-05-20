@@ -8,16 +8,24 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+	const aside = document.querySelector('.sidebar');
+
 	function sidebarToggle(){
-
-		// const sideBtn = document.querySelector('.sidebar-btn');
-		const aside   = document.querySelector('.sidebar');
-
 		aside.classList.toggle('active');
-
 	}
 
 	window.sidebarToggle = sidebarToggle;
 	// sidebarToggle();
+
+	function detectWidth(){
+		if (window.innerWidth < 992) {
+			aside.classList.remove('active');
+		}else{
+			aside.classList.add('active');
+		}
+	}
+	detectWidth();
+
+	window.addEventListener('resize', detectWidth);
 
 })
