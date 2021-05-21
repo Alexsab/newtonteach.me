@@ -3,7 +3,9 @@
 // window.jQuery = $
 // window.$ = $
 
-import bootstrap from 'bootstrap'
+import 'bootstrap';
+import {alert} from 'bootstrap/js/dist/alert';
+// import {Alert} from 'bootstrap'
 
 // // Import vendor jQuery plugin example (not module)
 // require('~/app/libs/mmenu/dist/mmenu.js')
@@ -18,8 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	function uploadFile(){
 		let form = document.querySelector('.update-user-information');
-		let input = form.querySelector('input[type="file"]');
-		input.click();
+		form.querySelector('input[type="file"]').click();
 	}
 
 	window.sidebarToggle = sidebarToggle;
