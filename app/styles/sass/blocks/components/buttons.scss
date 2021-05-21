@@ -1,0 +1,25 @@
+.btn{
+	padding: 16px 48px;
+	border-radius: 100px;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 19px;
+	cursor: pointer;
+	transition: all .25s ease;
+	text-decoration: none;
+	color: inherit;
+	&:hover{
+		text-decoration: none;
+		color: inherit;
+	}
+}
+
+// Розовая
+.btn-secondary-dark{
+	color: $color_primary_lightest;
+	background-color: $secondary_dark;
+	&:hover{
+		background-color: darken($secondary_dark, 5%);
+		color: $color_primary_lightest;
+	}
+}

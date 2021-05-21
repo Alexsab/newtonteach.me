@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<base href="/">
+
+	<title>Newton - New UI</title>
+	<meta name="description" content="">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="icon" href="images/dist/logo-circle.svg">
+	
+	<link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body>
+	
+	<aside class="sidebar fixed-top text-white" id="sidebar">
+
+	<div class="sidebar-btn sidebar-link d-flex align-items-center" onclick="sidebarToggle()">
+		<div class="sidebar-link__icon">
+			<img src="images/dist/icons/menu.svg" alt="">
+		</div>
+		<!-- /.sidebar-link__icon -->		
+		<span class="sidebar-link__text fw-600">Menu</span>
+	</div>
+	<!-- /.sidebar-btn -->
+
+	<a href="javascript:void(0)" class="sidebar-link user-link d-flex flex-nowrap align-items-center text-white">
+		<div class="custom-card-img sidebar-link__icon">
+			<img src="images/dist/user.png" alt="">
+		</div>
+		<div class="user-info sidebar-link__text">
+			<h4 class="card-title mb-1">Jessica McCaffrey</h4>
+			<p class="card-text"><small>5th Grade Student</small></p>
+		</div>
+	</a>
+
+	<div class="sidebar-menu">
+
+	<div class="sidebar-menu__row d-flex">
+		
+		<a href="/" class="sidebar-link d-flex align-items-center text-white active">
+			<span class="sidebar-link__icon">
+				<img src="images/dist/icons/home.svg" alt="">
+			</span>
+			<!-- /.sidebar-link__icon -->		
+			<span class="sidebar-link__text">Home</span>
+		</a>
+		<a class="sidebar-link d-flex align-items-center text-white">
+			<span class="sidebar-link__icon">
+				<img src="images/dist/icons/knowledge.svg" alt="">
+			</span>
+			<!-- /.sidebar-link__icon -->		
+			<span class="sidebar-link__text">Knowledge</span>
+		</a>
+		<a class="sidebar-link d-flex align-items-center text-white">
+			<span class="sidebar-link__icon">
+				<img src="images/dist/icons/school.svg" alt="">
+			</span>
+			<!-- /.sidebar-link__icon -->		
+			<span class="sidebar-link__text">School</span>
+		</a>
+
+	</div>
+	<!-- /.sidebar-menu__row -->
+
+	<a class="sidebar-link d-flex align-items-center text-white">
+		<span class="sidebar-link__icon">
+			<img src="images/dist/icons/diary.svg" alt="">
+		</span>
+		<!-- /.sidebar-link__icon -->		
+		<span class="sidebar-link__text">Diary</span>
+	</a>
+	<a class="sidebar-link d-flex align-items-center text-white">
+		<span class="sidebar-link__icon">
+			<img src="images/dist/icons/statistics.svg" alt="">
+		</span>
+		<!-- /.sidebar-link__icon -->		
+		<span class="sidebar-link__text">Statistics</span>
+	</a>
+	<a class="sidebar-link d-flex align-items-center text-white">
+		<span class="sidebar-link__icon">
+			<img src="images/dist/icons/book-opened-filled-reading-tool.svg" alt="">
+		</span>
+		<!-- /.sidebar-link__icon -->		
+		<span class="sidebar-link__text">Homework</span>
+	</a>
+	<a class="sidebar-link d-flex align-items-center text-white">
+		<span class="sidebar-link__icon">
+			<img src="images/dist/icons/speech-bubble.svg" alt="">
+		</span>
+		<!-- /.sidebar-link__icon -->		
+		<span class="sidebar-link__text">Messages</span>
+	</a>
+	<a class="sidebar-link d-flex align-items-center text-white">
+		<span class="sidebar-link__icon">
+			<img src="images/dist/icons/folder.svg" alt="">
+		</span>
+		<!-- /.sidebar-link__icon -->		
+		<span class="sidebar-link__text">Materials</span>
+	</a>
+	<a class="sidebar-link d-flex align-items-center text-white">
+		<span class="sidebar-link__icon">
+			<img src="images/dist/icons/calendar.svg" alt="">
+		</span>
+		<!-- /.sidebar-link__icon -->		
+		<span class="sidebar-link__text">Schedule</span>
+	</a>
+	<a class="sidebar-link d-flex align-items-center text-white">
+		<span class="sidebar-link__icon">
+			<img src="images/dist/icons/tutors.svg" alt="">
+		</span>
+		<!-- /.sidebar-link__icon -->		
+		<span class="sidebar-link__text">Tutors</span>
+	</a>
+
+	<div class="sidebar-menu__bottom">
+		<a href="/pages/settings/" class="sidebar-link d-flex align-items-center text-white">
+			<span class="sidebar-link__icon">
+				<img src="images/dist/icons/settings.svg" alt="">
+			</span>
+			<!-- /.sidebar-link__icon -->		
+			<span class="sidebar-link__text">Settings</span>
+		</a>
+		<a class="sidebar-link d-flex align-items-center text-white">
+			<span class="sidebar-link__icon">
+				<img src="images/dist/icons/question-mark.svg" alt="">
+			</span>
+			<!-- /.sidebar-link__icon -->		
+			<span class="sidebar-link__text">Help</span>
+		</a>
+		<a class="sidebar-link d-flex align-items-center text-white">
+			<span class="sidebar-link__icon">
+				<img src="images/dist/icons/heart.svg" alt="">
+			</span>
+			<!-- /.sidebar-link__icon -->		
+			<span class="sidebar-link__text">Invite friends</span>
+		</a>
+	</div>
+	<!-- /.sidebar-menu__bottom -->
+	
+	<a href="javascript:void(0)" class="sidebar-logo">
+		<img src="images/dist/logo-white.svg" alt="" class="sidebar-open">
+		<img src="images/dist/logo-circle.svg" alt="" class="sidebar-close">
+	</a>
+	<!-- /.sidebar-logo -->
+
+</div>	
+
+</aside>
+
+	<div class="content">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12 col-md-5 col-xl-4 col-xxl-3">
+
+					<div class="card menu-vertical menu-arrows mb-4">
+	<div class="card-body">
+		
+		<div class="nav flex-column">
+			<a href="/pages/settings/" class="nav-link py-3 px-0 text-start active">Personal information</a>
+			<a href="#" class="nav-link py-3 px-0 text-start">Security</a>
+			<a href="#" class="nav-link py-3 px-0 text-start">Parent</a>
+			<a href="#" class="nav-link py-3 px-0 text-start">Subscriptions</a>
+		</div>
+
+	</div>
+</div>
+
+<div class="card menu-vertical menu-links mb-4">
+	<div class="card-body">
+		
+		<div class="nav flex-column">
+			<a href="#" class="nav-link active py-3 px-0 text-start">Help & Feedback</a>
+			<a href="#" class="nav-link py-3 px-0 text-start">About</a>
+		</div>
+
+	</div>
+</div>
+
+				</div>
+				<!-- /.col-4 -->			
+				<div class="col-12 col-md-7 col-xl-8 col-xxl-9">
+					
+					<div class="card user-info p-4 mb-4">
+	<div class="card-body text-center">
+		
+		<form class="update-user-information mx-auto">
+			<div class="user-photo mb-5">
+				<input type="file" class="hidden">
+				<img src="images/dist/user-big.png" alt="" class="d-block mx-auto mb-3 rounded-circle">
+				<a href="#" class="upload-file primary-light" onclick="uploadFile(); return false;">Update photo</a>
+			</div>
+			<!-- /.user-photo -->
+
+			<div class="input-group custom-group required mb-3">
+				<span class="input-label"><small>Name</small></span>
+				<input type="text" class="pt-4 pb-1 px-3" id="basic-url" name="name" value="Jessica">
+			</div>
+
+			<div class="input-group custom-group mb-3">
+				<input type="text" class="px-3" id="basic-url" name="middle-name" placeholder="Middle name">
+			</div>
+
+			<div class="input-group custom-group required mb-3">
+				<span class="input-label"><small>Last name</small></span>
+				<input type="text" class="pt-4 pb-1 px-3" id="basic-url" name="last-name" value="Caffrey">
+			</div>
+
+			<div class="input-group">
+				<select class="form-select" id="inputGroupSelect01" disabled>
+					<option value="1" selected>Student</option>
+					<option value="2">Two</option>
+					<option value="3">Three</option>
+				</select>
+			</div>
+
+			<hr class="hr">
+
+			<div class="input-group custom-group mb-3">
+				<span class="input-label"><small>Country</small></span>
+				<select class="form-select pt-4 pb-1 px-3">
+					<option value="1" selected>USA</option>
+					<option value="2">Russia</option>
+					<option value="3">Ukraine</option>
+				</select>
+			</div>
+
+			<div class="input-group custom-group">
+				<span class="input-label"><small>City</small></span>
+				<select class="form-select pt-4 pb-1 px-3">
+					<option value="1" selected>New York</option>
+					<option value="2">Russia</option>
+					<option value="3">Ukraine</option>
+				</select>
+			</div>
+
+			<hr class="hr">
+
+			<div class="input-group custom-group mb-3">
+				<span class="input-label"><small>School</small></span>
+				<select class="form-select pt-4 pb-1 px-3">
+					<option value="1" selected>California Elementary</option>
+					<option value="2">Russia</option>
+					<option value="3">Ukraine</option>
+				</select>
+			</div>
+
+			<div class="input-group custom-group">
+				<span class="input-label"><small>Grade</small></span>
+				<select class="form-select pt-4 pb-1 px-3">
+					<option value="1" selected>5 th</option>
+					<option value="2">Russia</option>
+					<option value="3">Ukraine</option>
+				</select>
+			</div>
+
+			<button type="submit" class="btn btn-secondary-dark">Save changes</button>
+
+		</form>
+
+	</div>
+	<!-- /.card-body -->
+</div>
+
+				</div>
+				<!-- /.col-8 -->
+			</div>
+			<!-- /.row -->			
+		</div>
+		<!-- /.container -->
+
+	</div>
+	<!-- /.content -->
+
+
+	
+	<script src="js/app.min.js"></script>
+
+</body>
+</html>
