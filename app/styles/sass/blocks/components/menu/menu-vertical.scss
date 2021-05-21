@@ -1,6 +1,7 @@
 .menu-vertical{
 	button, a{
 		border: none;
+		font-size: $XLsize - 2;
 		background-color: #fff;
 		color: $color_primary_darkest;
 		border-bottom: 1px solid $color_primary_light;
@@ -14,7 +15,7 @@
 	}
 }
 
-.menu-tabs{
+.menu-arrows{
 	button, a{
 		&:after{
 			content: '\203A';

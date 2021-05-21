@@ -39,12 +39,12 @@ input, textarea
 
 body
 	font-family: $userfont
-	font-size: $XLsize
+	font-size: $LGsize
 	line-height: $lineheight
 	color: $textcolor
 	min-width: 320px
 	position:relative
 	overflow-x: hidden
 	background-color: $backgrount_light
-	+media-breakpoint-down(xxl)
-		font-size: $LGsize
+	+media-breakpoint-up(xxl)
+		font-size: $XLsize

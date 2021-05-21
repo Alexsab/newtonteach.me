@@ -19,17 +19,15 @@ document.addEventListener('DOMContentLoaded', () => {
 	window.sidebarToggle = sidebarToggle;
 	// sidebarToggle();
 
-	function detectWidth(){
-		if (window.innerWidth < 992) {
-			aside.classList.remove('active');
-		}else{
-			aside.classList.add('active');
-		}
-	}
-	detectWidth();
+	// function detectWidth(){
+	// 	if (window.innerWidth < 992) {
+	// 		aside.classList.remove('active');
+	// 	}
+	// }
+	// detectWidth();
 
-	window.addEventListener('resize', detectWidth);
+	// window.addEventListener('resize', detectWidth);
 
-	console.log(bootstrap);
+	// console.log(bootstrap);
 
 })
