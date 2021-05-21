@@ -1,8 +1,76 @@
-<div class="card card-content-tabs user-info">
+<div class="card user-info p-4 mb-4">
 	<div class="card-body text-center">
 		
-		<form>
-			
+		<form class="update-user-information mx-auto">
+			<div class="user-photo mb-5">
+				<input type="file" class="hidden">
+				<img src="images/dist/user-big.png" alt="" class="d-block mx-auto mb-3 rounded-circle">
+				<a href="#" class="upload-file primary-light" onclick="uploadFile(); return false;">Update photo</a>
+			</div>
+			<!-- /.user-photo -->
+
+			<div class="input-group custom-group required mb-3">
+				<span class="input-label"><small>Name</small></span>
+				<input type="text" class="pt-4 pb-1 px-3" id="basic-url" name="name" value="Jessica">
+			</div>
+
+			<div class="input-group custom-group mb-3">
+				<input type="text" class="px-3" id="basic-url" name="middle-name" placeholder="Middle name">
+			</div>
+
+			<div class="input-group custom-group required mb-3">
+				<span class="input-label"><small>Last name</small></span>
+				<input type="text" class="pt-4 pb-1 px-3" id="basic-url" name="last-name" value="Caffrey">
+			</div>
+
+			<div class="input-group">
+				<select class="form-select" id="inputGroupSelect01" disabled>
+					<option value="1" selected>Student</option>
+					<option value="2">Two</option>
+					<option value="3">Three</option>
+				</select>
+			</div>
+
+			<hr class="hr">
+
+			<div class="input-group custom-group mb-3">
+				<span class="input-label"><small>Country</small></span>
+				<select class="form-select pt-4 pb-1 px-3">
+					<option value="1" selected>USA</option>
+					<option value="2">Russia</option>
+					<option value="3">Ukraine</option>
+				</select>
+			</div>
+
+			<div class="input-group custom-group">
+				<span class="input-label"><small>City</small></span>
+				<select class="form-select pt-4 pb-1 px-3">
+					<option value="1" selected>New York</option>
+					<option value="2">Russia</option>
+					<option value="3">Ukraine</option>
+				</select>
+			</div>
+
+			<hr class="hr">
+
+			<div class="input-group custom-group mb-3">
+				<span class="input-label"><small>School</small></span>
+				<select class="form-select pt-4 pb-1 px-3">
+					<option value="1" selected>California Elementary</option>
+					<option value="2">Russia</option>
+					<option value="3">Ukraine</option>
+				</select>
+			</div>
+
+			<div class="input-group custom-group">
+				<span class="input-label"><small>Grade</small></span>
+				<select class="form-select pt-4 pb-1 px-3">
+					<option value="1" selected>5 th</option>
+					<option value="2">Russia</option>
+					<option value="3">Ukraine</option>
+				</select>
+			</div>
+
 		</form>
 
 	</div>

@@ -16,8 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
 		aside.classList.toggle('active');
 	}
 
+	function uploadFile(){
+		let form = document.querySelector('.update-user-information');
+		let input = form.querySelector('input[type="file"]');
+		input.click();
+	}
+
 	window.sidebarToggle = sidebarToggle;
-	// sidebarToggle();
+	window.uploadFile = uploadFile;
 
 	// function detectWidth(){
 	// 	if (window.innerWidth < 992) {
