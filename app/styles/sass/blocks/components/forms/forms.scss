@@ -46,12 +46,6 @@ select.form-select{
 	color: $color_primary_darkest !important;
 	height: 61px;
 	width: 100%;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	text-indent: 1px;
-}
-select.form-select::-ms-expand {
-	display: none;
 }
 
 select.form-select{
