@@ -1,4 +1,44 @@
-<div class="sidebar-menu">
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<base href="/dist/">
+
+	<title>Newton - Security</title>
+	<meta name="description" content="">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="icon" href="/images/dist/logo-circle.svg">
+
+	<link rel="stylesheet" href="/css/main.min.css">
+</head>
+
+<body>
+	
+	<aside class="sidebar fixed-top text-white" id="sidebar">
+
+	<div class="sidebar-btn sidebar-link d-flex align-items-center" onclick="sidebarToggle()">
+		<div class="sidebar-link__icon">
+			<img src="/images/dist/icons/menu.svg" alt="">
+		</div>
+		<!-- /.sidebar-link__icon -->
+		<span class="sidebar-link__text fw-600">Menu</span>
+	</div>
+	<!-- /.sidebar-btn -->
+
+	<a href="javascript:void(0)" class="sidebar-link user-link d-flex flex-nowrap align-items-center text-white">
+		<div class="custom-card-img sidebar-link__icon">
+			<img src="/images/dist/user.png" alt="">
+		</div>
+		<div class="user-info sidebar-link__text">
+			<h4 class="card-title mb-1">Jessica McCaffrey</h4>
+			<p class="card-text"><small>5th Grade Student</small></p>
+		</div>
+	</a>
+
+	<div class="sidebar-menu">
 
 	<div class="sidebar-menu__row d-flex">
 
@@ -109,3 +149,87 @@
 	<!-- /.sidebar-logo -->
 
 </div>
+
+</aside>
+
+	<div class="content">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12 col-md-5 col-xl-4 col-xxl-3">
+
+					<div class="card menu-vertical menu-arrows mb-3">
+	<div class="card-body">
+		
+		<div class="nav flex-column">
+			<a href="/pages/settings/" class="nav-link py-3 px-0 text-start active">Personal information</a>
+			<a href="/pages/settings/security.html" class="nav-link py-3 px-0 text-start">Security</a>
+			<a href="/pages/settings/parents.html" class="nav-link py-3 px-0 text-start">Parent</a>
+			<a href="#" class="nav-link py-3 px-0 text-start">Subscriptions</a>
+		</div>
+
+	</div>
+</div>
+
+<div class="card menu-vertical menu-links mb-3">
+	<div class="card-body">
+		
+		<div class="nav flex-column">
+			<a href="#" class="nav-link active py-3 px-0 text-start">Help & Feedback</a>
+			<a href="#" class="nav-link py-3 px-0 text-start">About</a>
+		</div>
+
+	</div>
+</div>
+
+				</div>
+				<!-- /.col-4 -->
+				<div class="col-12 col-md-7 col-xl-8 col-xxl-9">
+
+					<div class="card user-info-security p-4 mb-3">
+	<div class="card-body text-center">
+		
+		<div class="settings-wrap mx-auto">
+			<form class="update-user-information mx-auto">
+
+				<div class="input-group custom-group required mb-3">
+					<span class="input-label"><small>Email</small></span>
+					<input type="email" class="pt-4 pb-1 px-3" name="email" value="mail@mail.com">
+				</div>
+
+				<div class="input-group custom-group required mb-3">
+					<span class="input-label"><small>Phone</small></span>
+					<input type="tel" class="pt-4 pb-1 px-3" name="phone" value="+71234567890">
+				</div>
+
+				<div class="input-group custom-group required mb-5">
+					<span class="input-label"><small>Password</small></span>
+					<input type="password" class="pt-4 pb-1 px-3" name="password" value="+71234567890">
+				</div>			
+
+				<button type="submit" class="btn btn-secondary-dark">Save changes</button>
+
+			</form>
+		</div>
+		<!-- /.settings-wrap mx-auto -->
+		
+
+	</div>
+	<!-- /.card-body -->
+</div>
+
+				</div>
+				<!-- /.col-8 -->
+			</div>
+			<!-- /.row -->
+		</div>
+		<!-- /.container -->
+
+	</div>
+	<!-- /.content -->
+
+
+	
+	<script src="/js/app.min.js"></script>
+
+</body>
+</html>
