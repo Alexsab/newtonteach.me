@@ -204,7 +204,7 @@
 				</div>
 			</div>
 
-			<button type="button" class="card add-btn bg-white border" data-bs-toggle="modal" data-bs-target="#exampleModal">
+			<button type="button" class="card add-btn bg-white border" data-bs-toggle="modal" data-bs-target="#addUser">
 				<img src="images/dist/icons/plus.svg" alt="">
 			</button>
 
@@ -227,21 +227,28 @@
 	<!-- /.content -->
 
 	
-	<div class="modal" tabindex="-1" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title">Modal title</h5>
+	<div class="modal" tabindex="-1" id="addUser" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered flex-column justify-content-center">
+		<div class="modal-content text-center">
+			<div class="modal-header justify-content-center border-0">
+				<h4 class="modal-title w-100">Add parent</h4>
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			</div>
 			<div class="modal-body">
-				<p>Modal body text goes here.</p>
+				<p>Share this CODE with your parents</p>
 			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Save changes</button>
+			<div class="modal-footer text-center justify-content-center border-0">
+				<form>
+					<div class="input-group custom-group mb-4 mx-auto w-75">
+						<input type="text" class="px-3 text-center" name="id" placeholder="12345">
+					</div>
+					<button type="button" class="btn btn-secondary-dark">Add Parent</button>
+				</form>
 			</div>
 		</div>
+
+		<p class="text-center text-white mt-3">Code gonna work only 10 minutes.  <br>If you need generate code again, please come back to this page.</p>
+
 	</div>
 </div>	
 	<script src="js/app.min.js"></script>
