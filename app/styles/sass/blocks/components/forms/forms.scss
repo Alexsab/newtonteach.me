@@ -1,7 +1,7 @@
 // Здесь все, что связано с формами
 
 .upload-file{
-	font-size: $fontsize;
+	font-size: 0.83vmax;
 	font-weight: 600;
 }
 .custom-group{
@@ -30,9 +30,9 @@
 	top: 12px;
 	left: 16px;
 	line-height: 1;
-	font-size: 10px;
+	font-size: 0.52vmax;
 	small{
-		font-size: 12px;
+		font-size: 0.63vmax;
 		font-weight: 500;
 	}
 }

@@ -1,0 +1,9 @@
+.add-user-card{
+	height: 97px;
+	border-color: $border-color;
+	cursor: pointer;
+	transition: all .25s ease;
+	&:hover{
+		background-color: $border-color;
+	}
+}

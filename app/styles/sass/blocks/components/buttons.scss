@@ -3,11 +3,12 @@
 	border-radius: 100px;
 	font-size: 16px;
 	font-weight: 600;
-	line-height: 19px;
+	line-height: 1vmax;
 	cursor: pointer;
 	transition: all .25s ease;
 	text-decoration: none;
 	color: inherit;
+	text-transform: capitalize;
 	&:hover{
 		text-decoration: none;
 		color: inherit;

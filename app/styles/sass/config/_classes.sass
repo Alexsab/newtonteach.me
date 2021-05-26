@@ -5,13 +5,15 @@
 	padding-left: $sidebarSize
 	transition: padding .3s ease
 	height: 100%
+	max-width: 76.3vw
+	margin: 0 auto
 	@include media-breakpoint-down(lg)
 		padding-left: 0
 		padding-top: $sidebarSize
 	.container-fluid
-		padding: 3%
-		@include media-breakpoint-down(lg)
-			padding: 15px
+		padding: 3% 15px
+		// @include media-breakpoint-down(lg)
+		// 	padding: 15px
 
 .card
 	border: none

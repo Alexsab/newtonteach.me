@@ -2,6 +2,7 @@
 @import mixins
 @import colors
 @import sizes
+@import vars
 @import fonts
 @import classes
 
@@ -44,12 +45,10 @@ input, textarea
 
 body
 	font-family: $userfont
-	font-size: $LGsize
+	font-size: 1.25vmax
 	line-height: $lineheight
 	color: $textcolor
 	min-width: 320px
 	position:relative
 	overflow-x: hidden
 	background-color: $backgrount_light
-	+media-breakpoint-up(xxl)
-		font-size: $XLsize
