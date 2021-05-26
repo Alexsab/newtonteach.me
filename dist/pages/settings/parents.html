@@ -43,7 +43,7 @@
 
 	<div class="sidebar-menu__row d-flex">
 
-		<a href="../../" class="sidebar-link d-flex align-items-center text-white active">
+		<a href="./" class="sidebar-link d-flex align-items-center text-white active">
 			<span class="sidebar-link__icon">
 				<img src="images/dist/icons/home.svg" alt="">
 			</span>
@@ -164,7 +164,7 @@
 		<div class="nav flex-column">
 			<a href="pages/settings/" class="nav-link py-3 px-0 text-start active">Personal information</a>
 			<a href="pages/settings/security.html" class="nav-link py-3 px-0 text-start">Security</a>
-			<a href="pages/settings/parents.html" class="nav-link py-3 px-0 text-start">Parent</a>
+			<a href="pages/settings/parents.html" class="nav-link py-3 px-0 text-start">Parents</a>
 			<a href="#" class="nav-link py-3 px-0 text-start">Subscriptions</a>
 		</div>
 
@@ -193,10 +193,10 @@
 				<div class="card-body">
 					<div class="d-flex flex-nowrap align-items-center mx-0">
 						<div class="user-avatar custom-card-img me-3">
-							<a href="#"><img src="images/dist/user.png" alt=""></a>
+							<a href="javascript:void(0)"><img src="images/dist/user.png" alt=""></a>
 						</div>
 						<div class="user-info">
-							<a href="#">John Caffrey</a>
+							<a href="javascript:void(0)">John Caffrey</a>
 							<p class="card-text"><small>Parent</small></p>
 						</div>
 					</div>
@@ -204,11 +204,9 @@
 				</div>
 			</div>
 
-			<div class="card add-user-card bg-white mx-auto border">
-				<div class="card-body d-flex align-items-center justify-content-center">
-					<img src="images/dist/icons/plus.svg" alt="">
-				</div>
-			</div>
+			<button type="button" class="card add-btn bg-white border" data-bs-toggle="modal" data-bs-target="#exampleModal">
+				<img src="images/dist/icons/plus.svg" alt="">
+			</button>
 
 		</div>
 		<!-- /.settings-wrap mx-auto -->
@@ -228,8 +226,24 @@
 	</div>
 	<!-- /.content -->
 
-
 	
+	<div class="modal" tabindex="-1" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Modal title</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<p>Modal body text goes here.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save changes</button>
+			</div>
+		</div>
+	</div>
+</div>	
 	<script src="js/app.min.js"></script>
 
 </body>
