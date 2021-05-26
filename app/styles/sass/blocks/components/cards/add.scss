@@ -1,9 +1,17 @@
-.add-user-card{
+.add-btn{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	height: 97px;
+	width: 100%;
 	border-color: $border-color;
 	cursor: pointer;
 	transition: all .25s ease;
 	&:hover{
 		background-color: $border-color;
+	}
+	img{
+		max-width: 14px;
+		height: auto;
 	}
 }
