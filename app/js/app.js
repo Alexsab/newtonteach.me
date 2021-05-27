@@ -42,4 +42,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	window.uploadFile = uploadFile;
 
+	// Прокрутка Story как ВК
+
+	// window.onload = function () {
+	// 	var scr = document.querySelector(".story-block");
+	// 	scr.mousedown(function () {
+	// 		$(this).css('cursor', 'grabbing');
+	// 		var startX = this.scrollLeft + event.pageX;
+	// 		var startY = this.scrollTop + event.pageY;
+	// 		scr.mousemove(function () {
+	// 			this.scrollLeft = startX - event.pageX;
+	// 			this.scrollTop = startY - event.pageY;
+	// 			return false;
+	// 		});
+	// 	});
+
+	// 	$(window).mouseup(function () {
+	// 		scr.off("mousemove").css('cursor', 'grab');
+	// 	});
+	// } 
+
 })
