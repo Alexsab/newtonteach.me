@@ -1,6 +1,17 @@
 .fw-600
 	font-weight: 600
 
+.fz-12
+	font-size: 12px
+.fz-16
+	font-size: 16px
+
+
+.size-32
+	width: 32px
+	height: 32px
+
+
 .content
 	padding-left: $sidebarSize
 	transition: padding .3s ease
@@ -17,17 +28,24 @@
 
 .card
 	border: none
-	border-radius: 16px
+	border-radius: 14px
 	color: $primary_light
+
+.custom-card-title
+	font-size: 14px
+	color: $color_primary_darkest
 
 .hidden
 	display: none
 
 // Colors
-.primary-light
+a.primary-light
 	color: $primary_light
 	&:hover, &:focus
 		color: $primary_lighter
+
+.gray-color
+	color: $color_primary_darkest
 
 .primary-light
 	background-color: $color_primary_light
@@ -36,3 +54,5 @@
 	background-color: $color_primary_light
 	opacity: 1
 	margin: 30px 0
+	&.gray
+		background-color: $backgrount_light
