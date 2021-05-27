@@ -12,29 +12,34 @@ import {alert} from 'bootstrap/js/dist/alert';
 
 document.addEventListener('DOMContentLoaded', () => {
 
+	// Выбор тарифа подписки - страница subscriptions.html
+	const optionCardItems = document.querySelectorAll('.option-card-item');
+
+	if (optionCardItems.length > 0) {
+		optionCardItems.forEach((item)=>{
+			item.addEventListener('click', (e)=>{
+				optionCardItems.forEach((el)=>{
+				el.classList.remove('bought');
+				})
+				item.classList.add('bought');
+			})
+		})
+	}
+
+	// Открытие сайдбара
 	const aside = document.querySelector('.sidebar');
 
 	function sidebarToggle(){
 		aside.classList.toggle('active');
 	}
+	window.sidebarToggle = sidebarToggle;
 
+	// Кастомная ссылка загрузки выбора файла
 	function uploadFile(){
 		let form = document.querySelector('.update-user-information');
 		form.querySelector('input[type="file"]').click();
 	}
 
-	window.sidebarToggle = sidebarToggle;
 	window.uploadFile = uploadFile;
-
-	// function detectWidth(){
-	// 	if (window.innerWidth < 992) {
-	// 		aside.classList.remove('active');
-	// 	}
-	// }
-	// detectWidth();
-
-	// window.addEventListener('resize', detectWidth);
-
-	// console.log(bootstrap);
 
 })

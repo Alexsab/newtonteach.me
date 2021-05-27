@@ -37,10 +37,17 @@
 
 .option-card-item{
 	position: relative;
+	cursor: pointer;
+	.total-date{
+		display: none;
+	}
 	&.bought{
 		background-image: url(../images/dist/icons/check-blue.svg);
 		background-repeat: no-repeat;
 		background-size: 15px;
 		background-position: right center;
+		.total-date{
+			display: block;
+		}
 	}
 }
