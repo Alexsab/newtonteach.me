@@ -6,7 +6,7 @@
 	<base href="/newtonteach.me/dist/">
 	<!-- <base href="/"> -->
 
-	<title>Newton - Security</title>
+	<title>Newton - Subscriptions</title>
 	<meta name="description" content="">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -156,7 +156,7 @@
 	<div class="content">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-4">
+				<div class="col-3">
 
 					<div class="card menu-vertical menu-arrows mb-3">
 	<div class="card-body">
@@ -184,35 +184,53 @@
 
 				</div>
 				<!-- /.col-4 -->
-				<div class="col-8">
+				<div class="col-9">
 
-					<div class="card user-info-security p-4 mb-3">
-	<div class="card-body text-center">
-		
-		<div class="settings-wrap mx-auto">
-			<form class="update-user-information mx-auto">
+					<div class="card subscriptions mb-3">
+	<div class="card-body p-4">
+		<div class="row">
+			<div class="col-5">
+				
+				<div class="subscriptions-menu">
+					<nav class="menu-list subscriptions-menu-list mb-4">
+						<h6 class="subscriptions-menu-title fw-normal text-uppercase mb-3">Best Offer</h6>
 
-				<div class="input-group custom-group required mb-3">
-					<span class="input-label"><small>Email</small></span>
-					<input type="email" class="pt-4 pb-1 px-3" name="email" value="mail@mail.com">
+						<a href="pages/settings/subscriptions.html" class="card primary-light mb-3 py-3 menu-link-with-icon active">
+							<span class="d-flex flex-nowrap align-items-center">
+							<img src="images/dist/icons/1.svg" alt="ALT" class="ms-3">
+							<span class="link-text px-3 pe-5">
+								<h5 class="mb-2">Get Newton One</h5>
+								<p>Get access to thousands of lessons. Quizzes, books, videos and presentation.</p>
+							</span>
+							<!-- /.link-text -->
+							</span>
+							<!-- /.row -->
+						</a>
+
+					</nav>
+					<!-- /.subscriptions-menu-list -->
+					
+					<nav class="subscriptions-menu-list mb-4">
+						
+						<h6 class="subscriptions-menu-title fw-normal text-uppercase mb-3">Seperate</h6>
+
+						<a class="card primary-light mb-3">
+							<div class="card-body">123</div>
+							<!-- /.card-body -->
+						</a>
+
+					</nav>
+					<!-- /.subscriptions-menu-list -->
+
 				</div>
+				<!-- /.subscriptions-menu -->				
 
-				<div class="input-group custom-group required mb-3">
-					<span class="input-label"><small>Phone</small></span>
-					<input type="tel" class="pt-4 pb-1 px-3" name="phone" value="+71234567890">
-				</div>
-
-				<div class="input-group custom-group required mb-5">
-					<span class="input-label"><small>Password</small></span>
-					<input type="password" class="pt-4 pb-1 px-3" name="password" value="+71234567890">
-				</div>			
-
-				<button type="submit" class="btn btn-secondary-dark">Save changes</button>
-
-			</form>
+			</div>
+			<!-- /.col-4 -->
+			<div class="col-5 offset-1">456</div>
+			<!-- /.col-4 -->
 		</div>
-		<!-- /.settings-wrap mx-auto -->
-		
+		<!-- /.row -->
 
 	</div>
 	<!-- /.card-body -->
@@ -228,8 +246,31 @@
 	</div>
 	<!-- /.content -->
 
-
 	
+	<div class="modal" tabindex="-1" id="addUser" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered flex-column justify-content-center">
+		<div class="modal-content text-center">
+			<div class="modal-header justify-content-center border-0">
+				<h4 class="modal-title w-100">Add parent</h4>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<p>Share this CODE with your parents</p>
+			</div>
+			<div class="modal-footer text-center justify-content-center border-0">
+				<form>
+					<div class="input-group custom-group mb-4 mx-auto w-75">
+						<input type="text" class="px-3 text-center" name="id" placeholder="12345">
+					</div>
+					<button type="button" class="btn btn-secondary-dark">Add Parent</button>
+				</form>
+			</div>
+		</div>
+
+		<p class="text-center text-white mt-3">Code gonna work only 10 minutes.  <br>If you need generate code again, please come back to this page.</p>
+
+	</div>
+</div>	
 	<script src="js/app.min.js"></script>
 
 </body>
