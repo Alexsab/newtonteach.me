@@ -6,16 +6,19 @@
 @import fonts
 @import classes
 
- 
+
 $textcolor: $primary_light
-$userfont: 'SF Pro Display', sans-serif 
+$userfont: 'SF Pro Display', sans-serif
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif
 
 // GENERAL DOCUMENT STYLES
 
 html
 	font-size: 24px
-
+	@media (max-width: 1600px)
+		font-size: 20px
+	@media (max-width: 1440px)
+		font-size: 16px
 ::placeholder
 	color: $color_primary_darker
 
@@ -31,7 +34,7 @@ a
 	color: $primary_light
 	&:hover, &:focus
 		color: $primary_lighter
-	
+
 
 a[href]
 	opacity: 1
@@ -55,7 +58,3 @@ body
 	position:relative
 	overflow-x: hidden
 	background-color: $backgrount_light
-	@media (max-width: 1600px)
-		font-size: 85%
-	@media (max-width: 1400px)
-		font-size: 80%
