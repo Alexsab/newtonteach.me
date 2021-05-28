@@ -34,5 +34,8 @@
 		"gulp-sass-glob": "^1.1.0",
 		"gulp-stylus": "^2.7.0",
 		"webpack-stream": "^6.1.2"
+	},
+	"dependencies": {
+		"gulp-sourcemaps": "^3.0.0"
 	}
 }

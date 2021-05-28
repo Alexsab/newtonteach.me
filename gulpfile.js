@@ -3,6 +3,7 @@ let preprocessor = 'sass', // Preprocessor (sass, less, styl); 'sass' also work 
 
 const { src, dest, parallel, series, watch } = require('gulp')
 const browserSync  = require('browser-sync').create()
+const sourcemaps   = require('gulp-sourcemaps')
 const bssi         = require('browsersync-ssi')
 const ssi          = require('ssi')
 const webpack      = require('webpack-stream')
@@ -61,10 +62,12 @@ function scripts() {
 
 function styles() {
 	return src([`app/styles/${preprocessor}/*.*`, `!app/styles/${preprocessor}/_*.*`])
+		.pipe(sourcemaps.init())
 		.pipe(eval(`${preprocessor}glob`)())
 		.pipe(eval(preprocessor)())
 		.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
 		.pipe(cleancss({ level: { 1: { specialComments: 0 } },/* format: 'beautify' */ }))
+		.pipe(sourcemaps.write())
 		.pipe(rename({ suffix: ".min" }))
 		.pipe(dest('app/css'))
 		.pipe(browserSync.stream())

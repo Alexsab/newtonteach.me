@@ -1,7 +1,7 @@
 // Здесь все, что связано с формами
 
 .upload-file{
-	font-size: 0.83vmax;
+	font-size: 16px;
 	font-weight: 600;
 }
 .custom-group{
@@ -28,11 +28,11 @@
 	z-index: 10;
 	color: $color_secondary;
 	top: 12px;
-	left: 16px;
+	left: 1rem;
 	line-height: 1;
-	font-size: 0.52vmax;
+	font-size: 10px;
 	small{
-		font-size: 0.63vmax;
+		font-size: 12px;
 		font-weight: 500;
 	}
 }

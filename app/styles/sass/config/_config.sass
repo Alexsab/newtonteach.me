@@ -13,6 +13,9 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif
 
 // GENERAL DOCUMENT STYLES
 
+html
+	font-size: 24px
+
 ::placeholder
 	color: $color_primary_darker
 
@@ -28,7 +31,7 @@ a
 	color: $primary_light
 	&:hover, &:focus
 		color: $primary_lighter
-		
+	
 
 a[href]
 	opacity: 1
@@ -45,10 +48,14 @@ input, textarea
 
 body
 	font-family: $userfont
-	font-size: 1.25vmax
+	font-size: 100%
 	line-height: $lineheight
 	color: $textcolor
 	min-width: 320px
 	position:relative
 	overflow-x: hidden
 	background-color: $backgrount_light
+	@media (max-width: 1600px)
+		font-size: 85%
+	@media (max-width: 1400px)
+		font-size: 80%
