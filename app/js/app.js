@@ -1,3 +1,4 @@
+'use strict';
 // // Import jQuery module (npm i jquery)
 // import $ from 'jquery'
 // window.jQuery = $
@@ -12,6 +13,8 @@ import {alert} from 'bootstrap/js/dist/alert';
 
 document.addEventListener('DOMContentLoaded', () => {
 
+	// 'use strict';
+
 	// Выбор тарифа подписки - страница subscriptions.html
 	const optionCardItems = document.querySelectorAll('.option-card-item');
 
@@ -19,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		optionCardItems.forEach((item)=>{
 			item.addEventListener('click', (e)=>{
 				optionCardItems.forEach((el)=>{
-				el.classList.remove('bought');
+					el.classList.remove('bought');
 				})
 				item.classList.add('bought');
 			})
@@ -42,24 +45,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	window.uploadFile = uploadFile;
 
-	// Прокрутка Story как ВК
+	// Прокрутка Story
 
-	// window.onload = function () {
-	// 	var scr = document.querySelector(".story-block");
-	// 	scr.mousedown(function () {
-	// 		$(this).css('cursor', 'grabbing');
-	// 		var startX = this.scrollLeft + event.pageX;
-	// 		var startY = this.scrollTop + event.pageY;
-	// 		scr.mousemove(function () {
-	// 			this.scrollLeft = startX - event.pageX;
-	// 			this.scrollTop = startY - event.pageY;
-	// 			return false;
-	// 		});
-	// 	});
+	window.onload = function () {
+		
+		const storyBlock = document.getElementById('story-block');
 
-	// 	$(window).mouseup(function () {
-	// 		scr.off("mousemove").css('cursor', 'grab');
-	// 	});
-	// } 
+		function verScroll(startX){
+			storyBlock.addEventListener('mousemove', function () {
+				this.scrollLeft = startX - event.pageX;
+				return false;
+			});
+		}
 
-})
+		storyBlock.addEventListener('mouseup', function () {
+			this.style.cursor = 'grab';
+			this.removeEventListener('mousemove', e => {}, false);
+		});
+
+		storyBlock.addEventListener('mousedown', function () {
+			this.style.cursor = 'grabbing';
+			var startX = this.scrollLeft + event.pageX;
+			verScroll(startX);
+		});
+	} 
+
+});

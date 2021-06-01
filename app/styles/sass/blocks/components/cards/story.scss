@@ -1,3 +1,16 @@
+.story-block{
+	overflow-x: auto;
+	&::-webkit-scrollbar{
+		height: 0;
+	}
+	&::-webkit-scrollbar-track{
+		box-shadow: none
+	}
+	&::-webkit-scrollbar-thumb{
+		background-color: transparent;
+	}
+}
+
 .story-item{
 	// border: 2px solid transparent;
 	flex: 0 0 auto;
