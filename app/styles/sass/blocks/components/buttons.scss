@@ -15,6 +15,23 @@
 	}
 }
 
+.btn-with-icon{
+	padding-left: 55px;
+	text-align: center;
+	position: relative;
+	color: #fff;
+	&:hover{
+		color: #fff;
+	}
+	.btn-icon{
+		position: absolute;
+		height: 100%;
+		width: auto;
+		left: 0;
+		top: 0;
+	}
+}
+
 // Розовая
 .btn-secondary-dark{
 	color: $color_primary_lightest;
@@ -25,5 +42,61 @@
 	}
 	&:focus, &:active{
 		background-color: $secondary_lighter;
+	}
+}
+
+// Темно розовая
+.btn-pink-dark{
+	background-color: $btn_pink_dark;
+	&:hover{
+		background-color: lighten($btn_pink_dark, 10%);
+	}
+}
+
+// Зеленая
+.btn-success-darken{
+	background-color: $color_success_darken;
+	&:hover{
+		background-color: $color_success_light;
+	}
+}
+
+// Светло зеленая
+.btn-simple-lightest{
+	background-color: $color_quizzes_simple_lightest;
+	&:hover{
+		background-color: lighten($color_quizzes_simple_lightest, 10%);
+	}
+}
+
+// Фиолетовая
+.btn-advanced-lighter{
+	background-color: $color_quizzes_advanced_lighter;
+	&:hover{
+		background-color: $color_quizzes_advanced_lightest;
+	}
+}
+
+// Синяя
+.btn-primary-lighter{
+	background-color: $primary_lighter;
+	&:hover{
+		background-color:$primary_lightest;
+	}
+}
+
+// Темно синяя
+.btn-blue-dark{
+	background-color: $btn_blue_dark;
+	&:hover{
+		background-color: lighten($btn_blue_dark, 10%);
+	}
+}
+
+// Красная
+.btn-danger-darken{
+	background-color: $color_danger_darken;
+	&:hover{
+		background-color: $color_danger_light;
 	}
 }
