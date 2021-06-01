@@ -25,18 +25,22 @@
 			display: inline-block;
 		}
 		.sidebar-link{
-			height: $sidebarSize -20px;
+			height: $sidebarSize - 10px;
+		}
+		.sidebar-btn{
+			height: $sidebarSize
 		}
 		.sidebar-menu__row{
-			height: $sidebarSize;
+			min-height: $sidebarSize;
 			justify-content: center;
 			flex-direction: row;
 			.sidebar-link{
-				height: $sidebarSize;
+				height: auto;
 				flex-basis: 0;
 				flex-grow: 1;
 				max-width: 100%;
 				flex-direction: column;
+				padding: 10px 0;
 				font-size: 0.6667rem;
 				justify-content: center;
 			}
@@ -56,11 +60,13 @@
 
 .sidebar-link{
 	flex-wrap: nowrap;
-	height: $sidebarSize - 25px;
+	min-height: $sidebarSize - 10px;
 	transition: background .2s ease-out;
 	opacity: 0.5;
 	text-decoration: none;
 	white-space: nowrap;
+	padding: 10px 0;
+	font-size: 0.8333rem;
 	&:hover, &.active{
 		// background-color: darken($primary_light, 2%); //Временно
 		text-decoration: none;
@@ -123,7 +129,8 @@
 	margin-bottom: 1vmax;
 	.sidebar-link{
 		height: $sidebarSize - 20px;
-		font-size: 16px;
+		padding: 10px 0;
+		font-size: 0.6667rem;
 		justify-content: center;
 	}
 }
@@ -141,19 +148,20 @@
 
 .sidebar-open{
 	display: none;
-	width: 5.667rem;
+	width: 136px;
 	height: auto;
 }
 
 .sidebar-close{
 	display: block;
-	width: 1.042rem;
-	height: 1.042rem;
 }
 
 .user-link{
-	flex: 0 0 $sidebarSize;
+	flex: 0 0 $sidebarSize + 10px;
 	display: inline-block;
+	// padding: 15px 0;
+	height: auto !important;
+	// margin: 10px 0;
 	.custom-card-img{
 		img{
 			width: 48px;
@@ -161,7 +169,7 @@
 		}		
 	}
 	* {
-		font-size: 16px;
-		font-weight: 400;
+		font-size: 0.6667rem;
+		// font-weight: 400;
 	}
 }
