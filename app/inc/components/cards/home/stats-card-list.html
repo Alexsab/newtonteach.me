@@ -1,0 +1,152 @@
+<div class="card progress-ring-list mb-3">
+	<div class="card-body">
+		<div class="d-flex justify-content-between align-items-center mb-3">
+			<div class="d-flex align-items-center card-text-left">
+				<h4 class="card-title lh-1 mb-0 me-2">Total stats</h4>
+				<span class="fz-16 lh-1">This week</span>
+			</div>
+			<a href="javascript:void(0)" class="fz-16 fw-600">See all</a>
+		</div>
+
+		<div class="d-flex justify-content-between">
+
+			<div class="text-center progress-item">
+				<div class="progress-count">0</div>
+				<svg class="progress-ring" width="170" height="170" data-percent="48" data-full-percent="50">
+					<circle class="progress-ring-circle" stroke-width="12" cx="85" cy="85" r="79" fill="transparent" />
+				</svg>
+			</div>
+
+			<div class="text-center progress-item">
+				<div class="progress-count">0</div>
+				<svg class="progress-ring" width="170" height="170" data-percent="5" data-full-percent="8">
+					<circle class="progress-ring-circle" stroke-width="12" cx="85" cy="85" r="79" fill="transparent" />
+				</svg>
+			</div>
+
+			<div class="text-center progress-item">
+				<div class="progress-count">0</div>
+				<svg class="progress-ring" width="170" height="170" data-percent="25" data-full-percent="50">
+					<circle class="progress-ring-circle" stroke-width="12" cx="85" cy="85" r="79" fill="transparent" />
+				</svg>
+			</div>
+
+			<div class="text-center progress-item">
+				<div class="progress-count">0</div>
+				<svg class="progress-ring" width="170" height="170" data-percent="38" data-full-percent="50">
+					<circle class="progress-ring-circle" stroke-width="12" cx="85" cy="85" r="79" fill="transparent" />
+				</svg>
+			</div>
+
+			<div class="text-center progress-item">
+				<div class="progress-count">0</div>
+				<svg class="progress-ring" width="170" height="170" data-percent="48" data-full-percent="100">
+					<circle class="progress-ring-circle" stroke-width="12" cx="85" cy="85" r="79" fill="transparent" />
+				</svg>
+			</div>
+
+		</div>
+		<!-- /.row -->
+
+	</div>
+</div>
+
+<style>
+.progress-item{
+	position: relative;
+}
+.progress-ring{
+	text-align: center;
+	display: flex;
+}
+.progress-count{
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 40px;
+}
+.progress-ring-circle{
+	transform-origin: center;
+	transform: rotate(90deg);
+	stroke: #85A5D9;
+}
+</style>
+
+<script>
+	const progressItem = document.querySelectorAll('.progress-item');
+	const circle = document.querySelectorAll('.progress-ring-circle');
+	let progressWidth = Math.floor((document.querySelector('.progress-ring-list .card-body').offsetWidth - 48) / progressItem.length);
+
+	if (progressWidth > 170){
+		progressWidth = 170;
+	}
+
+	if (circle.length > 0) {
+
+		circle.forEach( item => {
+
+			widthSvgDetect(item, progressWidth)
+
+			let percent = parseInt(item.closest('.progress-item svg').getAttribute('data-percent')); //получаем проценты
+			let fullPercent = parseInt(item.closest('.progress-item svg').getAttribute('data-full-percent')); //макс число процентов
+			const progressCount = item.closest('.progress-item').firstChild.nextSibling; //progress-count куда вставляем счетчик
+			const radius = item.r.baseVal.value; //радиус
+			const circumference = 2 * Math.PI * radius; //длина окружности
+
+			//небольшая проверка
+			if (percent > fullPercent){
+				percent = fullPercent;
+			}
+
+			item.style.strokeDashoffset = circumference; // заливаем полностью окружность
+			item.style.strokeDasharray = `${circumference} ${circumference}`; // необъяснимо, но понятно)
+
+			num(progressCount, percent); //функция счетчика
+
+			setTimeout(function(){
+				item.style.transition = 'all 1s ease-in-out'; //время анимации
+				setProgress(item, percent, fullPercent, circumference); // функция прогресс-бара
+			}, 0)
+
+		})
+
+	}
+
+	// window.addEventListener('resize', ()=>{
+	// 	func
+	// });
+
+	//функция счетчика
+	function num(item, percent){
+		let i = 0;
+		let timerId = setInterval(function(){
+			item.innerHTML = i++;
+			if (i > percent) {
+				clearInterval(timerId);
+			}
+		}, 1000 / percent * 0.8);
+	}
+
+	// функция прогресс-бара
+	function setProgress(item, percent, fullPercent, circumference){
+		const offset = circumference - percent / fullPercent * circumference; //непонятная формула)
+		item.style.strokeDashoffset = offset; // устанавливаем заливку, равную проценту
+	}
+
+	function widthSvgDetect(item, itemWidth){
+		let stroke = item.getAttribute('stroke-width');
+		let c = Math.floor(itemWidth / 2);
+		let r = Math.floor((itemWidth / 2) - stroke) ;
+
+		item.closest('svg').setAttribute('width', itemWidth);
+		item.closest('svg').setAttribute('height', itemWidth);
+
+		item.setAttribute('cx', c);
+		item.setAttribute('cy', c);
+		item.setAttribute('r', r);
+
+	}
+
+</script>
