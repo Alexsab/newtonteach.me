@@ -19,6 +19,7 @@
 		"bootstrap": "^5.0.1",
 		"browser-sync": "^2.26.14",
 		"browsersync-ssi": "^0.2.4",
+		"circles": "^0.2.0",
 		"del": "^6.0.0",
 		"gulp": "^4.0.2",
 		"gulp-autoprefixer": "^7.0.1",

@@ -322,7 +322,24 @@
 	<div class="card-body">
 		<div class="d-flex justify-content-between align-items-center mb-3">
 			<div class="d-flex align-items-center card-text-left">
-				<h4 class="card-title lh-1 mb-0 me-2">Total stats</h4>
+				<h4 class="card-title lh-1 mb-0 me-2">CANVAS</h4>
+				<span class="fz-16 lh-1">This week</span>
+			</div>
+			<a href="javascript:void(0)" class="fz-16 fw-600">See all</a>
+		</div>
+
+		<div class="d-flex">
+			<div class="circle" id="circles-1"></div>
+		</div>
+		<!-- /.d-flex -->
+	</div>
+</div>
+
+<div class="card progress-ring-list mb-3">
+	<div class="card-body">
+		<div class="d-flex justify-content-between align-items-center mb-3">
+			<div class="d-flex align-items-center card-text-left">
+				<h4 class="card-title lh-1 mb-0 me-2">SVG</h4>
 				<span class="fz-16 lh-1">This week</span>
 			</div>
 			<a href="javascript:void(0)" class="fz-16 fw-600">See all</a>
@@ -626,6 +643,43 @@
 
 	
 	<script src="js/app.min.js"></script>
+	<script src="js/circles.js"></script>
+
+	<script>
+		var colors = [
+		['#fff', '#85A5D9'], ['#FCE6A4', '#EFB917'], ['#BEE3F7', '#45AEEA'], ['#F8F9B6', '#D2D558'], ['#F4BCBF', '#D43A43']
+		],
+		circles = [];
+
+		var child = document.querySelectorAll('.circle');
+		child.forEach((item)=> {
+			var i = 1,
+			id = item.getAttribute('id'),
+			// id = child.getAttribute('id'),
+			percentage = 48,
+
+			circle2 = Circles.create({
+				id:         id,
+				value:      percentage,
+				radius:     85,
+				width:      10,
+				colors:     colors[i - 1]
+			});
+
+			circles.push(circle2);
+			//console.log(child.getAttribute('id'))
+		})
+
+		window.addEventListener('resize', function(e) {
+			for (var i = 0; i < circles.length; i++) {
+				circles[i].updateRadius(50);
+			}
+		});
+
+		function getWidth() {
+			return window.innerWidth / 20;
+		}
+	</script>
 
 </body>
 </html>

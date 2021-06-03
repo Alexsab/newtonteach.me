@@ -42,6 +42,43 @@
 
 	<!--#include virtual="/inc/footer.html" -->
 	<script src="js/app.min.js"></script>
+	<script src="js/circles.js"></script>
+
+	<script>
+		var colors = [
+		['#fff', '#85A5D9'], ['#FCE6A4', '#EFB917'], ['#BEE3F7', '#45AEEA'], ['#F8F9B6', '#D2D558'], ['#F4BCBF', '#D43A43']
+		],
+		circles = [];
+
+		var child = document.querySelectorAll('.circle');
+		child.forEach((item)=> {
+			var i = 1,
+			id = item.getAttribute('id'),
+			// id = child.getAttribute('id'),
+			percentage = 48,
+
+			circle2 = Circles.create({
+				id:         id,
+				value:      percentage,
+				radius:     85,
+				width:      10,
+				colors:     colors[i - 1]
+			});
+
+			circles.push(circle2);
+			//console.log(child.getAttribute('id'))
+		})
+
+		window.addEventListener('resize', function(e) {
+			for (var i = 0; i < circles.length; i++) {
+				circles[i].updateRadius(50);
+			}
+		});
+
+		function getWidth() {
+			return window.innerWidth / 20;
+		}
+	</script>
 
 </body>
 </html>

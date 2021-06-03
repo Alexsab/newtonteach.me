@@ -6,10 +6,10 @@
 
 import 'bootstrap';
 import {alert} from 'bootstrap/js/dist/alert';
-// import {Alert} from 'bootstrap'
+//import {Circles} from 'circles';
 
 // // Import vendor jQuery plugin example (not module)
-// require('~/app/libs/mmenu/dist/mmenu.js')
+// require('~/app/js/circles.js')
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -68,6 +68,25 @@ document.addEventListener('DOMContentLoaded', () => {
 			var startX = this.scrollLeft + event.pageX;
 			verScroll(startX);
 		});
-	} 
+	}
+
+	var colors = [
+	['#D3B6C6', '#4B253A'], ['#FCE6A4', '#EFB917'], ['#BEE3F7', '#45AEEA'], ['#F8F9B6', '#D2D558'], ['#F4BCBF', '#D43A43']
+	], circles = [];
+
+	// for (var i = 1; i <= 5; i++) {
+	// 	var child = document.getElementById('circles-' + i),
+	// 	percentage = 31.42 + (i * 9.84);
+
+	// 	circles.push(Circles.create({
+	// 		id:         child.id,
+	// 		value:		percentage,
+	// 		radius:     60,
+	// 		width:      10,
+	// 		colors:     colors[i - 1]
+	// 	}));
+	// } 
+
+	
 
 });
