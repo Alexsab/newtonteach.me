@@ -314,7 +314,7 @@
       isGreater       = newPercentage > oldPercentage;
 
       delta           += newPercentage % 1; //If new percentage is not an integer, we add the decimal part to the delta
-      steps           = Math.floor(Math.abs(newPercentage - oldPercentage) / delta);
+      steps           = Math.floor(newPercentage - oldPercentage / delta);
       stepDuration    = duration / steps;
 
 

@@ -322,171 +322,69 @@
 	<div class="card-body">
 		<div class="d-flex justify-content-between align-items-center mb-3">
 			<div class="d-flex align-items-center card-text-left">
-				<h4 class="card-title lh-1 mb-0 me-2">CANVAS</h4>
-				<span class="fz-16 lh-1">This week</span>
-			</div>
-			<a href="javascript:void(0)" class="fz-16 fw-600">See all</a>
-		</div>
-
-		<div class="d-flex">
-			<div class="circle" id="circles-1"></div>
-		</div>
-		<!-- /.d-flex -->
-	</div>
-</div>
-
-<div class="card progress-ring-list mb-3">
-	<div class="card-body">
-		<div class="d-flex justify-content-between align-items-center mb-3">
-			<div class="d-flex align-items-center card-text-left">
-				<h4 class="card-title lh-1 mb-0 me-2">SVG</h4>
+				<h4 class="card-title lh-1 mb-0 me-2">Total stats</h4>
 				<span class="fz-16 lh-1">This week</span>
 			</div>
 			<a href="javascript:void(0)" class="fz-16 fw-600">See all</a>
 		</div>
 
 		<div class="d-flex justify-content-between">
-
-			<div class="text-center progress-item">
-				<div class="progress-count">0</div>
-				<svg class="progress-ring" width="170" height="170" data-percent="48" data-full-percent="50">
-					<circle class="progress-ring-circle" stroke-width="12" cx="85" cy="85" r="79" fill="transparent" />
-				</svg>
+			<div class="progress-ring text-center">
+				<div class="circle" id="circles-1" data-value="48" data-max-value="50" data-color="#85A5D9" data-color-opacity="#E3EAF6" data-text="Hours"></div>
+				<span class="progress-ring-text d-block text-center fz-16 fw-normal mt-2">Learning Time</span>	
 			</div>
+			<!-- /.progress-ring -->
 
-			<div class="text-center progress-item">
-				<div class="progress-count">0</div>
-				<svg class="progress-ring" width="170" height="170" data-percent="5" data-full-percent="8">
-					<circle class="progress-ring-circle" stroke-width="12" cx="85" cy="85" r="79" fill="transparent" />
-				</svg>
+			<div class="progress-ring text-center">
+				<div class="circle" id="circles-2" data-value="24" data-max-value="30" data-color="#86D985" data-color-opacity="#E3F6E3"></div>
+				<span class="progress-ring-text d-block text-center fz-16 fw-normal mt-2">Homework Done</span>	
 			</div>
+			<!-- /.progress-ring -->
 
-			<div class="text-center progress-item">
-				<div class="progress-count">0</div>
-				<svg class="progress-ring" width="170" height="170" data-percent="25" data-full-percent="50">
-					<circle class="progress-ring-circle" stroke-width="12" cx="85" cy="85" r="79" fill="transparent" />
-				</svg>
+			<div class="progress-ring text-center">
+				<div class="circle" id="circles-3" data-value="8" data-max-value="8" data-color="#D785D9" data-color-opacity="#F6E3F6"></div>
+				<span class="progress-ring-text d-block text-center fz-16 fw-normal mt-2">Video Watched</span>	
 			</div>
+			<!-- /.progress-ring -->
 
-			<div class="text-center progress-item">
-				<div class="progress-count">0</div>
-				<svg class="progress-ring" width="170" height="170" data-percent="38" data-full-percent="50">
-					<circle class="progress-ring-circle" stroke-width="12" cx="85" cy="85" r="79" fill="transparent" />
-				</svg>
+			<div class="progress-ring text-center">
+				<div class="circle" id="circles-4" data-value="16" data-max-value="35" data-color="#9F85D9" data-color-opacity="#E9E3F6"></div>
+				<span class="progress-ring-text d-block text-center fz-16 fw-normal mt-2">Quizzes Done</span>	
 			</div>
+			<!-- /.progress-ring -->
 
-			<div class="text-center progress-item">
-				<div class="progress-count">0</div>
-				<svg class="progress-ring" width="170" height="170" data-percent="48" data-full-percent="100">
-					<circle class="progress-ring-circle" stroke-width="12" cx="85" cy="85" r="79" fill="transparent" />
-				</svg>
+			<div class="progress-ring text-center">
+				<div class="circle" id="circles-5" data-value="64" data-max-value="74" data-color="#85D3D9" data-color-opacity="#E3F5F6"></div>
+				<span class="progress-ring-text d-block text-center fz-16 fw-normal mt-2">Pages Read</span>	
 			</div>
-
+			<!-- /.progress-ring -->
 		</div>
-		<!-- /.row -->
-
+		<!-- /.d-flex -->
 	</div>
 </div>
 
 <style>
-.progress-item{
-	position: relative;
-}
-.progress-ring{
-	text-align: center;
-	display: flex;
-}
-.progress-count{
-	position: absolute;
-	width: 100%;
-	left: 0;
-	top: 50%;
-	transform: translateY(-50%);
-	font-size: 40px;
-}
-.progress-ring-circle{
-	transform-origin: center;
-	transform: rotate(90deg);
-	stroke: #85A5D9;
-}
+	.progress-ring .circle{
+		transform: rotate(180deg);
+	}
+	.progress-ring .circles-text{
+		transform: rotate(-180deg);
+		font-size: 40px !important;
+		font-weight: 600;
+		line-height: 1 !important;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.circle-desc{
+		font-size: 16px;
+		font-weight: 600;
+	}
+	.progress-ring-text{
+		color: #8D8D8D;
+	}
 </style>
-
-<script>
-	const progressItem = document.querySelectorAll('.progress-item');
-	const circle = document.querySelectorAll('.progress-ring-circle');
-	let progressWidth = Math.floor((document.querySelector('.progress-ring-list .card-body').offsetWidth - 48) / progressItem.length);
-
-	if (progressWidth > 170){
-		progressWidth = 170;
-	}
-
-	if (circle.length > 0) {
-
-		circle.forEach( item => {
-
-			widthSvgDetect(item, progressWidth)
-
-			let percent = parseInt(item.closest('.progress-item svg').getAttribute('data-percent')); //получаем проценты
-			let fullPercent = parseInt(item.closest('.progress-item svg').getAttribute('data-full-percent')); //макс число процентов
-			const progressCount = item.closest('.progress-item').firstChild.nextSibling; //progress-count куда вставляем счетчик
-			const radius = item.r.baseVal.value; //радиус
-			const circumference = 2 * Math.PI * radius; //длина окружности
-
-			//небольшая проверка
-			if (percent > fullPercent){
-				percent = fullPercent;
-			}
-
-			item.style.strokeDashoffset = circumference; // заливаем полностью окружность
-			item.style.strokeDasharray = `${circumference} ${circumference}`; // необъяснимо, но понятно)
-
-			num(progressCount, percent); //функция счетчика
-
-			setTimeout(function(){
-				item.style.transition = 'all 1s ease-in-out'; //время анимации
-				setProgress(item, percent, fullPercent, circumference); // функция прогресс-бара
-			}, 0)
-
-		})
-
-	}
-
-	// window.addEventListener('resize', ()=>{
-	// 	func
-	// });
-
-	//функция счетчика
-	function num(item, percent){
-		let i = 0;
-		let timerId = setInterval(function(){
-			item.innerHTML = i++;
-			if (i > percent) {
-				clearInterval(timerId);
-			}
-		}, 1000 / percent * 0.8);
-	}
-
-	// функция прогресс-бара
-	function setProgress(item, percent, fullPercent, circumference){
-		const offset = circumference - percent / fullPercent * circumference; //непонятная формула)
-		item.style.strokeDashoffset = offset; // устанавливаем заливку, равную проценту
-	}
-
-	function widthSvgDetect(item, itemWidth){
-		let stroke = item.getAttribute('stroke-width');
-		let c = Math.floor(itemWidth / 2);
-		let r = Math.floor((itemWidth / 2) - stroke) ;
-
-		item.closest('svg').setAttribute('width', itemWidth);
-		item.closest('svg').setAttribute('height', itemWidth);
-
-		item.setAttribute('cx', c);
-		item.setAttribute('cy', c);
-		item.setAttribute('r', r);
-
-	}
-
-</script>
 						<div class="card classes-card-list mb-3">
 	<div class="card-body pb-2">
 		<div class="d-flex justify-content-between align-items-center mb-3">
@@ -646,27 +544,35 @@
 	<script src="js/circles.js"></script>
 
 	<script>
-		var colors = [
-		['#fff', '#85A5D9'], ['#FCE6A4', '#EFB917'], ['#BEE3F7', '#45AEEA'], ['#F8F9B6', '#D2D558'], ['#F4BCBF', '#D43A43']
-		],
-		circles = [];
+		let circles = [];
 
-		var child = document.querySelectorAll('.circle');
+		let child = document.querySelectorAll('.circle');
 		child.forEach((item)=> {
-			var i = 1,
-			id = item.getAttribute('id'),
-			// id = child.getAttribute('id'),
-			percentage = 48,
 
-			circle2 = Circles.create({
+			let text = item.getAttribute('data-text');
+
+			text ? text = `<span class="circle-desc d-block">${text}</span>`: text = '';
+
+			let i = 1,
+			id = item.getAttribute('id'),
+			percentage = item.getAttribute('data-value'),
+			maxValue = item.getAttribute('data-max-value'),
+			color = item.getAttribute('data-color'),
+			colorOpacity = item.getAttribute('data-color-opacity'),
+			
+
+			circle = Circles.create({
 				id:         id,
 				value:      percentage,
+				maxValue:   maxValue,
+				duration:   1000,
+				text:       function(value){return '<span style="color: '+color+'">' + Math.floor(value) + text +'</span>';},
 				radius:     85,
-				width:      10,
-				colors:     colors[i - 1]
+				width:      12,
+				colors:     [colorOpacity, color]
 			});
 
-			circles.push(circle2);
+			circles.push(circle);
 			//console.log(child.getAttribute('id'))
 		})
 

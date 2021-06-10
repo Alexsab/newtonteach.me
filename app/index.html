@@ -45,27 +45,35 @@
 	<script src="js/circles.js"></script>
 
 	<script>
-		var colors = [
-		['#fff', '#85A5D9'], ['#FCE6A4', '#EFB917'], ['#BEE3F7', '#45AEEA'], ['#F8F9B6', '#D2D558'], ['#F4BCBF', '#D43A43']
-		],
-		circles = [];
+		let circles = [];
 
-		var child = document.querySelectorAll('.circle');
+		let child = document.querySelectorAll('.circle');
 		child.forEach((item)=> {
-			var i = 1,
-			id = item.getAttribute('id'),
-			// id = child.getAttribute('id'),
-			percentage = 48,
 
-			circle2 = Circles.create({
+			let text = item.getAttribute('data-text');
+
+			text ? text = `<span class="circle-desc d-block">${text}</span>`: text = '';
+
+			let i = 1,
+			id = item.getAttribute('id'),
+			percentage = item.getAttribute('data-value'),
+			maxValue = item.getAttribute('data-max-value'),
+			color = item.getAttribute('data-color'),
+			colorOpacity = item.getAttribute('data-color-opacity'),
+			
+
+			circle = Circles.create({
 				id:         id,
 				value:      percentage,
+				maxValue:   maxValue,
+				duration:   1000,
+				text:       function(value){return '<span style="color: '+color+'">' + Math.floor(value) + text +'</span>';},
 				radius:     85,
-				width:      10,
-				colors:     colors[i - 1]
+				width:      12,
+				colors:     [colorOpacity, color]
 			});
 
-			circles.push(circle2);
+			circles.push(circle);
 			//console.log(child.getAttribute('id'))
 		})
 
