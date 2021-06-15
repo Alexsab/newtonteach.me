@@ -6,18 +6,9 @@
 .fz-16
 	font-size: 0.6667rem
 
-
 .size-32
 	width: 32px
 	height: 32px
-
-.size-64
-	width: 64px
-	height: 64px
-
-.w-24
-	width: 24%
-
 
 .wrapper
 	overflow-x: auto
@@ -27,20 +18,18 @@
 	height: 100%
 
 .content
-	max-width: 1465px
-	min-width: 1112px
+	max-width: calc(409px + 44*1rem)
+	min-width: 1114px
 	width: 100%
 	height: 100%
 	margin: 1rem auto
 	position: relative
-	.container-fluid
-		padding: 3% 15px
 	.container, .container-md, .container-sm
 		max-width: 100%
 
 .card
 	border: none
-	border-radius: 14px
+	border-radius: .75rem
 	color: $primary_light
 
 .custom-card-title
@@ -79,12 +68,11 @@ a.primary-light
 	transform: translateX(-50%)
 	z-index: 1000
 
-img.pos-abs
 	opacity: 0
 	&.active
-		opacity: 50%;
+		opacity: 50%
 
-.example
+.grid
 	height: 100%
 	.row
 		height: 100%
@@ -92,4 +80,13 @@ img.pos-abs
 			height: 100%
 			.smth
 				height: 100%
-				background-color: #ff000008
+				background-color: #ff000010
+
+img.screenshot
+	margin-left: $sidebarSize/2
+
+.bd-example-row .row>.col, .bd-example-row .row>[class^="col-"]
+	padding-top: 1rem
+	padding-bottom: .1rem
+	background-color: rgba(39,41,43,0.03)
+	border: 1px solid rgba(39,41,43,0.1)
