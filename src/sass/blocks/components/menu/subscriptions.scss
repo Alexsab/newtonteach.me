@@ -1,0 +1,53 @@
+.menu-link-with-border{
+	border: 2px solid transparent;
+	transition: all .2s ease;
+	position: relative;
+	&:hover, &.active{
+		border-color: $primary_light;
+	}
+}
+
+.menu-arrows .menu-link-with-icon:after{
+	right: 16px;
+	font-size: 24px;
+}
+
+.menu-link-with-icon img{
+	flex: 0 0 56px;
+	height: 100%;
+	object-fit: cover;
+	padding: 0;
+	border-radius: 12px;
+	overflow: hidden;
+}
+
+.link-text{
+	flex: 1 0 0%;
+}
+
+.link-text h5{
+	font-size: 16px;
+	font-weight: normal;
+}
+
+.link-text p{
+	font-size: 12px;
+	margin-bottom: 0;
+}
+
+.option-card-item{
+	position: relative;
+	cursor: pointer;
+	.total-date{
+		display: none;
+	}
+	&.bought{
+		background-image: url(../images/dist/icons/check-blue.svg);
+		background-repeat: no-repeat;
+		background-size: 15px;
+		background-position: right center;
+		.total-date{
+			display: block;
+		}
+	}
+}

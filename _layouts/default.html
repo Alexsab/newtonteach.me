@@ -5,20 +5,28 @@
 
 <body>
 
+	<!-- {%- include image.html -%} -->
+
 	{%- include header.html -%}
 
 	{%- include sidebar.html -%}
 
-	<main{% if page.class %} class="{{page.class}}"{% endif %}>
+	<div class="wrapper">
 		<div class="content">
 
+			{%- include grid.html -%}
+
 			{{ content }}
+
 		</div>
-	</main>
+		<!-- /.content -->
+	</div>
+	<!-- /.wrapper -->
+
 
 	{%- include footer.html -%}
 
-	<script src="{{ 'js/scripts.min.js' | relative_url }}"></script>
+	<script src="{{ 'js/app.js' | relative_url }}"></script>
 
 	<!-- edit: alexsab.ru -->
 

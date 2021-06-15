@@ -1,179 +1,107 @@
-<aside class="sidebar" id="sidebar">
+<aside class="sidebar fixed-top text-white" id="sidebar">
 
-	<button class="sidebar-btn"><span></span><span></span><span></span></button>
-
-	<div class="user">
-		<div class="user__photo">
-			<img src="{{ 'img/user.png' | relative_url }}" alt="User">
+	<div class="sidebar-btn sidebar-link d-flex align-items-center">
+		<div class="sidebar-link__icon">
+			<img src="images/dist/icons/menu.svg" alt="">
 		</div>
-		<!-- /.user__photo -->
-		<div class="user__info">
-			<span class="user__name">Jesica Born</span>
-			<span class="user__pos">Student</span>
-		</div>
-		<!-- /.user__info -->
+		<!-- /.sidebar-link__icon -->
+		<span class="sidebar-link__text fw-600">Menu</span>
 	</div>
-	<!-- /.user -->
+	<!-- /.sidebar-btn -->
 
-	<hr>
+	<a href="javascript:void(0)" class="sidebar-link user-link d-flex flex-nowrap align-items-center text-white">
+		<div class="custom-card-img sidebar-link__icon">
+			<img src="images/dist/user.png" alt="">
+		</div>
+		<div class="user-info sidebar-link__text">
+			<h4 class="card-title mb-1">Jessica McCaffrey</h4>
+			<p class="card-text"><small>5th Grade Student</small></p>
+		</div>
+	</a>
 
-	<nav class="user__menu">
-		<ul>
-			<span class="user__menu--row">
-				<li>
-					<a href="javascript:void(0)">
-						<span class="user__menu-icon">
-							<img src="{{ 'img/icons/ic_laptop_mac_24px.svg' | relative_url }}" alt="Classwork">
-						</span>
-						<!-- /.user__menu-icon -->							
-						<span class="user__menu-title">Classwork</span>
-					</a>
-				</li>
-				<li>
-					<a href="javascript:void(0)">
-						<span class="user__menu-icon">
-							<img src="{{ 'img/icons/ic_local_library_24px.svg' | relative_url }}" alt="Knowledge">
-						</span>
-						<!-- /.user__menu-icon -->							
-						<span class="user__menu-title">Knowledge</span>
-					</a>
-				</li>
-				<li>
-					<a href="javascript:void(0)">
-						<span class="user__menu-icon">
-							<img src="{{ 'img/icons/ic_home_24px.svg' | relative_url }}" alt="Home">
-						</span>
-						<!-- /.user__menu-icon -->							
-						<span class="user__menu-title">Home</span>
-					</a>
-				</li>
+	<div class="sidebar-menu">
+
+		<a class="sidebar-link d-flex align-items-center text-white">
+			<span class="sidebar-link__icon">
+				<img src="images/dist/icons/diary.svg" alt="">
 			</span>
-			<!-- /.user__menu--row -->
-
-			<li>
-				<a href="javascript:void(0)">
-					<span class="user__menu-icon">
-						<img src="{{ 'img/icons/ic_assessment_24px.svg' | relative_url }}" alt="Statistics">
-					</span>
-					<!-- /.user__menu-icon -->							
-					<span class="user__menu-title">Statistics</span>
-				</a>
-			</li>
-
-			<li>
-				<a href="javascript:void(0)">
-					<span class="user__menu-icon">
-						<img src="{{ 'img/icons/ic_insert_invitation_24px.svg' | relative_url }}" alt="Schedule">
-					</span>
-					<!-- /.user__menu-icon -->							
-					<span class="user__menu-title">Schedule</span>
-				</a>
-			</li>
-
-			<li>
-				<a href="/newtonteach.me/video-classes/">
-					<span class="user__menu-icon">
-						<img src="{{ 'img/icons/ic_video_library_24px.svg' | relative_url }}" alt="Video Classes">
-					</span>
-					<!-- /.user__menu-icon -->							
-					<span class="user__menu-title">Video Classes</span>
-				</a>
-			</li>
-
-			<li>
-				<a href="/newtonteach.me/quizess/">
-					<span class="user__menu-icon">
-						<img src="{{ 'img/icons/ic_spellcheck_24px.svg' | relative_url }}" alt="My Quizzes">
-					</span>
-					<!-- /.user__menu-icon -->							
-					<span class="user__menu-title">My Quizzes</span>
-				</a>
-			</li>
-
-			<li>
-				<a href="javascript:void(0)">
-					<span class="user__menu-icon">
-						<img src="{{ 'img/icons/ic_book_24px.svg' | relative_url }}" alt="My Books">
-					</span>
-					<!-- /.user__menu-icon -->							
-					<span class="user__menu-title">My Books</span>
-				</a>
-			</li>
-
-			<li>
-				<a href="javascript:void(0)">
-					<span class="user__menu-icon">
-						<img src="{{ 'img/icons/ic_account_box_24px.svg' | relative_url }}" alt="Tutors">
-					</span>
-					<!-- /.user__menu-icon -->							
-					<span class="user__menu-title">Tutors</span>
-				</a>
-			</li>
-			
-			<li>
-				<a href="javascript:void(0)">
-					<span class="user__menu-icon">
-						<img src="{{ 'img/icons/ic_forum_24px.svg' | relative_url }}" alt="Messages">
-					</span>
-					<!-- /.user__menu-icon -->							
-					<span class="user__menu-title">Messages</span>
-				</a>
-			</li>
-
-			<li>
-				<a href="javascript:void(0)">
-					<span class="user__menu-icon">
-						<img src="{{ 'img/icons/ic_school_24px.svg' | relative_url }}" alt="Homework">
-					</span>
-					<!-- /.user__menu-icon -->							
-					<span class="user__menu-title">Homework</span>
-				</a>
-			</li>
-
-			<li>
-				<a href="javascript:void(0)">
-					<span class="user__menu-icon">
-						<img src="{{ 'img/icons/ic_account_balance_24px.svg' | relative_url }}" alt="School">
-					</span>
-					<!-- /.user__menu-icon -->							
-					<span class="user__menu-title">School</span>
-				</a>
-			</li>
-
-			<hr>
-
-			<li>
-				<a href="javascript:void(0)">
-					<span class="user__menu-icon">
-						<img src="{{ 'img/icons/ic_settings_24px.svg' | relative_url }}" alt="Settings">
-					</span>
-					<!-- /.user__menu-icon -->							
-					<span class="user__menu-title">Settings</span>
-				</a>
-			</li>
-
-			<li>
-				<a href="javascript:void(0)">
-					<span class="user__menu-icon">
-						<img src="{{ 'img/icons/help-icon.svg' | relative_url }}" alt="Help">
-					</span>
-					<!-- /.user__menu-icon -->							
-					<span class="user__menu-title">Help</span>
-				</a>
-			</li>
-
-		</ul>
-	</nav>
-	<!-- /.user__menu -->
-
-	<div class="sidebar-footer">
-		<a href="javascript:void(0)" class="btn btn-white">Invite To Newton</a>
-		<a href="/" class="sidebar-logo">
-			<img src="{{ 'img/logo-white.svg' | relative_url }}" alt="Newton">
-			<img src="{{ 'img/logo-circle.svg' | relative_url }}" alt="Newton">
+			<!-- /.sidebar-link__icon -->
+			<span class="sidebar-link__text">Diary</span>
 		</a>
+		<a class="sidebar-link d-flex align-items-center text-white">
+			<span class="sidebar-link__icon">
+				<img src="images/dist/icons/statistics.svg" alt="">
+			</span>
+			<!-- /.sidebar-link__icon -->
+			<span class="sidebar-link__text">Statistics</span>
+		</a>
+		<a class="sidebar-link d-flex align-items-center text-white">
+			<span class="sidebar-link__icon">
+				<img src="images/dist/icons/book-opened-filled-reading-tool.svg" alt="">
+			</span>
+			<!-- /.sidebar-link__icon -->
+			<span class="sidebar-link__text">Homework</span>
+		</a>
+		<a class="sidebar-link d-flex align-items-center text-white">
+			<span class="sidebar-link__icon">
+				<img src="images/dist/icons/speech-bubble.svg" alt="">
+			</span>
+			<!-- /.sidebar-link__icon -->
+			<span class="sidebar-link__text">Messages</span>
+		</a>
+		<a class="sidebar-link d-flex align-items-center text-white">
+			<span class="sidebar-link__icon">
+				<img src="images/dist/icons/folder.svg" alt="">
+			</span>
+			<!-- /.sidebar-link__icon -->
+			<span class="sidebar-link__text">Materials</span>
+		</a>
+		<a class="sidebar-link d-flex align-items-center text-white">
+			<span class="sidebar-link__icon">
+				<img src="images/dist/icons/calendar.svg" alt="">
+			</span>
+			<!-- /.sidebar-link__icon -->
+			<span class="sidebar-link__text">Schedule</span>
+		</a>
+		<a class="sidebar-link d-flex align-items-center text-white">
+			<span class="sidebar-link__icon">
+				<img src="images/dist/icons/tutors.svg" alt="">
+			</span>
+			<!-- /.sidebar-link__icon -->
+			<span class="sidebar-link__text">Tutors</span>
+		</a>
+
+		<div class="sidebar-menu__bottom">
+			<a href="pages/settings/" class="sidebar-link d-flex align-items-center text-white">
+				<span class="sidebar-link__icon">
+					<img src="images/dist/icons/settings.svg" alt="">
+				</span>
+				<!-- /.sidebar-link__icon -->
+				<span class="sidebar-link__text">Settings</span>
+			</a>
+			<a class="sidebar-link d-flex align-items-center text-white">
+				<span class="sidebar-link__icon">
+					<img src="images/dist/icons/question-mark.svg" alt="">
+				</span>
+				<!-- /.sidebar-link__icon -->
+				<span class="sidebar-link__text">Help</span>
+			</a>
+			<a class="sidebar-link d-flex align-items-center text-white">
+				<span class="sidebar-link__icon">
+					<img src="images/dist/icons/heart.svg" alt="">
+				</span>
+				<!-- /.sidebar-link__icon -->
+				<span class="sidebar-link__text">Invite friends</span>
+			</a>
+		</div>
+		<!-- /.sidebar-menu__bottom -->
+
+		<a href="javascript:void(0)" class="sidebar-logo">
+			<img src="images/dist/logo-white.svg" alt="" class="sidebar-open">
+			<img src="images/dist/logo-circle.svg" alt="" class="sidebar-close size-32">
+		</a>
+		<!-- /.sidebar-logo -->
+
 	</div>
-	<!-- /.sidebar-footer -->
-	
+
 </aside>
-<!-- /#sidebar.sidebar -->

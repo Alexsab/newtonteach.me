@@ -1,6 +1,6 @@
 // VARIABLES & PATHS
 let preprocessor = 'sass', // Preprocessor (sass, scss, less, styl)
-    fileswatch   = 'html,htm,txt,json,md,woff2,php', // List of files extensions for watching & hard reload (comma separated)
+    fileswatch   = 'html,htm,txt,json,md,woff2,php,markdown', // List of files extensions for watching & hard reload (comma separated)
     pageversion  = 'html,htm,php', // List of files extensions for watching change version files (comma separated)
     imageswatch  = 'jpg,jpeg,png,webp,svg', // List of images extensions for watching & compression (comma separated)
     online       = true, // If «false» - Browsersync will work offline without internet connection
@@ -13,6 +13,12 @@ let preprocessor = 'sass', // Preprocessor (sass, scss, less, styl)
 
 const { src, dest, parallel, series, watch, task } = require('gulp'),
 	sass           = require('gulp-sass'),
+	sassglob       = require('gulp-sass-glob'),
+	less           = require('gulp-less'),
+	lessglob       = require('gulp-less-glob'),
+	styl           = require('gulp-stylus'),
+	stylglob       = require("gulp-noop"),
+	sourcemaps     = require('gulp-sourcemaps'),
 	cleancss       = require('gulp-clean-css'),
 	concat         = require('gulp-concat'),
 	browserSync    = require('browser-sync').create(),
@@ -51,20 +57,20 @@ projects.newtonteach_ui = {
 	dest: basename,
 
 	styles: {
-		src:	basename + '/' + preprocessor + '/styles.'+preprocessor,
-		watch:    basename + '/' + preprocessor + '/**/*.'+preprocessor,
+		src:	basename + '/src/' + preprocessor + '/main.'+preprocessor,
+		watch:    basename + '/src/' + preprocessor + '/**/*.'+preprocessor,
 		dest:   basename + '/css',
-		output: 'styles.css',
+		output: 'main.min.css',
 	},
 
 	scripts: {
 		src: [
-			'../node_modules/jquery/dist/jquery.min.js',
-			'../node_modules/slick-carousel/slick/slick.js',
-			basename + '/js/common.js', // Custom scripts. Always at the end
+			// '../node_modules/jquery/dist/jquery.min.js',
+			// '../node_modules/slick-carousel/slick/slick.js',
+			basename + '/src/js/common.js', // Custom scripts. Always at the end
 		],
 		dest:       basename + '/js',
-		output:     'scripts.min.js',
+		output:     'app.min.js',
 	},
 
 	code: {
@@ -74,20 +80,20 @@ projects.newtonteach_ui = {
 	},
 
 	styles_jekyll: {
-		src:	'src/' + preprocessor + '/styles.'+preprocessor,
-		watch:    'src/' + preprocessor + '/**/*.'+preprocessor,
+		src:	'src/' + preprocessor + '/main.'+preprocessor,
+		watch:    'src/' + preprocessor + '/**/*',
 		dest:   'css',
-		output: 'styles.css',
+		output: 'main.min.css',
 	},
 
 	scripts_jekyll: {
 		src: [
-			'../node_modules/jquery/dist/jquery.min.js',
-			'../node_modules/slick-carousel/slick/slick.js',
-			'src/js/common.js', // Custom scripts. Always at the end
+			// '../node_modules/jquery/dist/jquery.min.js',
+			// '../node_modules/slick-carousel/slick/slick.js',
+			'src/js/app.js', // Custom scripts. Always at the end
 		],
 		dest:       'js',
-		output:     'scripts.min.js',
+		output:     'app.min.js',
 	},
 
 	code_jekyll: {
@@ -126,10 +132,13 @@ function newtonteach_ui_browsersync() {
 // Custom Styles
 function newtonteach_ui_styles() {
 	return src(projects.newtonteach_ui.styles.src)
+	.pipe(eval(`${preprocessor}glob`)())
 	.pipe(eval(preprocessor)({ outputStyle: 'expanded' }).on("error", notify.onError()))
-	.pipe(concat(projects.newtonteach_ui.styles.output))
+	// .pipe(concat(projects.newtonteach_ui.styles.output))
 	.pipe(autoprefixer({ grid: true, overrideBrowserslist: ['last 10 versions'] }))
+	.pipe(dest(projects.newtonteach_ui.styles.dest))
 	.pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Optional. Comment out when debugging
+	.pipe(rename({ suffix: ".min" }))
 	.pipe(dest(projects.newtonteach_ui.styles.dest))
 	.pipe(browserSync.stream())
 
@@ -138,9 +147,11 @@ function newtonteach_ui_styles() {
 // Scripts & JS Libraries
 function newtonteach_ui_scripts() {
 	return src(projects.newtonteach_ui.scripts.src)
-	.pipe(concat(projects.newtonteach_ui.scripts.output))
+	// .pipe(concat(projects.newtonteach_ui.scripts.output))
+	.pipe(dest(projects.newtonteach_ui.scripts.dest))
 	.pipe(uglify()) // Minify js (opt.)
 	.pipe(header(projects.newtonteach_ui.forProd))
+	.pipe(rename({ suffix: ".min" }))
 	.pipe(dest(projects.newtonteach_ui.scripts.dest))
 	.pipe(browserSync.stream())
 };
@@ -165,10 +176,15 @@ function newtonteach_ui_browsersync_jekyll() {
 // Custom Styles
 function newtonteach_ui_styles_jekyll() {
 	return src(projects.newtonteach_ui.styles_jekyll.src)
+	.pipe(sourcemaps.init())
+	.pipe(eval(`${preprocessor}glob`)())
 	.pipe(eval(preprocessor)({ outputStyle: 'expanded' }).on("error", notify.onError()))
-	.pipe(concat(projects.newtonteach_ui.styles_jekyll.output))
+	// .pipe(concat(projects.newtonteach_ui.styles_jekyll.output))
 	.pipe(autoprefixer({ grid: true, overrideBrowserslist: ['last 10 versions'] }))
-	.pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Optional. Comment out when debugging
+	.pipe(dest(projects.newtonteach_ui.styles_jekyll.dest))
+	.pipe(cleancss({ level: { 1: { specialComments: 0 } },/* format: 'beautify' */ })) // Optional. Comment out when debugging
+	.pipe(sourcemaps.write())
+	.pipe(rename({ suffix: ".min" }))
 	.pipe(dest(projects.newtonteach_ui.styles_jekyll.dest))
 	.pipe(browserSync.stream())
 
@@ -177,9 +193,11 @@ function newtonteach_ui_styles_jekyll() {
 // Scripts & JS Libraries
 function newtonteach_ui_scripts_jekyll() {
 	return src(projects.newtonteach_ui.scripts_jekyll.src)
-	.pipe(concat(projects.newtonteach_ui.scripts.output))
+	// .pipe(concat(projects.newtonteach_ui.scripts.output))
+	.pipe(dest(projects.newtonteach_ui.scripts_jekyll.dest))
 	.pipe(uglify()) // Minify js (opt.)
 	.pipe(header(projects.newtonteach_ui.forProd))
+	.pipe(rename({ suffix: ".min" }))
 	.pipe(dest(projects.newtonteach_ui.scripts_jekyll.dest))
 	.pipe(browserSync.stream())
 };
@@ -220,8 +238,8 @@ function newtonteach_ui_run_jekyll(callback) {
 	return build;
 }
 
-exports.newtonteach_ui_jekyll = parallel(newtonteach_ui_styles_jekyll, newtonteach_ui_scripts_jekyll, newtonteach_ui_browsersync, newtonteach_ui_watch_jekyll);
-exports.newtonteach_ui_run_jekyll = parallel(newtonteach_ui_cd_jekyll, newtonteach_ui_styles_jekyll, newtonteach_ui_scripts_jekyll, newtonteach_ui_run_jekyll, newtonteach_ui_browsersync_jekyll, newtonteach_ui_watch_jekyll);
+exports.newtonteach_ui_jekyll_with_build = parallel(newtonteach_ui_cd_jekyll, newtonteach_ui_styles_jekyll, newtonteach_ui_scripts_jekyll, newtonteach_ui_run_jekyll, newtonteach_ui_browsersync_jekyll, newtonteach_ui_watch_jekyll);
+exports.newtonteach_ui_just_jekyll = parallel(newtonteach_ui_styles_jekyll, newtonteach_ui_scripts_jekyll, newtonteach_ui_browsersync, newtonteach_ui_watch_jekyll);
 exports.newtonteach_ui = parallel(newtonteach_ui_styles, newtonteach_ui_scripts, newtonteach_ui_browsersync, newtonteach_ui_watch);
 
 

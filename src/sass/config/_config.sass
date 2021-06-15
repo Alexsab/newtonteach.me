@@ -1,0 +1,63 @@
+@import libs
+@import mixins
+@import colors
+@import sizes
+@import vars
+@import fonts
+@import classes
+
+
+$textcolor: $primary_light
+$userfont: 'SF Pro Display', sans-serif
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif
+
+// GENERAL DOCUMENT STYLES
+
+html
+	font-size: 24px
+	@media (max-width: 1600px)
+		font-size: 22px
+	@media (max-width: 1440px)
+		font-size: 20px
+::placeholder
+	color: $color_primary_darker
+
+::selection
+	background-color: $primary_lighter
+	color: $color_primary_lightest
+
+// На время разработки
+a
+	text-decoration: none
+	opacity: 0.5
+	font-family: $userfont
+	color: $primary_light
+	&:hover, &:focus
+		color: $primary_lighter
+
+
+a[href]
+	opacity: 1
+
+button
+	font-family: $userfont
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: $color_danger_dark
+	&:required:valid
+		border-color: $color_success_dark
+
+body
+	font-family: $userfont
+	font-size: 100%
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position:relative
+	overflow-x: hidden
+	background-color: $backgrount_light
+
+.row
+	--bs-gutter-x: 1rem !important
