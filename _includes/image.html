@@ -1,1 +1,33 @@
-<img src="/newtonteach.me/images/dist/home-1440.png" alt="example" class="screenshot pos-abs">
+<style>
+.shower {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	z-index: 2000;
+	background-color: #FFFFFF99;
+	padding: 10px;
+	border-radius: 1rem;
+	opacity: 0.1;
+}
+.shower:hover {
+	opacity: 1;
+}
+
+.showEl.active:before {
+	content: "👁";
+}
+</style>
+<div class="shower">
+	<div>Show:</div>
+	<div><a href="javascript:void(0)" class="showEl" data-el="grid">grid</a></div>
+	<div><a href="javascript:void(0)" class="showEl" data-el="home-1440">home-1440</a></div>
+	<div><a href="javascript:void(0)" class="showEl" data-el="home-1920">home-1920</a></div>
+	<div><a href="javascript:void(0)" class="showEl" data-el="sidebar-1440-close">sidebar-1440-close</a></div>
+	<div><a href="javascript:void(0)" class="showEl" data-el="sidebar-1440-open">sidebar-1440-open</a></div>
+</div>
+<!-- /.shower -->
+
+<img src="/newtonteach.me/images/dist/figma/home-1440.png" alt="example" class="screenshot pos-abs home-1440">
+<img src="/newtonteach.me/images/dist/figma/home-1920.png" alt="example" class="screenshot pos-abs home-1920">
+<img src="/newtonteach.me/images/dist/figma/sidebar-1440-close.png" alt="example" class="screenshot pos-abs sidebar-1440-close">
+<img src="/newtonteach.me/images/dist/figma/sidebar-1440-open.png" alt="example" class="screenshot pos-abs sidebar-1440-open">

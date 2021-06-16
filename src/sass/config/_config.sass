@@ -13,21 +13,6 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif
 
 // GENERAL DOCUMENT STYLES
 
-// html
-// 	font-size: 24px
-// 	@media (max-width: 1919px)
-// 		font-size: calc(24px-1vw)
-// 	@media (max-width: 1440px)
-// 		font-size: 16px
-
-/* Single property */
-html
-	@include interpolate(font-size, 1440px, 1920px, 16px, 24px)
-
-/* Multiple properties with same values */
-// h1,h2,h3,h4,h5
-	// @include interpolate((padding-top, padding-bottom), 20rem, 70rem, 0rem, .5rem);
-
 ::placeholder
 	color: $color_primary_darker
 

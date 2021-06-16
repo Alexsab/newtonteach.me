@@ -68,8 +68,10 @@ a.primary-light
 	z-index: 1000
 
 	opacity: 0
+	display: none
 	&.active
 		opacity: 50%
+		display: block
 
 .grid
 	height: 100%
@@ -81,8 +83,14 @@ a.primary-light
 				height: 100%
 				background-color: #ff000010
 
-img.screenshot
-	margin-left: $sidebarSize/2
+img.screenshot.home-1440
+	margin-left: 30px
+img.screenshot.home-1920
+	margin-left: 30px
+img.screenshot.sidebar-1440-close
+	left: 90px
+img.screenshot.sidebar-1440-open
+	left: 240px
 
 .blocks.active .row>.col, .blocks.active .row>[class^="col-"]
 	background-color: rgba(39,41,43,0.03)

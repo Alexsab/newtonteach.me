@@ -7,14 +7,26 @@
 	d.querySelector('.sidebar-btn').addEventListener("click", function(el) {
 		this.parentNode.classList.toggle('active');
 	})
-	d.querySelector('.sidebar .help').addEventListener("click", function(el) {
-		d.querySelector('.grid').classList.toggle('active');
-		d.querySelector('.blocks').classList.toggle('active');
-	})
-	d.querySelector('.sidebar .invite').addEventListener("click", function(el) {
-		d.querySelector('img.screenshot').classList.toggle('active');
-	})
 
+	d.querySelectorAll('.showEl').forEach(function(el) {
+		el.addEventListener("click", function(elel) {
+			el.classList.toggle('active');
+			var what = el.dataset.el;
+			switch(what) {
+				case "grid":
+					d.querySelector('.grid').classList.toggle('active');
+					d.querySelector('.blocks').classList.toggle('active');
+					break;
+				default:
+					active("."+what);
+			}
+		});
+	});
+	function active(selector) {
+		d.querySelectorAll(selector).forEach(function(el) {
+			el.classList.toggle('active');
+		})
+	}
 	function calcSizes() {
 		d.querySelectorAll('.size').forEach(function(el){
 			el.innerText = "size: "+el.parentNode.offsetWidth+"x"+el.parentNode.offsetHeight;

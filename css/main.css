@@ -11553,6 +11553,24 @@ fieldset:disabled .btn {
   }
 }
 
+/* Single property */
+html {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 1440px) {
+  html {
+    font-size: calc(1.66667vw - 8px);
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  html {
+    font-size: 24px;
+  }
+}
+
+/* Multiple properties with same values */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-weight: 700;
 }
@@ -11700,10 +11718,12 @@ a.primary-light:hover, a.primary-light:focus {
           transform: translateX(-50%);
   z-index: 1000;
   opacity: 0;
+  display: none;
 }
 
 .pos-abs.active {
   opacity: 50%;
+  display: block;
 }
 
 .grid {
@@ -11723,8 +11743,20 @@ a.primary-light:hover, a.primary-light:focus {
   background-color: #ff000010;
 }
 
-img.screenshot {
+img.screenshot.home-1440 {
   margin-left: 30px;
+}
+
+img.screenshot.home-1920 {
+  margin-left: 30px;
+}
+
+img.screenshot.sidebar-1440-close {
+  left: 90px;
+}
+
+img.screenshot.sidebar-1440-open {
+  left: 240px;
 }
 
 .blocks.active .row > .col, .blocks.active .row > [class^="col-"] {
@@ -11732,36 +11764,22 @@ img.screenshot {
   border: 1px solid rgba(39, 41, 43, 0.1);
 }
 
-/* Single property */
-html {
-  font-size: 16px;
-}
-
-@media screen and (min-width: 1440px) {
-  html {
-    font-size: calc(1.66667vw - 8px);
-  }
-}
-
-@media screen and (min-width: 1920px) {
-  html {
-    font-size: 24px;
-  }
-}
-
-/* Multiple properties with same values */
 ::-webkit-input-placeholder {
   color: rgba(115, 115, 115, 0.64);
 }
+
 ::-moz-placeholder {
   color: rgba(115, 115, 115, 0.64);
 }
+
 :-ms-input-placeholder {
   color: rgba(115, 115, 115, 0.64);
 }
+
 ::-ms-input-placeholder {
   color: rgba(115, 115, 115, 0.64);
 }
+
 ::placeholder {
   color: rgba(115, 115, 115, 0.64);
 }
