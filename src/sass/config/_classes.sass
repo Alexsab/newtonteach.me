@@ -1,11 +1,3 @@
-.fw-600
-	font-weight: 600
-
-.fz-12
-	font-size: 12px
-.fz-16
-	font-size: 0.6667rem
-
 .size-32
 	width: 32px
 	height: 32px
@@ -26,6 +18,13 @@
 	position: relative
 	.container, .container-md, .container-sm
 		max-width: 100%
+
+.blocks
+	margin-top: 68px
+	.row
+		// padding-top: 1rem
+		padding-bottom: 1rem
+
 
 .card
 	border: none
@@ -85,8 +84,6 @@ a.primary-light
 img.screenshot
 	margin-left: $sidebarSize/2
 
-.bd-example-row .row>.col, .bd-example-row .row>[class^="col-"]
-	padding-top: 1rem
-	padding-bottom: .1rem
+.blocks.active .row>.col, .blocks.active .row>[class^="col-"]
 	background-color: rgba(39,41,43,0.03)
 	border: 1px solid rgba(39,41,43,0.1)

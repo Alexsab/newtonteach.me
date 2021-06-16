@@ -9,6 +9,7 @@
 	})
 	d.querySelector('.sidebar .help').addEventListener("click", function(el) {
 		d.querySelector('.grid').classList.toggle('active');
+		d.querySelector('.blocks').classList.toggle('active');
 	})
 	d.querySelector('.sidebar .invite').addEventListener("click", function(el) {
 		d.querySelector('img.screenshot').classList.toggle('active');

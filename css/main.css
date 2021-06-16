@@ -11613,18 +11613,6 @@ h6, .h6 {
   src: url("../fonts/SFProDisplay-Bold.woff2") format("woff2");
 }
 
-.fw-600 {
-  font-weight: 600;
-}
-
-.fz-12 {
-  font-size: 12px;
-}
-
-.fz-16 {
-  font-size: 0.6667rem;
-}
-
 .size-32 {
   width: 32px;
   height: 32px;
@@ -11649,6 +11637,14 @@ h6, .h6 {
 
 .content .container, .content .container-md, .content .container-sm {
   max-width: 100%;
+}
+
+.blocks {
+  margin-top: 68px;
+}
+
+.blocks .row {
+  padding-bottom: 1rem;
 }
 
 .card {
@@ -11731,45 +11727,41 @@ img.screenshot {
   margin-left: 30px;
 }
 
-.bd-example-row .row > .col, .bd-example-row .row > [class^="col-"] {
-  padding-top: 1rem;
-  padding-bottom: .1rem;
+.blocks.active .row > .col, .blocks.active .row > [class^="col-"] {
   background-color: rgba(39, 41, 43, 0.03);
   border: 1px solid rgba(39, 41, 43, 0.1);
 }
 
+/* Single property */
 html {
-  font-size: 24px;
+  font-size: 16px;
 }
 
-@media (max-width: 1600px) {
+@media screen and (min-width: 1440px) {
   html {
-    font-size: 20px;
+    font-size: calc(1.66667vw - 8px);
   }
 }
 
-@media (max-width: 1440px) {
+@media screen and (min-width: 1920px) {
   html {
-    font-size: 16px;
+    font-size: 24px;
   }
 }
 
+/* Multiple properties with same values */
 ::-webkit-input-placeholder {
   color: rgba(115, 115, 115, 0.64);
 }
-
 ::-moz-placeholder {
   color: rgba(115, 115, 115, 0.64);
 }
-
 :-ms-input-placeholder {
   color: rgba(115, 115, 115, 0.64);
 }
-
 ::-ms-input-placeholder {
   color: rgba(115, 115, 115, 0.64);
 }
-
 ::placeholder {
   color: rgba(115, 115, 115, 0.64);
 }
