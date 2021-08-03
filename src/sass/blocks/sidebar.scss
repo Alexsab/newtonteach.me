@@ -125,7 +125,7 @@
 		height: auto;
 	}
 	.sidebar-link__text{
-		font-size: 0.6667rem;
+		font-size: 0.75rem;
 	}
 }
 
@@ -180,8 +180,8 @@
 			@include interpolate(height, 1440px, 1920px, 40px, 48px);
 		}
 	}
-	// * {
-	// 	font-size: 0.6667rem;
-	// 	// font-weight: 400;
-	// }
+	* {
+		font-size: 0.75rem;
+		// font-weight: 400;
+	}
 }

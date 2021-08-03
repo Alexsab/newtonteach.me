@@ -12169,7 +12169,7 @@ body {
 }
 
 .sidebar-btn .sidebar-link__text {
-  font-size: 0.6667rem;
+  font-size: 0.75rem;
 }
 
 .sidebar-menu {
@@ -12280,4 +12280,8 @@ body {
   .user-link .custom-card-img img {
     height: 48px;
   }
+}
+
+.user-link * {
+  font-size: 0.75rem;
 }
