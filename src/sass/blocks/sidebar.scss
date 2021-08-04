@@ -24,31 +24,25 @@
 			opacity: 1;
 			display: inline-block;
 		}
-		.sidebar-link{
-			@include interpolate(min-height, $LP, $fullHD, 43px, 56px);
-		}
-		.sidebar-btn{
-			@include interpolate(height, $LP, $fullHD, 60px, 80px);
-		}
-		.sidebar-menu__row{
-			min-height: $sidebarSize;
-			justify-content: center;
-			flex-direction: row;
-			.sidebar-link{
-				height: auto;
-				flex-basis: 0;
-				flex-grow: 1;
-				max-width: 100%;
-				flex-direction: column;
-				padding: 10px 0;
-				font-size: 0.6667rem;
-				justify-content: center;
-			}
-			.sidebar-link__icon{
-				flex: 0 0 0%;
-				margin-bottom: 8px;
-			}
-		}
+		// .sidebar-menu__row{
+		// 	min-height: $sidebarSize;
+		// 	justify-content: center;
+		// 	flex-direction: row;
+		// 	.sidebar-link{
+		// 		height: auto;
+		// 		flex-basis: 0;
+		// 		flex-grow: 1;
+		// 		max-width: 100%;
+		// 		flex-direction: column;
+		// 		padding: 10px 0;
+		// 		font-size: 0.6667rem;
+		// 		justify-content: center;
+		// 	}
+		// 	.sidebar-link__icon{
+		// 		flex: 0 0 0%;
+		// 		margin-bottom: 8px;
+		// 	}
+		// }
 		.sidebar-open{
 			display: block;
 		}
@@ -82,7 +76,7 @@
 
 .sidebar-link{
 	flex-wrap: nowrap;
-	@include interpolate(min-height, $LP, $fullHD, 43px, 56px);
+	@include interpolate(min-height, $LP, $fullHD, 52px, 64px);
 	transition: background .2s ease-out;
 	opacity: 0.5;
 	text-decoration: none;
@@ -136,12 +130,8 @@
 }
 
 .sidebar-link__text{
-	// width: 0;
-	// visibility: hidden;
-	// opacity: 0;
 	font-size: 1rem;
 	transition: all .2s ease;
-	// display: none;
 }
 
 .sidebar-btn{
@@ -179,17 +169,17 @@
 	flex: 1;
 }
 
-.sidebar-menu__row{
-	height: auto;
-	flex-direction: column;
-	margin-bottom: 1vmax;
-	.sidebar-link{
-		height: $sidebarSize - 20px;
-		padding: 10px 0;
-		font-size: 0.6667rem;
-		justify-content: center;
-	}
-}
+// .sidebar-menu__row{
+// 	height: auto;
+// 	flex-direction: column;
+// 	margin-bottom: 1vmax;
+// 	.sidebar-link{
+// 		height: $sidebarSize - 20px;
+// 		padding: 10px 0;
+// 		font-size: 0.6667rem;
+// 		justify-content: center;
+// 	}
+// }
 
 .sidebar-menu__bottom{
 	margin-top: 1vmax;
@@ -218,6 +208,7 @@
 	@include interpolate(flex-basis, $LP, $fullHD, 60px, 80px);
 	display: inline-block;
 	height: auto !important;
+	margin-bottom: 12px;
 	&::before{
 		display: none;
 	}
