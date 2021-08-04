@@ -10,9 +10,12 @@ $gutter: $grid-gutter-width
 $sidebarSize: 60px
 $sidebarSizeOpen: 240px
 
+$LP: 1440px
+$fullHD: 1920px
+
 /* Single property */
 html
-	@include interpolate(font-size, 1440px, 1920px, 16px, 21.33px)
+	@include interpolate(font-size, $LP, $fullHD, 16px, 21.33px)
 
 /* Multiple properties with same values */
 // h1,h2,h3,h4,h5

@@ -12132,17 +12132,39 @@ body {
   }
 }
 
+.sidebar-link::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 2px;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  opacity: 0;
+  -webkit-transition: opacity .2s;
+  -o-transition: opacity .2s;
+  transition: opacity .2s;
+}
+
 .sidebar-link:hover, .sidebar-link.active {
   text-decoration: none;
+}
+
+.sidebar-link:hover::before, .sidebar-link.active::before {
+  opacity: 1;
 }
 
 .sidebar-link[href] {
   opacity: 1;
 }
 
-.sidebar-link[href]:hover, .sidebar-link[href].active {
-  background-color: #337a99;
+.sidebar-link[href]:hover {
+  background-color: rgba(231, 238, 241, 0.1);
   text-decoration: none;
+}
+
+.sidebar-link[href].active {
+  background-color: rgba(231, 238, 241, 0.15);
 }
 
 .sidebar-link__icon {
@@ -12250,8 +12272,16 @@ body {
   }
 }
 
+.sidebar-btn::before {
+  display: none;
+}
+
 .sidebar-btn:hover {
-  background-color: #337a99;
+  background-color: rgba(231, 238, 241, 0.1);
+}
+
+.sidebar-btn.active {
+  background-color: rgba(231, 238, 241, 0.15);
 }
 
 .sidebar-btn img {
@@ -12354,6 +12384,10 @@ body {
     -ms-flex-preferred-size: 80px;
         flex-basis: 80px;
   }
+}
+
+.user-link::before {
+  display: none;
 }
 
 .user-link .custom-card-img img {

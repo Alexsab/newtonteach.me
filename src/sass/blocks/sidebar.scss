@@ -6,8 +6,8 @@
 	transition: width .2s ease-out;
 	display: flex;
 	flex-direction: column;
-	@include interpolate(width, 1440px, 1920px, 60px, 80px);
-	@include interpolate(padding-top, 1440px, 1920px, 60px, 80px);
+	@include interpolate(width, $LP, $fullHD, 60px, 80px);
+	@include interpolate(padding-top, $LP, $fullHD, 60px, 80px);
 	&::-webkit-scrollbar{
 		width: 0.2vw
 	}
@@ -18,17 +18,17 @@
 		background-color: rgba($primary_dark, .6)
 	}
 	&.active{
-		@include interpolate(width, 1440px, 1920px, 240px, 320px);
+		@include interpolate(width, $LP, $fullHD, 240px, 320px);
 		.sidebar-link__text{
 			visibility: visible;
 			opacity: 1;
 			display: inline-block;
 		}
 		.sidebar-link{
-			@include interpolate(min-height, 1440px, 1920px, 43px, 56px);
+			@include interpolate(min-height, $LP, $fullHD, 43px, 56px);
 		}
 		.sidebar-btn{
-			@include interpolate(height, 1440px, 1920px, 60px, 80px);
+			@include interpolate(height, $LP, $fullHD, 60px, 80px);
 		}
 		.sidebar-menu__row{
 			min-height: $sidebarSize;
@@ -56,10 +56,10 @@
 			display: none;
 		}
 		.sidebar-count{
-			@include interpolate(right, 1440px, 1920px, 21px, 28px);
-			@include interpolate(width, 1440px, 1920px, 22px, 29px);
-			@include interpolate(height, 1440px, 1920px, 16.5px, 22px);
-			@include interpolate(font-size, 1440px, 1920px, 10px, 12px);	
+			@include interpolate(right, $LP, $fullHD, 21px, 28px);
+			@include interpolate(width, $LP, $fullHD, 22px, 29px);
+			@include interpolate(height, $LP, $fullHD, 16.5px, 22px);
+			@include interpolate(font-size, $LP, $fullHD, 10px, 12px);	
 		}
 	}
 }
@@ -77,36 +77,51 @@
 	align-items: center;
 	top: 50%;
 	transform: translateY(-50%);
-	@include interpolate(right, 1440px, 1920px, 8px, 12px);
+	@include interpolate(right, $LP, $fullHD, 8px, 12px);
 }
 
 .sidebar-link{
 	flex-wrap: nowrap;
-	@include interpolate(min-height, 1440px, 1920px, 43px, 56px);
+	@include interpolate(min-height, $LP, $fullHD, 43px, 56px);
 	transition: background .2s ease-out;
 	opacity: 0.5;
 	text-decoration: none;
 	white-space: nowrap;
 	position: relative;
-	// padding: 10px 0;
-	// font-size: 0.8333rem;
+	&::before{
+		content: '';
+		position: absolute;
+		height: 100%;
+		width: 2px;
+		top: 0;
+		left: 0;
+		background-color: $white;
+		opacity: 0;
+		transition: opacity .2s;
+	}
 	&:hover, &.active{
 		// background-color: darken($primary_light, 2%); //Временно
 		text-decoration: none;
+		&::before{
+			opacity: 1;
+		}
 	}
 }
 
 //Временно
 .sidebar-link[href]{
 	opacity: 1;
-	&:hover, &.active{
-		background-color: darken($primary_light, 2%);
+	&:hover{
+		background-color: rgba($backgrount_light, .1);
 		text-decoration: none;
+	}
+	&.active{
+		background-color: rgba($backgrount_light, .15);
 	}
 }
 
 .sidebar-link__icon{
-	@include interpolate(flex-basis, 1440px, 1920px, 60px, 80px);
+	@include interpolate(flex-basis, $LP, $fullHD, 60px, 80px);
 	height: 100%;
 	display: flex;
 	justify-content: center;
@@ -116,8 +131,8 @@
 }
 
 .sidebar-link__icon img{
-	@include interpolate(width, 1440px, 1920px, 20px, 24px);
-	@include interpolate(height, 1440px, 1920px, 20px, 24px);
+	@include interpolate(width, $LP, $fullHD, 20px, 24px);
+	@include interpolate(height, $LP, $fullHD, 20px, 24px);
 }
 
 .sidebar-link__text{
@@ -131,7 +146,7 @@
 
 .sidebar-btn{
 	position: absolute;
-	@include interpolate(height, 1440px, 1920px, 60px, 80px);
+	@include interpolate(height, $LP, $fullHD, 60px, 80px);
 	width: 100%;
 	left: 0;
 	top: 0;
@@ -140,11 +155,17 @@
 	z-index: 100;
 	padding: 0;
 	box-sizing: border-box;
+	&::before{
+		display: none;
+	}
 	&:hover{
-		background-color: darken($primary_light, 2%); //Временно
+		background-color: rgba($backgrount_light, .1);
+	}
+	&.active{
+		background-color: rgba($backgrount_light, .15);
 	}
 	img{
-		@include interpolate(width, 1440px, 1920px, 20px, 24px);
+		@include interpolate(width, $LP, $fullHD, 20px, 24px);
 		height: auto;
 	}
 	.sidebar-link__text{
@@ -194,13 +215,16 @@
 .user-link{
 	flex-grow: 0;
 	flex-shrink: 0;
-	@include interpolate(flex-basis, 1440px, 1920px, 60px, 80px);
+	@include interpolate(flex-basis, $LP, $fullHD, 60px, 80px);
 	display: inline-block;
 	height: auto !important;
+	&::before{
+		display: none;
+	}
 	.custom-card-img{
 		img{
-			@include interpolate(width, 1440px, 1920px, 40px, 48px);
-			@include interpolate(height, 1440px, 1920px, 40px, 48px);
+			@include interpolate(width, $LP, $fullHD, 40px, 48px);
+			@include interpolate(height, $LP, $fullHD, 40px, 48px);
 		}
 	}
 	* {
