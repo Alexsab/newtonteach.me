@@ -17,7 +17,7 @@
   },
   "homepage": "https://newtonteach.me/",
   "devDependencies": {
-    "bootstrap": "^5.0.1",
-    "browser-sync": "^2.26.14"
+    "bootstrap": "^5.1.0",
+    "browser-sync": "^2.27.5"
   }
 }

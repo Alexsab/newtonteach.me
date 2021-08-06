@@ -12,7 +12,7 @@ let preprocessor = 'sass', // Preprocessor (sass, scss, less, styl)
 					''].join('\n');
 
 const { src, dest, parallel, series, watch, task } = require('gulp'),
-	sass           = require('gulp-sass'),
+	sass           = require('gulp-sass')(require('sass')),
 	sassglob       = require('gulp-sass-glob'),
 	less           = require('gulp-less'),
 	lessglob       = require('gulp-less-glob'),
