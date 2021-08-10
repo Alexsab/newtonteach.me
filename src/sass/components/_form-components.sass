@@ -1,0 +1,74 @@
+// Checkbox & Radio buttons
+.new-label
+	cursor: pointer
+	position: relative
+	display: flex
+	align-items: center
+	// @include interpolate(line-height, $LP, $fullHD, 15px, 20px)
+	&:hover
+		.new-primary
+			border-color: $primary_lighter
+	input
+		width: 0
+		height: 0
+		position: absolute
+		z-index: -1000
+		&:checked
+			~ .new-primary
+				border-color: $primary_light
+			~ .new-checkbox
+				background-color: $primary_light
+				&:before
+					opacity: 1
+			~ .new-radio
+				border-width: 2px
+				&:before
+					opacity: 1
+		&:disabled
+			~ .new-checkbox-radio
+				opacity: 0.6
+
+
+.new-checkbox-radio
+	@include interpolate(width, $LP, $fullHD, 15px, 20px)
+	@include interpolate(height, $LP, $fullHD, 15px, 20px)
+	position: relative
+	margin-right: 6px
+	border-radius: 50%
+	border-width: 1px
+	border-style: solid
+	background-color: $white
+
+.new-primary
+	border-color: $color_primary_darkest
+	&:hover
+		border-color: $primary_lighter
+
+.new-checkbox
+	&:before
+		content: ''
+		@include interpolate(width, $LP, $fullHD, 9px, 12px)
+		@include interpolate(height, $LP, $fullHD, 9px, 12px)
+		position: absolute
+		background-image: url(../images/dist/icons/check-white.svg)
+		background-size: 100%
+		background-repeat: no-repeat
+		background-position: center
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+		opacity: 0
+
+.new-radio
+	&:before
+		content: ''
+		display: block
+		border-radius: 50%
+		@include interpolate(width, $LP, $fullHD, 9px, 12px)
+		@include interpolate(height, $LP, $fullHD, 9px, 12px)
+		background-color: $primary_light
+		position: absolute
+		@include interpolate(left, $LP, $fullHD, 1px, 1.333px)
+		@include interpolate(top, $LP, $fullHD, 1px, 1.333px)
+		// transform: translate(-50%, -50%)
+		opacity: 0
