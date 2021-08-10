@@ -12636,7 +12636,7 @@ h4, .h4 {
   font-size: 1.1252rem;
 }
 
-h5, .h5, p {
+h5, .h5, p, .default-link {
   font-size: 0.7501rem;
 }
 
@@ -12872,6 +12872,17 @@ body {
 
 .row {
   --bs-gutter-x: 1rem !important;
+}
+
+.default-link:hover {
+  color: #4899B5;
+}
+.default-link.active {
+  color: #3680A1;
+}
+.default-link.disabled {
+  color: #E6E6E6;
+  cursor: default;
 }
 
 .sidebar {
