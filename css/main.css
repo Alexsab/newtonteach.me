@@ -12632,7 +12632,7 @@ h3, .h3 {
   font-size: 1.5002rem;
 }
 
-h4, .h4 {
+h4, .h4, .big-text {
   font-size: 1.1252rem;
 }
 
@@ -13729,4 +13729,23 @@ body {
 }
 .user-link * {
   font-size: 0.7501rem;
+}
+
+.welcome-block {
+  background-repeat: no-repeat;
+  background-size: 55%;
+  background-position: right top;
+}
+.welcome-block {
+  height: 356px;
+}
+@media screen and (min-width: 1441px) {
+  .welcome-block {
+    height: calc(15.4488517745vw + 133.382045929px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .welcome-block {
+    height: 430px;
+  }
 }
