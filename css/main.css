@@ -12690,6 +12690,20 @@ h6, .h6, .small-text {
   }
 }
 
+.mr-8 {
+  margin-right: 6px;
+}
+@media screen and (min-width: 1441px) {
+  .mr-8 {
+    margin-right: calc(0.4175365344vw - 0.0167014614px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .mr-8 {
+    margin-right: 8px;
+  }
+}
+
 @font-face {
   font-family: "SF Pro Display";
   font-style: normal;
@@ -12786,6 +12800,10 @@ a.primary-light:hover, a.primary-light:focus {
   color: #4899B5;
 }
 
+.primary-lightest {
+  color: #79C4D8;
+}
+
 .gray-color, .color-primary-darkest {
   color: #8D8D8D;
 }
@@ -12859,6 +12877,18 @@ img.screenshot.sidebar-1440-open {
 .blocks.active .row > .col, .blocks.active .row > [class^=col-] {
   background-color: rgba(39, 41, 43, 0.03);
   border: 1px solid rgba(39, 41, 43, 0.1);
+}
+
+.color-purple-lighter-bg {
+  background-color: #6B48B5;
+}
+
+.color-blue-light-bg {
+  background-color: #55A0D7;
+}
+
+.color-green-lighter-bg {
+  background-color: #41A497;
 }
 
 ::-webkit-input-placeholder {
@@ -13208,6 +13238,36 @@ body {
 .btn.color-primary-lighter-bg.disabled, .btn.color-primary-lighter-bg:disabled {
   opacity: 0.6;
   cursor: default;
+}
+
+.hashtag {
+  padding: 4px 8px;
+}
+.hashtag {
+  margin-left: 6px;
+}
+@media screen and (min-width: 1441px) {
+  .hashtag {
+    margin-left: calc(0.4175365344vw - 0.0167014614px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .hashtag {
+    margin-left: 8px;
+  }
+}
+.hashtag {
+  margin-right: 6px;
+}
+@media screen and (min-width: 1441px) {
+  .hashtag {
+    margin-right: calc(0.4175365344vw - 0.0167014614px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .hashtag {
+    margin-right: 8px;
+  }
 }
 
 .sidebar {
