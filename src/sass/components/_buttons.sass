@@ -1,0 +1,20 @@
+.btn
+	border-radius: 100px
+	text-align: center
+	cursor: pointer
+	transition: all .25s ease
+	&-small
+		font-size: 0.7501rem
+		line-height: 1
+		padding: 8px 16px
+	&.color-primary-lighter-bg
+		background-color: $color_primary_lighter
+		&:hover
+			color: $color_primary_darkest
+			background-color: $color_primary_light
+		&.active
+			color: $color_primary_darkest !important
+			background-color: $color_primary_dark !important
+		&.disabled, &:disabled
+			opacity: 0.6
+			cursor: default

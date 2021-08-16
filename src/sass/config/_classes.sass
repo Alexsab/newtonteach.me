@@ -20,13 +20,10 @@
 		max-width: 100%
 
 .blocks
-	margin-top: 68px
+	@include interpolate(margin-top, $LP, $fullHD, 51px, 68px)
 	.row
 		// padding-top: 1rem
 		padding-bottom: 1rem
-
-.fw-semibold
-	font-weight: 600
 
 .card
 	border: none
@@ -56,14 +53,17 @@ a.primary-light
 	color: $color_quizzes_simple_light
 
 .primary-light
-	background-color: $color_primary_light
+	background-color: $color_primary_lighter
 
 .hr
-	background-color: $color_primary_light
+	background-color: $color_primary_lighter
 	opacity: 1
 	margin: 30px 0
 	&.gray
-		background-color: $backgrount_light
+		background-color: $backgrount_lighter
+
+.border-top
+	border-top: 1px solid $color_primary_lighter !important
 
 
 .pos-abs

@@ -10,7 +10,7 @@ $gutter: $grid-gutter-width
 $sidebarSize: 60px
 $sidebarSizeOpen: 240px
 
-$LP: 1440px
+$LP: 1441px
 $fullHD: 1920px
 
 /* Single property */
@@ -37,3 +37,13 @@ h5, p, .default-link, .fz-normal
 	font-size: 0.7501rem
 h6, .small-text
 	font-size: 0.5626rem
+
+.fw-semibold
+	font-weight: 600
+
+.mb-24
+	@include interpolate(margin-bottom, $LP, $fullHD, 18px, 24px)
+.mb-16
+	@include interpolate(margin-bottom, $LP, $fullHD, 12px, 16px)
+.mr-16
+	@include interpolate(margin-right, $LP, $fullHD, 12px, 16px)

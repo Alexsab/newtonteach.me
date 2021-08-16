@@ -60,7 +60,7 @@ sitemap_menu:
   - title: Educator
     pages:
       - name: "Home Ver. 0.1"
-        url: /newtonteach.me/educator/home/
+        url: /newtonteach.me/educator/home
   - title: Parent
   - title: Student
 
