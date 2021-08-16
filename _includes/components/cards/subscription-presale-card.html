@@ -1,5 +1,55 @@
 <div class="card subscription-presale-card mb-3">
 	<div class="card-body">
-		<h4 class="text-center mb-16">Subscription presale</h4>
+		<h4 class="text-center mb-24">Subscription presale</h4>
+
+		<form>
+			<!-- ROW -->
+			<div class="d-flex align-items-center mb-3">
+				<div class="d-flex flex-column">
+					<label class="new-label mb-2">
+						<input type="radio" name="pay" required>
+						<span class="new-checkbox-radio new-primary new-radio"></span>
+						<span class="new-checkbox-radio-text fz-normal gray-color">Get 2 month Premium for:</span>
+					</label>
+					<span class="fz-normal color_green_lighter lh-1 text-end">Discount:</span>
+				</div>
+
+				<div class="d-flex flex-column flex-fill">
+					<span class="text-end secondary_dark d-inline-block fw-semibold fz-normal mb-2">$4.99</span>
+					<span class="fz-normal color_green_lighter lh-1 text-end"><s>$93.01</s></span>			
+				</div>
+			</div>
+			<!-- ROW -->
+			<div class="d-flex align-items-center mb-3">
+				<div class="d-flex flex-column">
+					<label class="new-label mb-2">
+						<input type="radio" name="pay" checked required>
+						<span class="new-checkbox-radio new-primary new-radio"></span>
+						<span class="new-checkbox-radio-text fz-normal gray-color">Get One Year Premium for:</span>
+					</label>
+					<span class="fz-normal color_green_lighter lh-1 text-end">Discount:</span>
+				</div>
+
+				<div class="d-flex flex-column flex-fill">
+					<span class="text-end secondary_dark d-inline-block fw-semibold fz-normal mb-2"> $59.99</span>
+					<span class="fz-normal color_green_lighter lh-1 text-end"><s>$430</s></span>			
+				</div>
+			</div>
+
+			<p class="color-primary-darkest pt-3 pb-3 mb-0">About Pricing learn more <a href="#" class="default-link primary-lightest">here...</a></p>
+
+			<div class="d-flex align-items-center justify-content-between mb-16">
+				<div class="backgrount_light_bg p-1 rounded d-flex justify-content-between">
+					<img src="{{ '/img/pay/visa.png' | relative_url }}" class="payment-icon" alt="Visa">
+					<img src="{{ '/img/pay/mastercard.png' | relative_url }}" class="payment-icon" alt="Master Card">
+					<img src="{{ '/img/pay/amex.png' | relative_url }}" class="payment-icon" alt="American Express">
+					<img src="{{ '/img/pay/discover.png' | relative_url }}" class="payment-icon" alt="Discover">
+				</div>
+				<button type="submit" class="btn btn-small secondary_dark_bg text-white">Pay</button>
+			</div>
+
+		</form>
+
+		<p class="small-text text-center color-primary-darkest mb-0">You can get your money back anytime before the platform launch. Just email us at info@newtonteach.me </p>
 	</div>
 </div>

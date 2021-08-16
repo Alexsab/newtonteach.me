@@ -74,3 +74,10 @@
 		@include interpolate(top, $LP, $fullHD, 1px, 1.333px)
 		// transform: translate(-50%, -50%)
 		opacity: 0
+
+.payment-icon
+	@include interpolate(width, $LP, $fullHD, 28px, 38px)
+	height: auto
+	@include interpolate(margin-right, $LP, $fullHD, 4.5px, 6px)
+	&:last-child
+		margin-right: 0
