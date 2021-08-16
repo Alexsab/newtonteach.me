@@ -12917,6 +12917,10 @@ img.screenshot.sidebar-1440-open {
   border: 1px solid rgba(39, 41, 43, 0.1);
 }
 
+.color-primary-lightest-bg {
+  background-color: #79C4D8;
+}
+
 .color-primary-lighter-bg {
   background-color: #F6F6F6;
 }
@@ -12931,6 +12935,10 @@ img.screenshot.sidebar-1440-open {
 
 .color-green-lighter-bg {
   background-color: #41A497;
+}
+
+.secondary_dark_bg {
+  background-color: #DC6DA0;
 }
 
 ::-webkit-input-placeholder {
@@ -13287,11 +13295,12 @@ body {
   -webkit-transition: all 0.25s ease;
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
+  border: none;
 }
 .btn-small {
   font-size: 0.7501rem;
   line-height: 1;
-  padding: 8px 16px;
+  padding: 8px 25px;
 }
 .btn.color-primary-lighter-bg {
   background-color: #F6F6F6;
@@ -13300,11 +13309,22 @@ body {
   color: #8D8D8D;
   background-color: #EFEFEF;
 }
-.btn.color-primary-lighter-bg.active {
+.btn.color-primary-lighter-bg.active, .btn.color-primary-lighter-bg:focus {
   color: #8D8D8D !important;
   background-color: #E6E6E6 !important;
 }
 .btn.color-primary-lighter-bg.disabled, .btn.color-primary-lighter-bg:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+.btn.secondary_dark_bg:hover {
+  background-color: #E18BB9;
+}
+.btn.secondary_dark_bg.active, .btn.secondary_dark_bg:focus {
+  color: #fff !important;
+  background-color: #EAAECD !important;
+}
+.btn.secondary_dark_bg.disabled, .btn.secondary_dark_bg:disabled {
   opacity: 0.6;
   cursor: default;
 }
@@ -13336,6 +13356,59 @@ body {
 @media screen and (min-width: 1920px) {
   .hashtag {
     margin-right: 8px;
+  }
+}
+
+.social-link {
+  border-radius: 8px;
+  -webkit-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.social-link {
+  width: 24px;
+}
+@media screen and (min-width: 1441px) {
+  .social-link {
+    width: calc(1.6701461378vw - 0.0668058455px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .social-link {
+    width: 32px;
+  }
+}
+.social-link {
+  height: 24px;
+}
+@media screen and (min-width: 1441px) {
+  .social-link {
+    height: calc(1.6701461378vw - 0.0668058455px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .social-link {
+    height: 32px;
+  }
+}
+.social-link:hover {
+  background-color: #4899B5;
+}
+
+.social-icon {
+  width: auto;
+}
+.social-icon {
+  height: 12px;
+}
+@media screen and (min-width: 1441px) {
+  .social-icon {
+    height: calc(0.8350730689vw - 0.0334029228px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .social-icon {
+    height: 16px;
   }
 }
 

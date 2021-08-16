@@ -3,18 +3,29 @@
 	text-align: center
 	cursor: pointer
 	transition: all .25s ease
+	border: none
 	&-small
 		font-size: 0.7501rem
 		line-height: 1
-		padding: 8px 16px
+		padding: 8px 25px
 	&.color-primary-lighter-bg
 		background-color: $color_primary_lighter
 		&:hover
 			color: $color_primary_darkest
 			background-color: $color_primary_light
-		&.active
+		&.active, &:focus
 			color: $color_primary_darkest !important
 			background-color: $color_primary_dark !important
 		&.disabled, &:disabled
 			opacity: 0.6
 			cursor: default
+	&.secondary_dark_bg
+		&:hover
+			background-color: $secondary_light
+		&.active, &:focus
+			color: $white !important
+			background-color: $secondary_lighter !important
+		&.disabled, &:disabled
+			opacity: 0.6
+			cursor: default
+
