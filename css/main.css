@@ -13184,6 +13184,33 @@ body {
   }
 }
 
+.school-avatar {
+  width: 31px;
+}
+@media screen and (min-width: 1441px) {
+  .school-avatar {
+    width: calc(2.0876826722vw + 0.9164926931px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .school-avatar {
+    width: 41px;
+  }
+}
+.school-avatar {
+  height: 31px;
+}
+@media screen and (min-width: 1441px) {
+  .school-avatar {
+    height: calc(2.0876826722vw + 0.9164926931px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .school-avatar {
+    height: 41px;
+  }
+}
+
 .info-row-icon {
   width: 18px;
 }
