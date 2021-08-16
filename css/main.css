@@ -279,7 +279,7 @@ kbd {
   font-size: 0.875em;
   color: #fff;
   background-color: #212529;
-  border-radius: 0.2rem;
+  border-radius: 8px;
 }
 kbd kbd {
   padding: 0;
@@ -2636,7 +2636,7 @@ progress {
   min-height: calc(1.5em + 0.5rem + 2px);
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
-  border-radius: 0.2rem;
+  border-radius: 8px;
 }
 .form-control-sm::-webkit-file-upload-button {
   padding: 0.25rem 0.5rem;
@@ -2667,7 +2667,7 @@ progress {
   min-height: calc(1.5em + 1rem + 2px);
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
-  border-radius: 0.3rem;
+  border-radius: 16px;
 }
 .form-control-lg::-webkit-file-upload-button {
   padding: 0.5rem 1rem;
@@ -3142,7 +3142,7 @@ textarea.form-control-lg {
 .input-group-lg > .btn {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
-  border-radius: 0.3rem;
+  border-radius: 16px;
 }
 
 .input-group-sm > .form-control,
@@ -3151,7 +3151,7 @@ textarea.form-control-lg {
 .input-group-sm > .btn {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
-  border-radius: 0.2rem;
+  border-radius: 8px;
 }
 
 .input-group-lg > .form-select,
@@ -3890,13 +3890,13 @@ textarea.form-control-lg {
 .btn-lg, .btn-group-lg > .btn {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
-  border-radius: 0.3rem;
+  border-radius: 16px;
 }
 
 .btn-sm, .btn-group-sm > .btn {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
-  border-radius: 0.2rem;
+  border-radius: 8px;
 }
 
 .fade {
@@ -5501,12 +5501,12 @@ textarea.form-control-lg {
   font-size: 1.25rem;
 }
 .pagination-lg .page-item:first-child .page-link {
-  border-top-left-radius: 0.3rem;
-  border-bottom-left-radius: 0.3rem;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
 }
 .pagination-lg .page-item:last-child .page-link {
-  border-top-right-radius: 0.3rem;
-  border-bottom-right-radius: 0.3rem;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
 }
 
 .pagination-sm .page-link {
@@ -5514,12 +5514,12 @@ textarea.form-control-lg {
   font-size: 0.875rem;
 }
 .pagination-sm .page-item:first-child .page-link {
-  border-top-left-radius: 0.2rem;
-  border-bottom-left-radius: 0.2rem;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 .pagination-sm .page-item:last-child .page-link {
-  border-top-right-radius: 0.2rem;
-  border-bottom-right-radius: 0.2rem;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 .badge {
@@ -6240,7 +6240,7 @@ textarea.form-control-lg {
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0.3rem;
+  border-radius: 16px;
   outline: 0;
 }
 
@@ -6274,8 +6274,8 @@ textarea.form-control-lg {
           justify-content: space-between;
   padding: 1rem 1rem;
   border-bottom: 1px solid #dee2e6;
-  border-top-left-radius: calc(0.3rem - 1px);
-  border-top-right-radius: calc(0.3rem - 1px);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 .modal-header .btn-close {
   padding: 0.5rem 0.5rem;
@@ -6311,8 +6311,8 @@ textarea.form-control-lg {
           justify-content: flex-end;
   padding: 0.75rem;
   border-top: 1px solid #dee2e6;
-  border-bottom-right-radius: calc(0.3rem - 1px);
-  border-bottom-left-radius: calc(0.3rem - 1px);
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 .modal-footer > * {
   margin: 0.25rem;
@@ -6604,7 +6604,7 @@ textarea.form-control-lg {
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0.3rem;
+  border-radius: 16px;
 }
 .popover .popover-arrow {
   position: absolute;
@@ -6696,8 +6696,8 @@ textarea.form-control-lg {
   font-size: 1rem;
   background-color: #f0f0f0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  border-top-left-radius: calc(0.3rem - 1px);
-  border-top-right-radius: calc(0.3rem - 1px);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 .popover-header:empty {
   display: none;
@@ -8835,7 +8835,7 @@ textarea.form-control-lg {
 }
 
 .rounded-1 {
-  border-radius: 0.2rem !important;
+  border-radius: 8px !important;
 }
 
 .rounded-2 {
@@ -8843,7 +8843,7 @@ textarea.form-control-lg {
 }
 
 .rounded-3 {
-  border-radius: 0.3rem !important;
+  border-radius: 16px !important;
 }
 
 .rounded-circle {
