@@ -1,0 +1,19 @@
+<div class="col-12">
+	<div class="card mb-3">
+	<h1 class="text-center mt-3 mb-2">SiteMap</h1>
+		<div class="card-body">
+			<div class="d-flex">
+				{% for item in site.sitemap_menu %}
+				<div class="col-4">
+					<h4 class="mb-3">{{ item.title }}</h4>
+					<ul>
+						{% for elem in item.pages %}
+						<li><a href="{{ elem.url }}" target="_blank">{{ elem.name }}</a></li>
+						{% endfor %}							
+					</ul>
+				</div>
+				{% endfor %}
+			</div>			
+		</div>
+	</div>
+</div>

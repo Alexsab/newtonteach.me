@@ -12734,7 +12734,7 @@ a.primary-light:hover, a.primary-light:focus {
   color: #4899B5;
 }
 
-.gray-color {
+.gray-color, .color-primary-darkest {
   color: #8D8D8D;
 }
 
@@ -13068,6 +13068,47 @@ body {
 @media screen and (min-width: 1920px) {
   .new-radio:before {
     top: 1.333px;
+  }
+}
+
+.avatar {
+  margin-right: 12px;
+}
+@media screen and (min-width: 1440px) {
+  .avatar {
+    margin-right: calc(0.8333333333vw + 0px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .avatar {
+    margin-right: 16px;
+  }
+}
+
+.user-avatar {
+  width: 48px;
+}
+@media screen and (min-width: 1440px) {
+  .user-avatar {
+    width: calc(3.3333333333vw + 0px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .user-avatar {
+    width: 64px;
+  }
+}
+.user-avatar {
+  height: 48px;
+}
+@media screen and (min-width: 1440px) {
+  .user-avatar {
+    height: calc(3.3333333333vw + 0px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .user-avatar {
+    height: 64px;
   }
 }
 

@@ -56,25 +56,29 @@ exclude:
 #   - vendor/gems/
 #   - vendor/ruby/
 
-video_class_menu:
-  - url: /video-class/
-    name: Video
-  - url: /video-class-notes/
-    name: Notes
-  - url: /video-class-quizzes/
-    name: Quizzes
-  - url: /video-class-about/
-    name: About
+sitemap_menu:
+  - title: Educator
+    pages:
+      - name: "Home Ver. 0.1"
+        url: /newtonteach.me/educator/home/
+  - title: Parent
+  - title: Student
 
-defaults:
-  -
-    scope:
-      path: ""
-      type: "pages"
-    values:
-      metaimg: ""
-      # h1: "Заголовок h1"
-      order: 100
+
+collections:
+  educator:
+    output: true
+    # permalink: /educator/:path/
+
+
+# defaults:
+#   - scope:
+#       path: ""
+#       type: "pages"
+#     values:
+#       metaimg: ""
+#       # h1: "Заголовок h1"
+#       order: 100
 
 sass:
   sass_dir: src/sass
