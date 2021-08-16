@@ -12850,6 +12850,10 @@ a.primary-light:hover, a.primary-light:focus {
   color: #349A8E;
 }
 
+.primary-lighter {
+  color: #4899B5;
+}
+
 .primary-light {
   background-color: #F6F6F6;
 }
@@ -13450,6 +13454,11 @@ body {
   .social-icon {
     height: 16px;
   }
+}
+
+.article-block-image {
+  -webkit-filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.13));
+          filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.13));
 }
 
 .sidebar {

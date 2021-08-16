@@ -1,0 +1,68 @@
+---
+layout: pages
+title: "Educator - Article Page"
+---
+
+<div class="row">
+
+	<div class="col-9">
+		<div class="card article-card">
+			<div class="card-body px-5">
+				<a href="#" class="primary-lighter big-text fw-semibold">Back</a>
+
+				<div class="article-title text-center mt-24 mb-5">
+					<h1 class="fw-semibold mb-24">article.title</h1>
+					<h4 class="fw-normal color-primary-darkest">article.description</h4>
+				</div>
+
+				<div class="article-content">
+
+					<div class="article-block pb-5">
+						<p class="big-text color-primary-darkest lh-sm mb-5">block.description</p>
+						<img src="https://via.placeholder.com/960x460" class="w-100 rounded-3 mb-16 article-block-image" alt="ALT">
+						<p class="mb-5 text-end color-primary-darkest">img.description</p>
+					</div>
+
+					<div class="article-block pb-5">
+						<h4 class="fw-semibold color-primary-darkest mb-24">block.title</h4>
+						<p class="big-text color-primary-darkest lh-sm mb-5">block.description</p>
+						<img src="https://via.placeholder.com/960x460" class="w-100 rounded-3 mb-16 article-block-image" alt="ALT">
+						<p class="mb-5 text-end color-primary-darkest">img.description</p>
+						<img src="https://via.placeholder.com/960x460" class="w-100 rounded-3 mb-16 article-block-image" alt="ALT">
+						<p class="mb-5 text-end color-primary-darkest">img.description</p>
+					</div>
+					
+				</div>
+			</div>
+
+			<div class="read-next px-5">
+				<h2 class="mb-24">Read next</h2>
+				<div class="row">
+					<div class="col-6">
+						<div class="card mb-24">
+							<a href="#"><img src="https://via.placeholder.com/472x264" class="card-img-top rounded-3 w-100 mb-16" alt="..."></a>
+							<h4 class="card-title"><a href="#">Article title</a></h4>
+							<p class="card-text color-primary-darkest">article.description (2 строки. Если не поместилось то ...)</p>
+						</div>
+					</div>
+
+					<div class="col-6">
+						<div class="card mb-24">
+							<a href="#"><img src="https://via.placeholder.com/472x264" class="card-img-top rounded-3 w-100 mb-16" alt="..."></a>
+							<h4 class="card-title"><a href="#">Article title</a></h4>
+							<p class="card-text color-primary-darkest">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="col-3">		
+		{%- include components/cards/subscription-presale-card.html -%}
+		{%- include components/cards/registered-teachers-card.html -%}
+		{%- include components/cards/social-card.html -%}
+		{%- include components/cards/survey-for-teacher-card.html -%}		
+	</div>
+</div>

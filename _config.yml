@@ -61,6 +61,8 @@ sitemap_menu:
     pages:
       - name: "Home Ver. 0.1"
         url: /newtonteach.me/educator/home
+      - name: "Article Page"
+        url: /newtonteach.me/educator/article-page
   - title: Parent
   - title: Student
 
