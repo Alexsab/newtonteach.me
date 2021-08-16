@@ -13059,6 +13059,9 @@ body {
 .new-label input:checked ~ .new-radio:before {
   opacity: 1;
 }
+.new-label input:checked ~ span ~ .new-checkbox-radio-text {
+  color: #4899B5;
+}
 .new-label input:disabled ~ .new-checkbox-radio {
   opacity: 0.6;
 }
