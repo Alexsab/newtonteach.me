@@ -13456,7 +13456,7 @@ body {
   }
 }
 
-.article-block-image {
+.article-block-image-shadow {
   -webkit-filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.13));
           filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.13));
 }
