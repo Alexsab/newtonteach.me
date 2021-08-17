@@ -67,6 +67,24 @@ sitemap_menu:
         url: /newtonteach.me/educator/article-quizzes
       - name: "Article Video lessons"
         url: /newtonteach.me/educator/article-video-lessons
+      - name: "Article Presentations"
+        url: /newtonteach.me/educator/article_presentations
+      - name: "Article files"
+        url: ''
+      - name: "Article Homework and Classwork"
+        url: ''
+      - name: "Article statistics"
+        url: ''
+      - name: "Article marketplace"
+        url: ''
+      - name: "Article classroom"
+        url: ''
+      - name: "Article chat"
+        url: ''
+      - name: "Article library"
+        url: ''
+      - name: "Article students interface"
+        url: ''
   - title: Parent
   - title: Student
 

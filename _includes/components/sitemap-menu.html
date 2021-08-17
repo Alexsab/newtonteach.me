@@ -8,7 +8,7 @@
 					<h4 class="mb-3">{{ item.title }}</h4>
 					<ul>
 						{% for elem in item.pages %}
-						<li><a href="{{ elem.url }}" target="_blank">{{ elem.name }}</a></li>
+						<li><a {% if elem.url != '' %}href="{{ elem.url }}" {% endif %} target="_blank">{{ elem.name }}</a></li>
 						{% endfor %}							
 					</ul>
 				</div>
