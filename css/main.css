@@ -13344,7 +13344,7 @@ body {
 .btn-small {
   font-size: 0.7501rem;
   line-height: 1;
-  padding: 8px 25px;
+  padding: 8px 34px;
 }
 .btn.color-primary-lighter-bg {
   background-color: #F6F6F6;
@@ -13844,7 +13844,6 @@ body {
       flex-shrink: 0;
   display: inline-block;
   height: auto !important;
-  margin-bottom: 12px;
 }
 .user-link {
   -ms-flex-preferred-size: 60px;

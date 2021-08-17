@@ -208,7 +208,6 @@
 	@include interpolate(flex-basis, $LP, $fullHD, 60px, 80px);
 	display: inline-block;
 	height: auto !important;
-	margin-bottom: 12px;
 	&::before{
 		display: none;
 	}
