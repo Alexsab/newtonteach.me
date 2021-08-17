@@ -74,13 +74,13 @@ sitemap_menu:
       - name: "Article Homework and Classwork"
         url: /newtonteach.me/educator/article_homework
       - name: "Article statistics"
-        url: /newtonteach.me/educator/article_statistics'
+        url: /newtonteach.me/educator/article_statistics
       - name: "Article marketplace"
         url: ''
       - name: "Article classroom"
         url: ''
       - name: "Article chat"
-        url: '/newtonteach.me/educator/article_chat'
+        url: /newtonteach.me/educator/article_chat
       - name: "Article library"
         url: ''
       - name: "Article students interface"
