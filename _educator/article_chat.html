@@ -1,0 +1,59 @@
+---
+layout: pages
+title: "Article Chat"
+---
+
+<div class="row">
+
+	<div class="col-9">
+		<div class="card article-card">
+			<div class="card-body px-5">
+				<a href="#" class="primary-lighter big-text fw-semibold">Back</a>
+
+				<div class="article-title text-center mt-24 mb-5">
+					<h1 class="fw-semibold mb-24">Chat</h1>
+					<h4 class="fw-normal color-primary-darkest">Chat with students and their parents in one place.</h4>
+				</div>
+
+				<div class="article-content">
+
+					<div class="article-block pb-5">
+						<p class="big-text color-primary-darkest lh-sm mb-5">Now you do not need to search for contacts of your students or their parents and do it through several messengers and emails. You can use one place for all communication about school life. Remind your students of upcoming lessons or extracurricular activities, or send files for study.</p>
+						<img src="{{ '/img/articles/chat/1.png' | relative_url }}" class="w-100 rounded-3 mb-16 article-block-image-shadow" alt="Chat with student on the platform">
+						<p class="mb-5 text-end color-primary-darkest">Chat with student on the platform</p>
+					</div>
+					
+				</div>
+			</div>
+
+			<div class="read-next px-5">
+				<h2 class="mb-24">Read next</h2>
+				<div class="row">
+					<div class="col-6">
+						<div class="card mb-24">
+							<a href="#"><img src="{{ '/img/articles/quizzes/art1.jpg' | relative_url }}" class="card-img-top rounded-3 w-100 mb-16" alt="create great quiz"></a>
+							<h4 class="card-title"><a href="#">How to create great quiz</a></h4>
+							<p class="card-text color-primary-darkest">Learn how easy it is to create great quizzes and how to choose the right difficulty level.</p>
+						</div>
+					</div>
+
+					<div class="col-6">
+						<div class="card mb-24">
+							<a href="#"><img src="{{ '/img/articles/quizzes/art2.jpg' | relative_url }}" class="card-img-top rounded-3 w-100 mb-16" alt="create great presentations"></a>
+							<h4 class="card-title"><a href="#">How to create great presentations</a></h4>
+							<p class="card-text color-primary-darkest">Learn how easy it is to create and download presentations on any subjects.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="col-3">		
+		{%- include components/cards/subscription-presale-card.html -%}
+		{%- include components/cards/registered-teachers-card.html -%}
+		{%- include components/cards/social-card.html -%}
+		{%- include components/cards/survey-for-teacher-card.html -%}		
+	</div>
+</div>

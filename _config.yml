@@ -80,7 +80,7 @@ sitemap_menu:
       - name: "Article classroom"
         url: ''
       - name: "Article chat"
-        url: ''
+        url: '/newtonteach.me/educator/article_chat'
       - name: "Article library"
         url: ''
       - name: "Article students interface"
