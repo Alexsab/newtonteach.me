@@ -65,6 +65,8 @@ sitemap_menu:
         url: /newtonteach.me/educator/article-page
       - name: "Article Quizzes"
         url: /newtonteach.me/educator/article-quizzes
+      - name: "Article Video lessons"
+        url: /newtonteach.me/educator/article-video-lessons
   - title: Parent
   - title: Student
 
