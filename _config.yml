@@ -78,7 +78,7 @@ sitemap_menu:
       - name: "Article marketplace"
         url: /newtonteach.me/educator/article_marketplace
       - name: "Article classroom"
-        url: ''
+        url: /newtonteach.me/educator/article_classroom
       - name: "Article chat"
         url: /newtonteach.me/educator/article_chat
       - name: "Article library"
