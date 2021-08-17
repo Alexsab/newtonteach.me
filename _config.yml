@@ -70,11 +70,11 @@ sitemap_menu:
       - name: "Article Presentations"
         url: /newtonteach.me/educator/article_presentations
       - name: "Article files"
-        url: '/newtonteach.me/educator/article_files'
+        url: /newtonteach.me/educator/article_files
       - name: "Article Homework and Classwork"
-        url: '/newtonteach.me/educator/article_homework'
+        url: /newtonteach.me/educator/article_homework
       - name: "Article statistics"
-        url: ''
+        url: /newtonteach.me/educator/article_statistics'
       - name: "Article marketplace"
         url: ''
       - name: "Article classroom"
