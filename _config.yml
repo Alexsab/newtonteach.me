@@ -72,7 +72,7 @@ sitemap_menu:
       - name: "Article files"
         url: ''
       - name: "Article Homework and Classwork"
-        url: ''
+        url: '/newtonteach.me/educator/article_homework'
       - name: "Article statistics"
         url: ''
       - name: "Article marketplace"
