@@ -70,7 +70,7 @@ sitemap_menu:
       - name: "Article Presentations"
         url: /newtonteach.me/educator/article_presentations
       - name: "Article files"
-        url: ''
+        url: '/newtonteach.me/educator/article_files'
       - name: "Article Homework and Classwork"
         url: '/newtonteach.me/educator/article_homework'
       - name: "Article statistics"
