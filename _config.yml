@@ -85,6 +85,16 @@ sitemap_menu:
         url: '/newtonteach.me/educator/article_library'
       - name: "Article students interface"
         url: '/newtonteach.me/educator/article_students-interface'
+  - title: Authorization
+    pages:
+      - name: "Sign Up"
+        url: ''
+      - name: "Sign In"
+        url: ''
+      - name: "Restore an Account"
+        url: ''
+      - name: "Tour"
+        url: ''
   - title: Parent
   - title: Student
 
