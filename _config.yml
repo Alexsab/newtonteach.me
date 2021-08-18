@@ -82,9 +82,9 @@ sitemap_menu:
       - name: "Article chat"
         url: /newtonteach.me/educator/article_chat
       - name: "Article library"
-        url: ''
+        url: '/newtonteach.me/educator/article_library'
       - name: "Article students interface"
-        url: ''
+        url: '/newtonteach.me/educator/article_students-interface'
   - title: Parent
   - title: Student
 

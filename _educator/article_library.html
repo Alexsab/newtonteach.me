@@ -1,0 +1,51 @@
+---
+layout: pages
+title: "Article Library"
+---
+
+<div class="row">
+
+	<div class="col-9">
+		<div class="card article-card">
+			<div class="card-body px-5">
+				<a href="#" class="primary-lighter big-text fw-semibold">Back</a>
+
+				<div class="article-title text-center mt-24 mb-5">
+					<h1 class="fw-semibold mb-24">Library</h1>
+					<h4 class="fw-normal color-primary-darkest">Collect all purchased and created resources in one place <br>with fast navigation</h4>
+				</div>
+
+				<div class="article-content">
+
+					<div class="article-block pb-5">
+						<p class="big-text color-primary-darkest lh-sm mb-5">All created or purchased resources will be located on the library page. You can use them to create lessons or to easily navigate through all resources.</p>
+						<img src="{{ '/img/articles/library/1.png' | relative_url }}" class="w-100 rounded-3 mb-16" alt="Files Library">
+						<p class="mb-5 text-end color-primary-darkest">Files Library</p>
+						<img src="{{ '/img/articles/library/2.png' | relative_url }}" class="w-100 rounded-3 mb-16" alt="Quizzes Library">
+						<p class="mb-5 text-end color-primary-darkest">Quizzes Library</p>
+						<img src="{{ '/img/articles/library/3.png' | relative_url }}" class="w-100 rounded-3 mb-16" alt="Video Library">
+						<p class="mb-5 text-end color-primary-darkest">Video Library</p>
+					</div>
+
+					<div class="article-block pb-5">
+						<h4 class="fw-semibold color-primary-darkest mb-24">Create lessons collections to prepare for future classes</h4>
+						<p class="big-text color-primary-darkest lh-sm mb-5">Create collections to which you can add any resources created by you or purchased on the marketplace. This will allow you to prepare lesson materials in advance in a month or a full-year curriculum.</p>
+						<img src="{{ '/img/articles/library/4.png' | relative_url }}" class="w-100 rounded-3 mb-16" alt="Collections for curriculum plan">
+						<p class="mb-5 text-end color-primary-darkest">Collections for curriculum plan</p>
+					</div>
+					
+				</div>
+			</div>
+
+			{%- include components/read-next.html -%}
+
+		</div>
+	</div>
+
+	<div class="col-3">		
+		{%- include components/cards/subscription-presale-card.html -%}
+		{%- include components/cards/registered-teachers-card.html -%}
+		{%- include components/cards/social-card.html -%}
+		{%- include components/cards/survey-for-teacher-card.html -%}		
+	</div>
+</div>
