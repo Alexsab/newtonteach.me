@@ -81,3 +81,22 @@
 	@include interpolate(margin-right, $LP, $fullHD, 4.5px, 6px)
 	&:last-child
 		margin-right: 0
+
+// selector-button
+.selector-button
+	span
+		@include interpolate(width, $LP, $fullHD, 257px, 343px)
+		@include interpolate(height, $LP, $fullHD, 50px, 67px)
+		cursor: pointer
+		transition: all .25s ease-out
+		&:hover
+			background-color: $color_primary_light
+	input
+		&:checked
+			~ span
+				background-color: $primary_light
+				color: $white
+	&.disabled
+		span
+			cursor: default
+			background-color: $color_primary_lighter

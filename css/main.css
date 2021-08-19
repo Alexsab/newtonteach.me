@@ -13347,6 +13347,50 @@ body {
   margin-right: 0;
 }
 
+.selector-button span {
+  cursor: pointer;
+  -webkit-transition: all 0.25s ease-out;
+  -o-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+}
+.selector-button span {
+  width: 257px;
+}
+@media screen and (min-width: 1441px) {
+  .selector-button span {
+    width: calc(17.9540709812vw - 1.7181628392px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .selector-button span {
+    width: 343px;
+  }
+}
+.selector-button span {
+  height: 50px;
+}
+@media screen and (min-width: 1441px) {
+  .selector-button span {
+    height: calc(3.5490605428vw - 1.1419624217px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .selector-button span {
+    height: 67px;
+  }
+}
+.selector-button span:hover {
+  background-color: #EFEFEF;
+}
+.selector-button input:checked ~ span {
+  background-color: #3680A1;
+  color: #fff;
+}
+.selector-button.disabled span {
+  cursor: default;
+  background-color: #F6F6F6;
+}
+
 .user-avatar {
   width: 48px;
 }
