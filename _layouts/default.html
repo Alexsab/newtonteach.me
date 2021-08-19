@@ -5,11 +5,14 @@
 
 <body>
 
+	{% if page.layout != 'auth' %}
+
 	{%- include image.html -%}
 
 	{%- include header.html -%}
 
 	{%- include sidebar.html -%}
+
 
 	<div class="wrapper">
 		<div class="content">
@@ -23,10 +26,14 @@
 	</div>
 	<!-- /.wrapper -->
 
+	{% else %}
+		{{ content }}
+	{% endif %}
+
 
 	{%- include footer.html -%}
 
-	<script src="{{ 'js/app.js' | relative_url }}"></script>
+	<script src="{{ 'js/app.min.js' | relative_url }}"></script>
 
 	<!-- edit: alexsab.ru -->
 

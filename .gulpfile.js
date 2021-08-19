@@ -67,7 +67,7 @@ projects.newtonteach_ui = {
 		src: [
 			// '../node_modules/jquery/dist/jquery.min.js',
 			// '../node_modules/slick-carousel/slick/slick.js',
-			basename + '/src/js/common.js', // Custom scripts. Always at the end
+			basename + '/src/js/app.js', // Custom scripts. Always at the end
 		],
 		dest:       basename + '/js',
 		output:     'app.min.js',
@@ -88,8 +88,8 @@ projects.newtonteach_ui = {
 
 	scripts_jekyll: {
 		src: [
-			// '../node_modules/jquery/dist/jquery.min.js',
-			// '../node_modules/slick-carousel/slick/slick.js',
+			'../node_modules/jquery/dist/jquery.min.js',
+			'../node_modules/slick-carousel/slick/slick.js',
 			'src/js/app.js', // Custom scripts. Always at the end
 		],
 		dest:       'js',
@@ -193,11 +193,11 @@ function newtonteach_ui_styles_jekyll() {
 // Scripts & JS Libraries
 function newtonteach_ui_scripts_jekyll() {
 	return src(projects.newtonteach_ui.scripts_jekyll.src)
-	// .pipe(concat(projects.newtonteach_ui.scripts.output))
+	.pipe(concat(projects.newtonteach_ui.scripts.output))
 	.pipe(dest(projects.newtonteach_ui.scripts_jekyll.dest))
 	.pipe(uglify()) // Minify js (opt.)
 	.pipe(header(projects.newtonteach_ui.forProd))
-	.pipe(rename({ suffix: ".min" }))
+	// .pipe(rename({ suffix: ".min" }))
 	.pipe(dest(projects.newtonteach_ui.scripts_jekyll.dest))
 	.pipe(browserSync.stream())
 };

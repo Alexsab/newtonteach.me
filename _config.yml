@@ -88,7 +88,7 @@ sitemap_menu:
   - title: Authorization
     pages:
       - name: "Sign Up"
-        url: ''
+        url: '/newtonteach.me/auth/sign-up'
       - name: "Sign In"
         url: ''
       - name: "Restore an Account"
@@ -103,6 +103,8 @@ collections:
   educator:
     output: true
     # permalink: /educator/:path/
+  auth:
+    output: true
 
 
 # defaults:

@@ -1,7 +1,13 @@
 'use strict';
 
+	$('#welcome-slider').slick({
+		arrows: false,
+		dots: true,
+		appendDots: $('#new-dots'),
+		speed: 200
+	});
+
 (function(w,d) {
-// document.addEventListener('DOMContentLoaded', () => {
 
 	// Открытие сайдбара
 	d.querySelector('.sidebar-btn').addEventListener("click", function(el) {
@@ -37,5 +43,4 @@
 	w.addEventListener("resize", calcSizes, false);
 
 
-// });
 }) (window, document);
