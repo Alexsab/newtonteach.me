@@ -3,4 +3,28 @@ layout: auth
 title: "Sign Up"
 ---
 
-<h2>Welcome</h2>
+<h2 class="mb-16">Welcome</h2>
+<p class="color-primary-darkest mb-5">Choose right occupation for you</p>
+
+<form>
+
+	<div class="d-flex flex-column">
+		<label class="selector-button mb-2">
+			<input type="radio" name="role" class="w-0 h-0 position-absolute invisible" checked>
+			<span class="d-flex align-items-center justify-content-center color-primary-darkest color-primary-lighter-bg rounded-3 fz-normal lh-1">Educator</span>
+		</label>
+		<label class="selector-button disabled mb-2">
+			<input type="radio" name="role" class="w-0 h-0 position-absolute invisible" disabled>
+			<span class="d-flex align-items-center justify-content-center color-primary-darkest color-primary-lighter-bg rounded-3 fz-normal lh-1">Student</span>
+		</label>
+		<label class="selector-button disabled mb-24">
+			<input type="radio" name="role" class="w-0 h-0 position-absolute invisible" disabled>
+			<span class="d-flex align-items-center justify-content-center color-primary-darkest color-primary-lighter-bg rounded-3 fz-normal lh-1">Parent</span>
+		</label>
+
+		<a href="#" class="btn btn-medium secondary_dark_bg text-white fz-normal fw-normal d-inline-block m-auto">Choose Occupation</a>
+
+	</div>
+	
+
+</form>

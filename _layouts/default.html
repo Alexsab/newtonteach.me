@@ -3,7 +3,7 @@
 
 {%- include head.html -%}
 
-<body>
+<body {% if page.layout == 'auth' %}class="bg-white"{% endif %}>
 
 	{% if page.layout != 'auth' %}
 

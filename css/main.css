@@ -13480,11 +13480,18 @@ body {
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
   border: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .btn-small {
   font-size: 0.7501rem;
   line-height: 1;
   padding: 8px 34px;
+}
+.btn-medium {
+  line-height: 1;
+  padding: 16px 32px;
 }
 .btn.color-primary-lighter-bg {
   background-color: #F6F6F6;
