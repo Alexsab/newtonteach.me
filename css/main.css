@@ -14079,7 +14079,20 @@ body {
 
 .welcome-slide-img {
   max-width: 100%;
-  width: 100%;
+  width: auto;
+}
+.welcome-slide-img {
+  height: 190px;
+}
+@media screen and (min-width: 1441px) {
+  .welcome-slide-img {
+    height: calc(14.6137787056vw - 20.5845511482px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .welcome-slide-img {
+    height: 260px;
+  }
 }
 
 .new-dots ul {

@@ -9,7 +9,8 @@ $primary_lightest: #79C4D8
 
 .welcome-slide-img
 	max-width: 100%
-	width: 100%
+	@include interpolate(height, $LP, $fullHD, 190px, 260px)
+	width: auto
 
 .new-dots
 	ul
