@@ -90,7 +90,7 @@ sitemap_menu:
       - name: "Sign Up"
         url: '/newtonteach.me/auth/sign-up'
       - name: "Sign In"
-        url: ''
+        url: '/newtonteach.me/auth/sign-in'
       - name: "Restore an Account"
         url: ''
       - name: "Tour"
