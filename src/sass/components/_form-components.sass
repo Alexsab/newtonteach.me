@@ -139,3 +139,16 @@
 		background-repeat: no-repeat
 		background-position: right 1rem center
 		@include interpolate(background-size, $LP, $fullHD, 6px, 8px)
+
+// back-link
+.back-link
+	@include interpolate(width, $LP, $fullHD, 30px, 40px)
+	@include interpolate(height, $LP, $fullHD, 30px, 40px)
+	@include interpolate(top, $LP, $fullHD, 24px, 32px)
+	@include interpolate(left, $LP, $fullHD, 24px, 32px)
+	opacity: 0.8 !important
+	img
+		@include interpolate(width, $LP, $fullHD, 9px, 12px)
+		height: auto
+	&:hover
+		opacity: 1 !important

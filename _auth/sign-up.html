@@ -24,7 +24,12 @@ title: "Sign Up"
 		<a href="#" class="btn btn-medium secondary_dark_bg text-white fz-normal fw-normal d-inline-block mx-auto mb-5">Choose Occupation</a>
 	</div>
 
-	<div class="d-flex flex-column">
+	<div class="d-flex flex-column d-none">
+
+		<a href="#" class="position-absolute d-flex align-items-center justify-content-center back-link">	
+			<img src="{{ '/img/icons/arrow-left.svg' | relative_url }}" alt="Back">
+		</a>
+
 		<h2 class="mb-16 text-center">Sign Up</h2>
 		<p class="color-primary-darkest mb-5 text-center">You signing up as an educator</p>
 
@@ -38,11 +43,11 @@ title: "Sign Up"
 		</div>
 		<div class="newton-form-group d-flex flex-column-reverse color-primary-lighter-bg rounded-3 color-primary-darkest fz-normal lh-1 position-relative required mb-2">
 			<input type="email" id="email" name="email" class="bg-transparent rounded-3 h-100 w-100 px-3 pt-4 pb-1" placeholder=" " required>
-			<label for="email" class="position-absolute">Email</label>
+			<label for="email" class="position-absolute">Email <span class="error-message ms-2">Email field is required</span></label>
 		</div>
 		<div class="newton-form-group d-flex flex-column-reverse color-primary-lighter-bg rounded-3 color-primary-darkest fz-normal lh-1 position-relative required mb-2">
 			<input type="password" id="password" name="password" class="bg-transparent rounded-3 h-100 w-100 px-3 pt-4 pb-1" placeholder=" " required>
-			<label for="password" class="position-absolute">Password</label>
+			<label for="password" class="position-absolute">Password <span class="error-message ms-2">Password field is required</span></label>
 		</div>
 
 		<label class="new-label mt-2 mb-3">
@@ -54,6 +59,19 @@ title: "Sign Up"
 		</label>
 
 		<button type="submit" class="btn btn-medium secondary_dark_bg text-white fz-normal fw-normal d-inline-block mx-auto mb-5">Sign Up</button>
+	</div>
+
+	<div class="d-flex flex-column">
+
+		<a href="#" class="position-absolute d-flex align-items-center justify-content-center back-link">	
+			<img src="{{ '/img/icons/arrow-left.svg' | relative_url }}" alt="Back">
+		</a>
+
+		<img src="{{ '/img/icons/success.svg' | relative_url }}" alt="Success" class="mx-auto mb-4">
+		<h2 class="mb-16 text-center">Your account is registered</h2>
+		<p class="color-primary-darkest mb-5 text-center">Please check your Email inbox to confirm registration.</p>
+
+		<a href="#" class="btn btn-medium secondary_dark_bg text-white fz-normal fw-normal d-inline-block mx-auto mb-5">Sign In</a>
 	</div>
 	
 
