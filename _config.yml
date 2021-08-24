@@ -92,7 +92,7 @@ sitemap_menu:
       - name: "Sign In"
         url: '/newtonteach.me/auth/sign-in'
       - name: "Restore an Account"
-        url: ''
+        url: '/newtonteach.me/auth/restore-an-account'
       - name: "Tour"
         url: ''
   - title: Parent
