@@ -1,3 +1,9 @@
+// form-step
+.form-step
+	display: none
+	&.active
+		display: flex
+
 // Checkbox & Radio buttons
 .new-label
 	cursor: pointer
@@ -116,13 +122,13 @@
 		cursor: text
 		transition: all 0.25s
 		.error-message
+			color: $color_danger_light
 			opacity: 0
 			transition: all 0.25s
 	input
 		color: $primary_light
 		border: 1px solid transparent
 		&:focus:required:invalid ~ label > .error-message
-			color: $color_danger_light
 			opacity: 1
 	input:focus ~ label,
 	input:not(:placeholder-shown) ~ label
@@ -139,6 +145,8 @@
 		background-repeat: no-repeat
 		background-position: right 1rem center
 		@include interpolate(background-size, $LP, $fullHD, 6px, 8px)
+		input:focus ~ label > .error-message
+			opacity: 1
 
 // back-link
 .back-link

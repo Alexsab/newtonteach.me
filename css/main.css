@@ -13134,6 +13134,15 @@ body {
   cursor: default;
 }
 
+.form-step {
+  display: none;
+}
+.form-step.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .new-label {
   cursor: pointer;
   position: relative;
@@ -13445,6 +13454,7 @@ body {
   transition: all 0.25s;
 }
 .newton-form-group label .error-message {
+  color: #E36565;
   opacity: 0;
   -webkit-transition: all 0.25s;
   -o-transition: all 0.25s;
@@ -13455,7 +13465,6 @@ body {
   border: 1px solid transparent;
 }
 .newton-form-group input:focus:required:invalid ~ label > .error-message {
-  color: #E36565;
   opacity: 1;
 }
 .newton-form-group input:not(:-moz-placeholder-shown) ~ label {
@@ -13501,6 +13510,9 @@ body {
   .newton-form-group.required {
     background-size: 8px;
   }
+}
+.newton-form-group.required input:focus ~ label > .error-message {
+  opacity: 1;
 }
 
 .back-link {

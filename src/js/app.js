@@ -1,5 +1,49 @@
 'use strict';
 
+	const chooseRoleLink = $('a#choose_role');
+
+	function inputRoleCheck(){
+		let check = false;
+		const role = $('input[name=role]:checked').val();
+		if(typeof(role) != 'undefined'){
+			chooseRoleLink.removeClass('disabled');
+			check = true;
+		}			
+		return check;
+	}
+
+	$('input[name=role]').on('change', () => {
+		inputRoleCheck();
+	});
+
+	inputRoleCheck();
+
+	chooseRoleLink.on('click', () => {
+		let parent = $('.form-step.active');
+		if (!inputRoleCheck()){
+			return;
+		}else{
+			parent.removeClass('active').next().addClass('active');
+		}
+		return false;
+	});
+
+	$('.back-link').on('click', () => {
+		let parent = $('.form-step.active');
+		parent.removeClass('active').prev().addClass('active');
+		return false;
+	});
+
+	$('form#sign_up').submit( function() {
+
+		$('.form-step').removeClass('active');
+		$('.success-register').addClass('active');
+
+		return false;
+	});
+	
+
+
 	$('#welcome-slider').slick({
 		arrows: false,
 		dots: true,
