@@ -99,4 +99,42 @@
 	&.disabled
 		span
 			cursor: default
-			background-color: $color_primary_lighter
+			opacity: 0.6
+
+// newton-form-group
+.newton-form-group
+	@include interpolate(width, $LP, $fullHD, 257px, 343px)
+	@include interpolate(height, $LP, $fullHD, 50px, 67px)
+	transition: all .25s ease-out
+	&:hover
+		background-color: $color_primary_light
+	label
+		left: 1rem
+		top: 50%
+		transform: translateY(-50%)
+		transform-origin: left top
+		cursor: text
+		transition: all 0.25s
+		.error-message
+			opacity: 0
+	input
+		color: $primary_light
+		border: 1px solid transparent
+		&:focus:required:invalid ~ label > .error-message
+			color: $color_danger_light
+			opacity: 1
+	input:focus ~ label,
+	input:not(:placeholder-shown) ~ label
+		top: 33%
+		left: 1.1rem
+		transform: translateY(-50%) scale(0.8)
+	&.disabled
+		cursor: default
+		opacity: 0.6
+		input, label
+			cursor: default
+	&.required
+		background-image: url(../img/icons/required.svg)
+		background-repeat: no-repeat
+		background-position: right 1rem center
+		@include interpolate(background-size, $LP, $fullHD, 6px, 8px)

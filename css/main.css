@@ -13101,10 +13101,10 @@ input, textarea {
   outline: none;
 }
 input:focus:required:invalid, textarea:focus:required:invalid {
-  border-color: #DC6D6D;
+  border-color: #E36565;
 }
 input:required:valid, textarea:required:valid {
-  border-color: #5CD098;
+  border-color: transparent;
 }
 
 body {
@@ -13388,7 +13388,111 @@ body {
 }
 .selector-button.disabled span {
   cursor: default;
-  background-color: #F6F6F6;
+  opacity: 0.6;
+}
+
+.newton-form-group {
+  -webkit-transition: all 0.25s ease-out;
+  -o-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+}
+.newton-form-group {
+  width: 257px;
+}
+@media screen and (min-width: 1441px) {
+  .newton-form-group {
+    width: calc(17.9540709812vw - 1.7181628392px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .newton-form-group {
+    width: 343px;
+  }
+}
+.newton-form-group {
+  height: 50px;
+}
+@media screen and (min-width: 1441px) {
+  .newton-form-group {
+    height: calc(3.5490605428vw - 1.1419624217px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .newton-form-group {
+    height: 67px;
+  }
+}
+.newton-form-group:hover {
+  background-color: #EFEFEF;
+}
+.newton-form-group label {
+  left: 1rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transform-origin: left top;
+      -ms-transform-origin: left top;
+          transform-origin: left top;
+  cursor: text;
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+}
+.newton-form-group label .error-message {
+  opacity: 0;
+}
+.newton-form-group input {
+  color: #3680A1;
+  border: 1px solid transparent;
+}
+.newton-form-group input:focus:required:invalid ~ label > .error-message {
+  color: #E36565;
+  opacity: 1;
+}
+.newton-form-group input:not(:-moz-placeholder-shown) ~ label {
+  top: 33%;
+  left: 1.1rem;
+  transform: translateY(-50%) scale(0.8);
+}
+.newton-form-group input:not(:-ms-input-placeholder) ~ label {
+  top: 33%;
+  left: 1.1rem;
+  -ms-transform: translateY(-50%) scale(0.8);
+      transform: translateY(-50%) scale(0.8);
+}
+.newton-form-group input:focus ~ label,
+.newton-form-group input:not(:placeholder-shown) ~ label {
+  top: 33%;
+  left: 1.1rem;
+  -webkit-transform: translateY(-50%) scale(0.8);
+      -ms-transform: translateY(-50%) scale(0.8);
+          transform: translateY(-50%) scale(0.8);
+}
+.newton-form-group.disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+.newton-form-group.disabled input, .newton-form-group.disabled label {
+  cursor: default;
+}
+.newton-form-group.required {
+  background-image: url(../img/icons/required.svg);
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+}
+.newton-form-group.required {
+  background-size: 6px;
+}
+@media screen and (min-width: 1441px) {
+  .newton-form-group.required {
+    background-size: calc(0.4175365344vw - 0.0167014614px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .newton-form-group.required {
+    background-size: 8px;
+  }
 }
 
 .user-avatar {

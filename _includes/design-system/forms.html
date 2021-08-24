@@ -7,18 +7,37 @@
 					<h4 class="color-primary-darkest fw-normal">SELECTOR</h4>
 					<hr>
 
-					<label class="selector-button">
+					<label class="selector-button d-block mb-3">
 						<input type="radio" name="selector" class="w-0 h-0 position-absolute invisible">
 						<span class="d-flex align-items-center justify-content-center color-primary-darkest color-primary-lighter-bg rounded-3 fz-normal lh-1">Selector</span>
 					</label>
-					<br><br>
+
 					<label class="selector-button disabled">
 						<input type="radio" name="selector" class="w-0 h-0 position-absolute invisible" disabled>
 						<span class="d-flex align-items-center justify-content-center color-primary-darkest color-primary-lighter-bg rounded-3 fz-normal lh-1">Selector disabled</span>
 					</label>
 
 				</div>
-				<div class="col">123</div>
+				<div class="col">
+					<h4 class="color-primary-darkest fw-normal">FIELDS</h4>
+					<hr>
+
+					<div class="newton-form-group d-flex flex-column-reverse color-primary-lighter-bg rounded-3 color-primary-darkest fz-normal lh-1 position-relative mb-3">
+						<input type="text" id="text" class="bg-transparent rounded-3 h-100 w-100 px-3 pt-4 pb-1" placeholder=" ">
+						<label for="text" class="position-absolute">Input</label>
+					</div>
+
+					<div class="newton-form-group d-flex flex-column-reverse color-primary-lighter-bg rounded-3 color-primary-darkest fz-normal lh-1 position-relative required mb-3">
+						<input type="text" id="text2" class="bg-transparent rounded-3 h-100 w-100 px-3 pt-4 pb-1" placeholder=" " required>
+						<label for="text2" class="d-flex align-items-center position-absolute">Input required <span class="error-message ms-2">Error message</span></label>
+					</div>
+
+					<div class="newton-form-group d-flex flex-column-reverse color-primary-lighter-bg rounded-3 color-primary-darkest fz-normal lh-1 position-relative disabled">
+						<input type="text" id="text3" class="bg-transparent rounded-3 h-100 w-100 px-3 pt-4 pb-1" placeholder=" " disabled>
+						<label for="text3" class="position-absolute">Input disabled</label>
+					</div>
+
+				</div>
 			</div>
 			<!-- /.row -->
 		</div>
