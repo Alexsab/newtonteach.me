@@ -3,12 +3,11 @@ layout: auth
 title: "Sign Up"
 ---
 
-<h2 class="mb-16">Welcome</h2>
-<p class="color-primary-darkest mb-5">Choose right occupation for you</p>
-
 <form>
 
-	<div class="d-flex flex-column">
+	<div class="d-flex flex-column d-none">
+		<h2 class="mb-16 text-center">Welcome</h2>
+		<p class="color-primary-darkest mb-5 text-center">Choose right occupation for you</p>
 		<label class="selector-button mb-2">
 			<input type="radio" name="role" class="w-0 h-0 position-absolute invisible" checked>
 			<span class="d-flex align-items-center justify-content-center color-primary-darkest color-primary-lighter-bg rounded-3 fz-normal lh-1">Educator</span>
@@ -23,7 +22,38 @@ title: "Sign Up"
 		</label>
 
 		<a href="#" class="btn btn-medium secondary_dark_bg text-white fz-normal fw-normal d-inline-block mx-auto mb-5">Choose Occupation</a>
+	</div>
 
+	<div class="d-flex flex-column">
+		<h2 class="mb-16 text-center">Sign Up</h2>
+		<p class="color-primary-darkest mb-5 text-center">You signing up as an educator</p>
+
+		<div class="newton-form-group d-flex flex-column-reverse color-primary-lighter-bg rounded-3 color-primary-darkest fz-normal lh-1 position-relative mb-2">
+			<input type="text" id="name" name="full-name" class="bg-transparent rounded-3 h-100 w-100 px-3 pt-4 pb-1" placeholder=" ">
+			<label for="name" class="position-absolute">Full Name</label>
+		</div>
+		<div class="newton-form-group d-flex flex-column-reverse color-primary-lighter-bg rounded-3 color-primary-darkest fz-normal lh-1 position-relative mb-2">
+			<input type="tel" id="phone" name="phone" class="bg-transparent rounded-3 h-100 w-100 px-3 pt-4 pb-1" placeholder=" ">
+			<label for="phone" class="position-absolute">Phone</label>
+		</div>
+		<div class="newton-form-group d-flex flex-column-reverse color-primary-lighter-bg rounded-3 color-primary-darkest fz-normal lh-1 position-relative required mb-2">
+			<input type="email" id="email" name="email" class="bg-transparent rounded-3 h-100 w-100 px-3 pt-4 pb-1" placeholder=" " required>
+			<label for="email" class="position-absolute">Email</label>
+		</div>
+		<div class="newton-form-group d-flex flex-column-reverse color-primary-lighter-bg rounded-3 color-primary-darkest fz-normal lh-1 position-relative required mb-2">
+			<input type="password" id="password" name="password" class="bg-transparent rounded-3 h-100 w-100 px-3 pt-4 pb-1" placeholder=" " required>
+			<label for="password" class="position-absolute">Password</label>
+		</div>
+
+		<label class="new-label mt-2 mb-3">
+			<input type="checkbox" name="agree" checked required>
+			<span class="new-checkbox-radio new-primary new-checkbox"></span>
+			<span class="new-checkbox-radio-text fz-normal gray-color">
+				<span class="gray-color">I agree with all</span> <a href="#" class="">Conditions</a> <span class="gray-color">&</span> <a href="#" class="">Privacy Policy</a>
+			</span>
+		</label>
+
+		<button type="submit" class="btn btn-medium secondary_dark_bg text-white fz-normal fw-normal d-inline-block mx-auto mb-5">Sign Up</button>
 	</div>
 	
 

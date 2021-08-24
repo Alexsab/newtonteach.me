@@ -43,6 +43,9 @@ input, textarea
 		border-color: $color_danger_light
 	&:required:valid
 		border-color: transparent
+input:-internal-autofill-selected
+	color: $primary_light !important
+	-webkit-text-fill-color: $primary_light !important
 
 body
 	font-family: $userfont

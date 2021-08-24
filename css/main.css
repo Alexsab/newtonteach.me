@@ -13107,6 +13107,11 @@ input:required:valid, textarea:required:valid {
   border-color: transparent;
 }
 
+input:-internal-autofill-selected {
+  color: #3680A1 !important;
+  -webkit-text-fill-color: #3680A1 !important;
+}
+
 body {
   font-family: "SF Pro Display", sans-serif;
   font-size: 100%;
@@ -13441,6 +13446,9 @@ body {
 }
 .newton-form-group label .error-message {
   opacity: 0;
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
 }
 .newton-form-group input {
   color: #3680A1;
