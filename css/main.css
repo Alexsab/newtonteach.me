@@ -2224,7 +2224,7 @@ progress {
   margin-bottom: 1rem;
   color: #212529;
   vertical-align: top;
-  border-color: #dee2e6;
+  border-color: #F6F6F6;
 }
 .table > :not(caption) > * > * {
   padding: 0.5rem 0.5rem;
@@ -6273,7 +6273,7 @@ textarea.form-control-lg {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 1rem 1rem;
-  border-bottom: 1px solid #dee2e6;
+  border-bottom: 1px solid #F6F6F6;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
@@ -6310,7 +6310,7 @@ textarea.form-control-lg {
       -ms-flex-pack: end;
           justify-content: flex-end;
   padding: 0.75rem;
-  border-top: 1px solid #dee2e6;
+  border-top: 1px solid #F6F6F6;
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
 }
@@ -7680,7 +7680,7 @@ textarea.form-control-lg {
 }
 
 .border {
-  border: 1px solid #dee2e6 !important;
+  border: 1px solid #F6F6F6 !important;
 }
 
 .border-0 {
@@ -7688,7 +7688,7 @@ textarea.form-control-lg {
 }
 
 .border-top {
-  border-top: 1px solid #dee2e6 !important;
+  border-top: 1px solid #F6F6F6 !important;
 }
 
 .border-top-0 {
@@ -7696,7 +7696,7 @@ textarea.form-control-lg {
 }
 
 .border-end {
-  border-right: 1px solid #dee2e6 !important;
+  border-right: 1px solid #F6F6F6 !important;
 }
 
 .border-end-0 {
@@ -7704,7 +7704,7 @@ textarea.form-control-lg {
 }
 
 .border-bottom {
-  border-bottom: 1px solid #dee2e6 !important;
+  border-bottom: 1px solid #F6F6F6 !important;
 }
 
 .border-bottom-0 {
@@ -7712,7 +7712,7 @@ textarea.form-control-lg {
 }
 
 .border-start {
-  border-left: 1px solid #dee2e6 !important;
+  border-left: 1px solid #F6F6F6 !important;
 }
 
 .border-start-0 {
@@ -12946,6 +12946,10 @@ a.primary-light:hover, a.primary-light:focus {
   color: #DC6DA0;
 }
 
+.color_danger_light {
+  color: #E36565;
+}
+
 .green-color {
   color: #349A8E;
 }
@@ -13123,15 +13127,47 @@ body {
   background-color: #E7EEF1;
 }
 
-.default-link:hover {
+.default-link svg {
+  height: auto;
+  fill: #8D8D8D;
+  -webkit-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.default-link svg {
+  width: 6px;
+}
+@media screen and (min-width: 1441px) {
+  .default-link svg {
+    width: calc(0.4175365344vw - 0.0167014614px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .default-link svg {
+    width: 8px;
+  }
+}
+.default-link:hover, .default-link:focus {
   color: #4899B5;
+}
+.default-link:hover svg, .default-link:focus svg {
+  fill: #4899B5;
 }
 .default-link.active {
   color: #3680A1;
 }
+.default-link.active svg {
+  fill: #3680A1;
+}
 .default-link.disabled {
   color: #E6E6E6;
   cursor: default;
+}
+.default-link.disabled svg {
+  fill: #E6E6E6;
+}
+.default-link.color_danger_light:hover, .default-link.color_danger_light:focus {
+  color: #DC6D6D;
 }
 
 .form-step {

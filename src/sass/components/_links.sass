@@ -1,8 +1,22 @@
 .default-link
-	&:hover
+	svg
+		@include interpolate(width, $LP, $fullHD, 6px, 8px)
+		height: auto
+		fill: $color_primary_darkest
+		transition: all .25s ease
+	&:hover, &:focus
 		color: $primary_lighter
+		svg
+			fill: $primary_lighter
 	&.active
 		color: $primary_light
+		svg
+			fill: $primary_light
 	&.disabled
 		color: $color_primary_dark
 		cursor: default
+		svg
+			fill: $color_primary_dark
+	&.color_danger_light
+		&:hover, &:focus
+			color: $color_danger_dark
