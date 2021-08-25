@@ -56,61 +56,23 @@ exclude:
 #   - vendor/gems/
 #   - vendor/ruby/
 
-sitemap_menu:
-  - title: Educator
-    pages:
-      - name: "Home Ver. 0.1"
-        url: /newtonteach.me/educator/home
-      - name: "Article Page(template)"
-        url: /newtonteach.me/educator/article-page
-      - name: "Article Quizzes"
-        url: /newtonteach.me/educator/article-quizzes
-      - name: "Article Video lessons"
-        url: /newtonteach.me/educator/article-video-lessons
-      - name: "Article Presentations"
-        url: /newtonteach.me/educator/article_presentations
-      - name: "Article files"
-        url: /newtonteach.me/educator/article_files
-      - name: "Article Homework and Classwork"
-        url: /newtonteach.me/educator/article_homework
-      - name: "Article statistics"
-        url: /newtonteach.me/educator/article_statistics
-      - name: "Article marketplace"
-        url: /newtonteach.me/educator/article_marketplace
-      - name: "Article classroom"
-        url: /newtonteach.me/educator/article_classroom
-      - name: "Article chat"
-        url: /newtonteach.me/educator/article_chat
-      - name: "Article library"
-        url: '/newtonteach.me/educator/article_library'
-      - name: "Article students interface"
-        url: '/newtonteach.me/educator/article_students-interface'
-  - title: Authorization
-    pages:
-      - name: "Sign Up"
-        url: '/newtonteach.me/auth/sign-up'
-      - name: "Sign In"
-        url: '/newtonteach.me/auth/sign-in'
-      - name: "Restore an Account"
-        url: '/newtonteach.me/auth/restore-an-account'
-      - name: "Tour"
-        url: ''
-  - title: Settings
-    pages:
-      - name: "Personal Info"
-        url: '/newtonteach.me/educator/settings/personal-info'
-      - name: "Security"
-        url: ''
-  - title: Parent
-  - title: Student
-
 
 collections:
   educator:
+    id: 0
+    collection: "Educator"
     output: true
-    # permalink: /educator/:path/
+    permalink: /educator/:path/
   auth:
+    id: 1
+    collection: "Authorization"
     output: true
+    permalink: /auth/:path/
+  settings:
+    id: 2
+    collection: "Settings"
+    output: true
+    permalink: /settings/:path/
 
 
 # defaults:

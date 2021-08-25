@@ -3,15 +3,21 @@
 	<h1 class="text-center mt-3 mb-2">SiteMap</h1>
 		<div class="card-body">
 			<div class="d-flex">
-				{% for item in site.sitemap_menu %}
+				{% assign sorted = site.collections | sort: 'id' %}
+				{% for item in sorted %}
+				{% if item.collection %}
 				<div class="col">
-					<h4 class="mb-3">{{ item.title }}</h4>
+					<h4 class="mb-3">{{ item.collection }}</h4>
 					<ul>
-						{% for elem in item.pages %}
-						<li><a {% if elem.url != '' %}href="{{ elem.url }}" {% endif %} target="_blank">{{ elem.name }}</a></li>
+						{% assign links = item.docs | reverse %}
+						{% for elem in links %}
+						<li>
+							<a href="/newtonteach.me{{ elem.url }}" target="_blank">{{ elem.title }}</a>
+						</li>
 						{% endfor %}							
 					</ul>
 				</div>
+				{% endif %}				
 				{% endfor %}
 			</div>			
 		</div>
