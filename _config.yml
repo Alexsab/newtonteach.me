@@ -95,6 +95,12 @@ sitemap_menu:
         url: '/newtonteach.me/auth/restore-an-account'
       - name: "Tour"
         url: ''
+  - title: Settings
+    pages:
+      - name: "Personal Info"
+        url: '/newtonteach.me/educator/settings/personal-info'
+      - name: "Security"
+        url: ''
   - title: Parent
   - title: Student
 
