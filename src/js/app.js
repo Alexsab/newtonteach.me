@@ -1,5 +1,6 @@
 'use strict';
 
+$(function(){
 	const chooseRoleLink = $('a#choose_role');
 
 	function inputRoleCheck(){
@@ -68,6 +69,43 @@
 			$img.replaceWith($svg);
 		}, 'xml');
 	});
+
+	// Dropdown
+
+	const $dropdown = $('.new-dropdown');
+
+	$dropdown.each(function(){
+		let $this = $(this),
+			$btn  = $this.find('button');
+		$btn.click(()=>{	
+			if ($this.hasClass('is-active')) {
+				closeDropdown($this);
+			}else{
+				$dropdown.removeClass('is-active');
+				openDropdown($this);
+			}
+		})
+	})
+
+	function openDropdown(el){
+		el.addClass('is-active');
+	}
+
+	function closeDropdown(el){
+		el.removeClass('is-active');
+	}
+
+	function checkValueDropdown(selector){
+		let inputValue = selector.find('input[type="hidden"]').val();
+		if ( inputValue != '' ) {
+			selector.find('.new-dropdown-value').html(inputValue);									
+			selector.addClass('is-selected');
+		}else{
+			selector.removeClass('is-selected');
+		}
+	}
+
+});
 
 (function(w,d) {
 

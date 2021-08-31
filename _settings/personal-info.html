@@ -9,8 +9,41 @@ title: "Personal Info"
 	</div>
 	<div class="col-9 mb-3">
 		<div class="card mb-3">
-			<div class="card-body">
-				Info
+			<div class="card-body py-4 text-center">
+				
+				<div class="personal-info">
+					<form class="mx-auto">
+						
+						<div class="user-avatar-block mb-48">
+							<img src="https://via.placeholder.com/156x156" alt="ALT" class="mx-auto rounded-circle mb-16 d-block">
+							<input type="file" id="user-avatar" class="d-none">
+							<a href="javascript:void(0)" class="primary-lightest fw-semibold fz-normal" onclick="document.getElementById('user-avatar').click();">Update photo</a>
+						</div>
+
+						<div class="newton-form-group d-flex flex-column-reverse color-primary-lighter-bg rounded-3 color-primary-darkest fz-normal lh-1 position-relative required mx-auto mb-16">
+							<input type="text" id="name" name="name" class="bg-transparent rounded-3 h-100 w-100 px-3 pt-4 pb-1" placeholder=" " required="" value="Jessica">
+							<label for="name" class="position-absolute">
+								Name
+								<span class="error-message ms-2">Name field is required</span>
+							</label>
+						</div>
+						<div class="newton-form-group d-flex flex-column-reverse color-primary-lighter-bg rounded-3 color-primary-darkest fz-normal lh-1 position-relative mx-auto mb-16">
+							<input type="text" id="middle-name" name="middle-name" class="bg-transparent rounded-3 h-100 w-100 px-3 pt-4 pb-1" placeholder=" ">
+							<label for="middle-name" class="position-absolute">
+								Middle name
+							</label>
+						</div>
+						<div class="newton-form-group d-flex flex-column-reverse color-primary-lighter-bg rounded-3 color-primary-darkest fz-normal lh-1 position-relative required mx-auto mb-16">
+							<input type="text" id="last-name" name="last-name" class="bg-transparent rounded-3 h-100 w-100 px-3 pt-4 pb-1" placeholder=" " required="" value="Caffrey">
+							<label for="last-name" class="position-absolute">
+								Last name
+								<span class="error-message ms-2">Last name field is required</span>
+							</label>
+						</div>
+
+					</form>					
+				</div>
+
 			</div>
 		</div>
 	</div>
