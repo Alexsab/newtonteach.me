@@ -11,7 +11,7 @@ title: "Personal Info"
 		<div class="card mb-3">
 			<div class="card-body py-4 text-center">
 				
-				<div class="personal-info">
+				<div class="personal-info mx-auto">
 					<form class="mx-auto">
 						
 						<div class="user-avatar-block mb-48">
@@ -40,6 +40,115 @@ title: "Personal Info"
 								<span class="error-message ms-2">Last name field is required</span>
 							</label>
 						</div>
+						<div class="new-dropdown newton-form-group color-primary-lighter-bg rounded-3 position-relative mx-auto mb-16 disabled">
+							<input type="hidden" name="role" class="new-dropdown-input" value="Educator">
+							<button type="button" class="p-0 bg-transparent w-100 h-100 color-primary-darkest fz-normal lh-1 rounded-3 position-relative border-0" disabled>						
+								<span class="new-dropdown-label position-absolute">Educator</span>
+								<span class="new-dropdown-arrow position-absolute top-50"><img src="{{'/img/icons/arrow-down.svg' | relative_url}}" alt="Down"></span>
+							</button>
+						</div>
+						<div class="new-dropdown new-dropdown-multi newton-form-group color-primary-lighter-bg rounded-3 position-relative mx-auto">
+							<input type="hidden" name="dropdown" class="new-dropdown-input" value="English">
+							<button type="button" class="p-0 bg-transparent w-100 h-100 color-primary-darkest fz-normal lh-1 rounded-3 position-relative border-0">						
+								<span class="new-dropdown-label position-absolute">Language</span>
+								<span class="new-dropdown-value position-absolute color_primary_light"></span>
+								<span class="new-dropdown-arrow position-absolute top-50"><img src="{{'/img/icons/arrow-down.svg' | relative_url}}" alt="Down"></span>
+							</button>
+							<div class="new-dropdown-list position-absolute w-100 start-0 top-100 rounded-3 px-3 bg-white">
+								<ul class="p-0 py-1 m-0">
+									<li class="new-dropdown-item py-2 color-primary-darkest fz-normal lh-1" data-value="English">
+										<span class="new-label">
+											<input type="checkbox">
+											<span class="new-checkbox-radio new-primary new-checkbox"></span>
+											<span class="new-checkbox-radio-text fz-normal gray-color">English</span>
+										</span>							
+									</li>
+									<li class="new-dropdown-item py-2 color-primary-darkest fz-normal lh-1" data-value="Russian">
+										<span class="new-label">
+											<input type="checkbox">
+											<span class="new-checkbox-radio new-primary new-checkbox"></span>
+											<span class="new-checkbox-radio-text fz-normal gray-color">Russian</span>
+										</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<hr class="color-primary-lighter-bg mt-24 mb-24 opacity-1">
+
+						<div class="new-dropdown newton-form-group color-primary-lighter-bg rounded-3 position-relative mb-16 is-selected">
+							<input type="hidden" name="dropdown" class="new-dropdown-input" value="United States">
+							<button type="button" class="p-0 bg-transparent w-100 h-100 color-primary-darkest fz-normal lh-1 rounded-3 position-relative border-0">						
+								<span class="new-dropdown-label position-absolute">Country</span>
+								<span class="new-dropdown-value position-absolute color_primary_light">United States</span>
+								<span class="new-dropdown-arrow position-absolute top-50"><img src="{{'/img/icons/arrow-down.svg' | relative_url}}" alt="Down"></span>
+							</button>
+							<div class="new-dropdown-list position-absolute w-100 start-0 top-100 rounded-3 px-3 bg-white text-start">
+								<ul class="p-0 py-1 m-0">
+									<li class="new-dropdown-item py-2 color-primary-darkest fz-normal lh-1 active" data-value="United States">United States</li>
+									<li class="new-dropdown-item py-2 color-primary-darkest fz-normal lh-1" data-value="Russia">Russia</li>
+									<li class="new-dropdown-item py-2 color-primary-darkest fz-normal lh-1" data-value="Canada">Canada</li>
+									<li class="new-dropdown-item py-2 color-primary-darkest fz-normal lh-1" data-value="Italy">Italy</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="new-dropdown newton-form-group color-primary-lighter-bg rounded-3 position-relative mb-16 is-selected">
+							<input type="hidden" name="dropdown" class="new-dropdown-input" value="California">
+							<button type="button" class="p-0 bg-transparent w-100 h-100 color-primary-darkest fz-normal lh-1 rounded-3 position-relative border-0">						
+								<span class="new-dropdown-label position-absolute">State</span>
+								<span class="new-dropdown-value position-absolute color_primary_light">California</span>
+								<span class="new-dropdown-arrow position-absolute top-50"><img src="{{'/img/icons/arrow-down.svg' | relative_url}}" alt="Down"></span>
+							</button>
+							<div class="new-dropdown-list position-absolute w-100 start-0 top-100 rounded-3 px-3 bg-white text-start">
+								<ul class="p-0 py-1 m-0">
+									<li class="new-dropdown-item py-2 color-primary-darkest fz-normal lh-1 active" data-value="California">California</li>
+									<li class="new-dropdown-item py-2 color-primary-darkest fz-normal lh-1" data-value="Iowa">Iowa</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="new-dropdown newton-form-group color-primary-lighter-bg rounded-3 position-relative is-selected">
+							<input type="hidden" name="dropdown" class="new-dropdown-input" value="Los Angeles">
+							<button type="button" class="p-0 bg-transparent w-100 h-100 color-primary-darkest fz-normal lh-1 rounded-3 position-relative border-0">						
+								<span class="new-dropdown-label position-absolute">City</span>
+								<span class="new-dropdown-value position-absolute color_primary_light">Los Angeles</span>
+								<span class="new-dropdown-arrow position-absolute top-50"><img src="{{'/img/icons/arrow-down.svg' | relative_url}}" alt="Down"></span>
+							</button>
+							<div class="new-dropdown-list position-absolute w-100 start-0 top-100 rounded-3 px-3 bg-white text-start">
+								<ul class="p-0 py-1 m-0">
+									<li class="new-dropdown-item py-2 color-primary-darkest fz-normal lh-1 active" data-value="Los Angeles">Los Angeles</li>
+									<li class="new-dropdown-item py-2 color-primary-darkest fz-normal lh-1" data-value="New York">New York</li>
+								</ul>
+							</div>
+						</div>
+
+						<hr class="color-primary-lighter-bg mt-24 mb-24 opacity-1">
+
+						<div class="new-dropdown newton-form-group color-primary-lighter-bg rounded-3 position-relative mb-16 is-selected">
+							<input type="hidden" name="dropdown" class="new-dropdown-input" value="California Elementary">
+							<button type="button" class="p-0 bg-transparent w-100 h-100 color-primary-darkest fz-normal lh-1 rounded-3 position-relative border-0">						
+								<span class="new-dropdown-label position-absolute">Work in school</span>
+								<span class="new-dropdown-value position-absolute color_primary_light">California Elementary</span>
+								<span class="new-dropdown-arrow position-absolute top-50"><img src="{{'/img/icons/arrow-down.svg' | relative_url}}" alt="Down"></span>
+							</button>
+							<div class="new-dropdown-list position-absolute w-100 start-0 top-100 rounded-3 px-3 bg-white text-start">
+								<ul class="p-0 py-1 m-0">
+									<li class="new-dropdown-item py-2 color-primary-darkest fz-normal lh-1 active" data-value="California Elementary">California Elementary</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="newton-form-group d-flex flex-column-reverse color-primary-lighter-bg rounded-3 color-primary-darkest fz-normal lh-1 position-relative mx-auto mb-16">
+							<input type="text" id="experience" name="experience" class="bg-transparent rounded-3 h-100 w-100 px-3 pt-4 pb-1" placeholder=" " value="12">
+							<label for="experience" class="position-absolute">
+								Experience (Yr)
+							</label>
+						</div>
+
+						<textarea class="color-primary-lighter-bg rounded-3 color-primary-darkest fz-normal position-relative mx-auto mb-16 px-3 py-2 w-100 border-0" placeholder="About (Up to 1400 characters)" maxlength="1400"></textarea>
+
+						<button type="submit" class="btn btn-medium secondary_dark_bg text-white fz-normal fw-normal d-inline-block mx-auto" data-direction="next" id="choose_role">Save Changes</button>
 
 					</form>					
 				</div>

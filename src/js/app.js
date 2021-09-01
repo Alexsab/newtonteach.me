@@ -136,12 +136,12 @@ $(function(){
 	// Функция открытия
 	function openDropdown(el){
 		el.addClass('is-active');
-		el.find('.new-dropdown-list').slideDown(150);
+		el.find('.new-dropdown-list').slideDown(100);
 	}
 	// Функция закрытия
 	function closeDropdown(el){
 		el.removeClass('is-active');
-		el.find('.new-dropdown-list').slideUp(150);
+		el.find('.new-dropdown-list').slideUp(100);
 	}
 	// Проверка, есть ли что-то в скрытом input
 	function checkValueDropdown(selector){

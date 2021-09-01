@@ -13145,6 +13145,10 @@ body {
   background-color: #E7EEF1;
 }
 
+hr {
+  opacity: 1;
+}
+
 .default-link svg {
   height: auto;
   fill: #8D8D8D;
@@ -13195,6 +13199,11 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+textarea {
+  resize: none;
+  overflow-y: auto;
 }
 
 .new-label {
@@ -14564,6 +14573,33 @@ body {
 }
 .new-dots ul .slick-active button {
   background-color: #4899B5;
+}
+
+.personal-info {
+  width: 257px;
+}
+@media screen and (min-width: 1441px) {
+  .personal-info {
+    width: calc(17.9540709812vw - 1.7181628392px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .personal-info {
+    width: 343px;
+  }
+}
+.personal-info textarea {
+  height: 165px;
+}
+@media screen and (min-width: 1441px) {
+  .personal-info textarea {
+    height: calc(11.4822546973vw - 0.4592901879px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .personal-info textarea {
+    height: 220px;
+  }
 }
 
 .user-avatar-block img {
