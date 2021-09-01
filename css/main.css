@@ -13523,22 +13523,50 @@ body {
 }
 .newton-form-group input:not(:-moz-placeholder-shown) ~ label {
   top: 33%;
-  left: 1.1rem;
-  transform: translateY(-50%) scale(0.8);
+  left: 1rem;
 }
 .newton-form-group input:not(:-ms-input-placeholder) ~ label {
   top: 33%;
-  left: 1.1rem;
-  -ms-transform: translateY(-50%) scale(0.8);
-      transform: translateY(-50%) scale(0.8);
+  left: 1rem;
 }
 .newton-form-group input:focus ~ label,
 .newton-form-group input:not(:placeholder-shown) ~ label {
   top: 33%;
-  left: 1.1rem;
-  -webkit-transform: translateY(-50%) scale(0.8);
-      -ms-transform: translateY(-50%) scale(0.8);
-          transform: translateY(-50%) scale(0.8);
+  left: 1rem;
+}
+.newton-form-group input:not(:-moz-placeholder-shown) ~ label {
+  font-size: 9px;
+}
+.newton-form-group input:not(:-ms-input-placeholder) ~ label {
+  font-size: 9px;
+}
+.newton-form-group input:focus ~ label,
+.newton-form-group input:not(:placeholder-shown) ~ label {
+  font-size: 9px;
+}
+@media screen and (min-width: 1441px) {
+  .newton-form-group input:not(:-moz-placeholder-shown) ~ label {
+    font-size: calc(0.6263048017vw - 0.0250521921px);
+  }
+  .newton-form-group input:not(:-ms-input-placeholder) ~ label {
+    font-size: calc(0.6263048017vw - 0.0250521921px);
+  }
+  .newton-form-group input:focus ~ label,
+.newton-form-group input:not(:placeholder-shown) ~ label {
+    font-size: calc(0.6263048017vw - 0.0250521921px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .newton-form-group input:not(:-moz-placeholder-shown) ~ label {
+    font-size: 12px;
+  }
+  .newton-form-group input:not(:-ms-input-placeholder) ~ label {
+    font-size: 12px;
+  }
+  .newton-form-group input:focus ~ label,
+.newton-form-group input:not(:placeholder-shown) ~ label {
+    font-size: 12px;
+  }
 }
 .newton-form-group.disabled {
   cursor: default;
@@ -13661,10 +13689,20 @@ body {
 }
 .new-dropdown.is-selected .new-dropdown-label {
   top: 33%;
-  left: 0.7rem;
-  -webkit-transform: translateY(-50%) scale(0.8);
-      -ms-transform: translateY(-50%) scale(0.8);
-          transform: translateY(-50%) scale(0.8);
+  left: 1rem;
+}
+.new-dropdown.is-selected .new-dropdown-label {
+  font-size: 9px;
+}
+@media screen and (min-width: 1441px) {
+  .new-dropdown.is-selected .new-dropdown-label {
+    font-size: calc(0.6263048017vw - 0.0250521921px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .new-dropdown.is-selected .new-dropdown-label {
+    font-size: 12px;
+  }
 }
 .new-dropdown.is-selected .new-dropdown-value {
   display: block;

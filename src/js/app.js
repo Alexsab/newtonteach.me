@@ -87,21 +87,51 @@ $(function(){
 		})
 	})
 
+	let arr = [];
+
 	$('.new-dropdown-item').click(function(){
 		let $th = $(this),
 			value = $th.data('value'),
-			$parent = $th.closest('.new-dropdown'),
+			$parent = $th.closest('.new-dropdown')
+			$items = $parent.find('.new-dropdown-item'),
 			$input = $parent.find('input[type="hidden"]');
 
 		if(!$parent.hasClass('new-dropdown-multi')){
-			$('.new-dropdown-item').removeClass('active');
+			$items.removeClass('active');
 			$th.addClass('active');
 			$input.val(value);
 			checkValueDropdown($parent);
 			closeDropdown($parent);
+		}else{
+
+			$th.toggleClass('active');
+			if ($.inArray(value, arr) == -1) {
+				arr.push(value);
+			}else{
+				arr = arr.filter(function(item) {
+					return item !== value
+				})
+			}
+			let out = arr.map(function(item) {
+				return item;
+			}).join(', ');
+			$input.val(out);
+			checkValueDropdown($parent);
 		}
 
 	})
+
+	$('body').click(function(e){
+		if (!e.target.closest('.new-dropdown')) {
+			closeDropdown($dropdown);
+		}
+	})
+
+	$(document).keyup(function(e) {
+		if (e.keyCode == 27) { //клавиша Esc
+			closeDropdown($dropdown);
+		}
+	});
 
 	function openDropdown(el){
 		el.addClass('is-active');

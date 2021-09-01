@@ -133,8 +133,8 @@
 	input:focus ~ label,
 	input:not(:placeholder-shown) ~ label
 		top: 33%
-		left: 1.1rem
-		transform: translateY(-50%) scale(0.8)
+		left: 1rem
+		@include interpolate(font-size, $LP, $fullHD, 9px, 12px)
 	&.disabled
 		cursor: default
 		opacity: 0.6
@@ -175,8 +175,8 @@
 	&.is-selected
 		.new-dropdown-label
 			top: 33%
-			left: 0.7rem
-			transform: translateY(-50%) scale(0.8)
+			left: 1rem
+			@include interpolate(font-size, $LP, $fullHD, 9px, 12px)
 		.new-dropdown-value
 			display: block
 .new-dropdown-list
