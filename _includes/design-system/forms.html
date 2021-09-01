@@ -43,7 +43,7 @@
 					<hr>
 
 					<div class="new-dropdown newton-form-group color-primary-lighter-bg rounded-3 position-relative mb-3">
-						<input type="hidden" name="dropdown" value="">
+						<input type="hidden" name="dropdown" class="new-dropdown-input" value="">
 						<button type="button" class="p-0 bg-transparent w-100 h-100 color-primary-darkest fz-normal lh-1 rounded-3 position-relative border-0">						
 							<span class="new-dropdown-label position-absolute">Dropdown</span>
 							<span class="new-dropdown-value position-absolute color_primary_light"></span>
@@ -60,7 +60,7 @@
 					</div>
 
 					<div class="new-dropdown new-dropdown-multi newton-form-group color-primary-lighter-bg rounded-3 position-relative mb-3">
-						<input type="hidden" name="dropdown" value="">
+						<input type="hidden" name="dropdown" class="new-dropdown-input" value="">
 						<button type="button" class="p-0 bg-transparent w-100 h-100 color-primary-darkest fz-normal lh-1 rounded-3 position-relative border-0">						
 							<span class="new-dropdown-label position-absolute">Dropdown multi</span>
 							<span class="new-dropdown-value position-absolute color_primary_light"></span>
@@ -68,16 +68,40 @@
 						</button>
 						<div class="new-dropdown-list position-absolute w-100 start-0 top-100 rounded-3 px-3 bg-white">
 							<ul class="p-0 py-1 m-0">
-								<li class="new-dropdown-item py-2 color-primary-darkest fz-normal lh-1" data-value="Value 1">Value 1</li>
-								<li class="new-dropdown-item py-2 color-primary-darkest fz-normal lh-1" data-value="Value 2">Value 2</li>
-								<li class="new-dropdown-item py-2 color-primary-darkest fz-normal lh-1" data-value="Value 3">Value 3</li>
-								<li class="new-dropdown-item py-2 color-primary-darkest fz-normal lh-1" data-value="Value 4">Value 4</li>
+								<li class="new-dropdown-item py-2 color-primary-darkest fz-normal lh-1" data-value="Value 1">
+									<span class="new-label">
+										<input type="checkbox">
+										<span class="new-checkbox-radio new-primary new-checkbox"></span>
+										<span class="new-checkbox-radio-text fz-normal gray-color">Value 1</span>
+									</span>							
+								</li>
+								<li class="new-dropdown-item py-2 color-primary-darkest fz-normal lh-1" data-value="Value 2">
+									<span class="new-label">
+										<input type="checkbox">
+										<span class="new-checkbox-radio new-primary new-checkbox"></span>
+										<span class="new-checkbox-radio-text fz-normal gray-color">Value 2</span>
+									</span>
+								</li>
+								<li class="new-dropdown-item py-2 color-primary-darkest fz-normal lh-1" data-value="Value 3">
+									<span class="new-label">
+										<input type="checkbox">
+										<span class="new-checkbox-radio new-primary new-checkbox"></span>
+										<span class="new-checkbox-radio-text fz-normal gray-color">Value 3</span>
+									</span>
+								</li>
+								<li class="new-dropdown-item py-2 color-primary-darkest fz-normal lh-1" data-value="Value 4">
+									<span class="new-label">
+										<input type="checkbox">
+										<span class="new-checkbox-radio new-primary new-checkbox"></span>
+										<span class="new-checkbox-radio-text fz-normal gray-color">Value 4</span>
+									</span>
+								</li>
 							</ul>
 						</div>
 					</div>
 
 					<div class="new-dropdown newton-form-group color-primary-lighter-bg rounded-3 position-relative mb-3 disabled">
-						<input type="hidden" name="dropdown" value="Dropdown disabled">
+						<input type="hidden" name="dropdown" class="new-dropdown-input" value="Dropdown disabled">
 						<button type="button" class="p-0 bg-transparent w-100 h-100 color-primary-darkest fz-normal lh-1 rounded-3 position-relative border-0" disabled>						
 							<span class="new-dropdown-label position-absolute">Dropdown disabled</span>
 							<span class="new-dropdown-arrow position-absolute top-50"><img src="{{'/img/icons/arrow-down.svg' | relative_url}}" alt="Down"></span>

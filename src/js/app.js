@@ -94,7 +94,7 @@ $(function(){
 			value = $th.data('value'),
 			$parent = $th.closest('.new-dropdown')
 			$items = $parent.find('.new-dropdown-item'),
-			$input = $parent.find('input[type="hidden"]');
+			$input = $parent.find('.new-dropdown-input');
 
 		if(!$parent.hasClass('new-dropdown-multi')){
 			$items.removeClass('active');
@@ -104,6 +104,7 @@ $(function(){
 			closeDropdown($parent);
 		}else{
 
+			$th.find('.new-label').toggleClass('active');
 			$th.toggleClass('active');
 			if ($.inArray(value, arr) == -1) {
 				arr.push(value);
@@ -142,7 +143,7 @@ $(function(){
 	}
 
 	function checkValueDropdown(selector){
-		let inputValue = selector.find('input[type="hidden"]').val();
+		let inputValue = selector.find('.new-dropdown-input').val();
 		if ( inputValue != '' ) {
 			selector.find('.new-dropdown-value').html(inputValue);									
 			selector.addClass('is-selected');

@@ -32,6 +32,13 @@
 					opacity: 1
 			~ span ~ .new-checkbox-radio-text
 				color: $primary_lighter
+	&.active
+		.new-primary
+			border-color: $primary_light
+		.new-checkbox
+			background-color: $primary_light
+			&:before
+				opacity: 1
 		&:disabled
 			~ .new-checkbox-radio
 				opacity: 0.6
@@ -114,7 +121,7 @@
 	transition: all .25s ease-out
 	&:hover
 		background-color: $color_primary_light
-	label
+	> label
 		left: 1rem
 		top: 50%
 		transform: translateY(-50%)
@@ -190,6 +197,8 @@
 		li
 			cursor: pointer
 			transition: all 0.2s ease
+			position: relative
+			z-index: 1
 			&:hover, &.active
 				color: $primary_light
 				
