@@ -176,9 +176,10 @@
 		z-index: 1
 		.new-dropdown-arrow
 			transform: translateY(-50%) rotate(-180deg)
-		.new-dropdown-list
-			height: auto
-			transform: translateY(6px)
+		// .new-dropdown-list
+		// 	height: auto
+		// 	opacity: 1
+		// 	transform: translateY(6px)
 	&.is-selected
 		.new-dropdown-label
 			top: 33%
@@ -187,11 +188,13 @@
 		.new-dropdown-value
 			display: block
 .new-dropdown-list
-	height: 0
-	z-index: -1
+	display: none
+	// height: 0
+	// opacity: 0
 	box-shadow: 0px 0px 11px rgba(165, 165, 165, 0.2)
-	transform: translateY(0)
-	transition: all 0.2s ease
+	transform: translateY(6px)
+	// transition: all 0.2s ease
+	z-index: -1
 	ul
 		list-style: none
 		li

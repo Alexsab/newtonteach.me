@@ -73,6 +73,7 @@ $(function(){
 	// Dropdown
 
 	const $dropdown = $('.new-dropdown');
+	let arr = [];
 
 	$dropdown.each(function(){
 		let $this = $(this),
@@ -87,22 +88,21 @@ $(function(){
 		})
 	})
 
-	let arr = [];
-
+	// Клик по элементам выпадающего списка
 	$('.new-dropdown-item').click(function(){
 		let $th = $(this),
 			value = $th.data('value'),
 			$parent = $th.closest('.new-dropdown')
 			$items = $parent.find('.new-dropdown-item'),
 			$input = $parent.find('.new-dropdown-input');
-
+		// обычный Dropdown
 		if(!$parent.hasClass('new-dropdown-multi')){
 			$items.removeClass('active');
 			$th.addClass('active');
 			$input.val(value);
 			checkValueDropdown($parent);
 			closeDropdown($parent);
-		}else{
+		}else{ // Мульти Dropdown
 
 			$th.find('.new-label').toggleClass('active');
 			$th.toggleClass('active');
@@ -121,27 +121,29 @@ $(function(){
 		}
 
 	})
-
+	// При клике на любое место в документе
 	$('body').click(function(e){
 		if (!e.target.closest('.new-dropdown')) {
 			closeDropdown($dropdown);
 		}
 	})
-
+	// Нажатие на клавишу Esc
 	$(document).keyup(function(e) {
 		if (e.keyCode == 27) { //клавиша Esc
 			closeDropdown($dropdown);
 		}
 	});
-
+	// Функция открытия
 	function openDropdown(el){
 		el.addClass('is-active');
+		el.find('.new-dropdown-list').slideDown(150);
 	}
-
+	// Функция закрытия
 	function closeDropdown(el){
 		el.removeClass('is-active');
+		el.find('.new-dropdown-list').slideUp(150);
 	}
-
+	// Проверка, есть ли что-то в скрытом input
 	function checkValueDropdown(selector){
 		let inputValue = selector.find('.new-dropdown-input').val();
 		if ( inputValue != '' ) {
@@ -151,6 +153,8 @@ $(function(){
 			selector.removeClass('is-selected');
 		}
 	}
+
+	// End Dropdown
 
 });
 
