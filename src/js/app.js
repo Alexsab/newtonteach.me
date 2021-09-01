@@ -87,6 +87,22 @@ $(function(){
 		})
 	})
 
+	$('.new-dropdown-item').click(function(){
+		let $th = $(this),
+			value = $th.data('value'),
+			$parent = $th.closest('.new-dropdown'),
+			$input = $parent.find('input[type="hidden"]');
+
+		if(!$parent.hasClass('new-dropdown-multi')){
+			$('.new-dropdown-item').removeClass('active');
+			$th.addClass('active');
+			$input.val(value);
+			checkValueDropdown($parent);
+			closeDropdown($parent);
+		}
+
+	})
+
 	function openDropdown(el){
 		el.addClass('is-active');
 	}
