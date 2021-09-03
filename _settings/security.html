@@ -1,0 +1,51 @@
+---
+layout: pages
+title: "Security"
+active: true
+---
+
+<div class="row">
+	<div class="col-3 mb-3">
+		{%- include components/widget-area-menu.html -%}
+	</div>
+	<div class="col-9 mb-3">
+		<div class="card h-100 position-relative mb-3">
+			<div class="card-body py-4 text-center">
+				
+				<div class="personal-info h-100 mx-auto">
+					<form class="mx-auto h-100">
+						
+						<div class="newton-form-group d-flex flex-column-reverse color-primary-lighter-bg rounded-3 color-primary-darkest fz-normal lh-1 position-relative required mb-16">
+							<input type="email" id="email" name="email" class="bg-transparent rounded-3 h-100 w-100 px-3 pt-4 pb-1" placeholder=" " value="jessicacaffrey@gmail.com" required>
+							<label for="email" class="position-absolute">Email <span class="error-message ms-2">Email field is required</span></label>
+						</div>
+
+						<div class="newton-form-group d-flex flex-column-reverse color-primary-lighter-bg rounded-3 color-primary-darkest fz-normal lh-1 position-relative required mb-16">
+							<input type="tel" id="phone" name="phone" class="bg-transparent rounded-3 h-100 w-100 px-3 pt-4 pb-1" placeholder=" " value="+18446644673" required>
+							<label for="phone" class="position-absolute">Phone <span class="error-message ms-2">Phone field is required</span></label>
+						</div>
+
+						<div class="newton-form-group d-flex flex-column-reverse color-primary-lighter-bg rounded-3 color-primary-darkest fz-normal lh-1 position-relative required mb-16">
+							<input type="password" id="password" name="password" class="bg-transparent rounded-3 h-100 w-100 px-3 pt-4 pb-1" placeholder=" " value="12345678" required>
+							<label for="password" class="position-absolute">Password <span class="error-message ms-2">Password field is required</span></label>
+						</div>
+
+						<hr class="color-primary-lighter-bg mt-24 mb-24 opacity-1">
+
+						<label class="new-label align-items-start mb-16">
+							<input type="checkbox" name="agree" checked required>
+							<span class="new-checkbox-radio new-primary new-checkbox flex-shrink-0"></span>
+							<span class="new-checkbox-radio-text fz-normal gray-color text-start">
+								<span class="gray-color">I accept to show my content and products to not registered users</span>
+							</span>
+						</label>
+
+						<button type="submit" class="btn btn-medium secondary_dark_bg text-white fz-normal fw-normal d-inline-block mx-auto position-absolute bottom-0 start-50 mb-4" style="transform: translateX(-50%);">Save Changes</button>
+
+					</form>					
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
