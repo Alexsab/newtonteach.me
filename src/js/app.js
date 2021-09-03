@@ -73,11 +73,14 @@ $(function(){
 	// Dropdown
 
 	const $dropdown = $('.new-dropdown');
-	let arr = [];
 
-	$dropdown.each(function(){
+	$dropdown.each(function(i){
 		let $this = $(this),
 			$btn  = $this.find('button');
+
+		$this.attr('data-id', i);
+		// arr.push(obj);
+		// console.log(arr);
 		$btn.click(()=>{	
 			if ($this.hasClass('is-active')) {
 				closeDropdown($this);
@@ -91,8 +94,9 @@ $(function(){
 	// Клик по элементам выпадающего списка
 	$('.new-dropdown-item').click(function(){
 		let $th = $(this),
+			id = $th.data('id');
 			value = $th.data('value'),
-			$parent = $th.closest('.new-dropdown')
+			$parent = $th.closest('.new-dropdown'),
 			$items = $parent.find('.new-dropdown-item'),
 			$input = $parent.find('.new-dropdown-input');
 		// обычный Dropdown
@@ -103,6 +107,10 @@ $(function(){
 			checkValueDropdown($parent);
 			closeDropdown($parent);
 		}else{ // Мульти Dropdown
+			let arr = [];
+			if ($input.val() != '') {
+				arr = $input.val().split(',');				
+			}
 
 			$th.find('.new-label').toggleClass('active');
 			$th.toggleClass('active');
@@ -115,7 +123,8 @@ $(function(){
 			}
 			let out = arr.map(function(item) {
 				return item;
-			}).join(', ');
+			}).join(',');
+			// console.log(arr);
 			$input.val(out);
 			checkValueDropdown($parent);
 		}
@@ -147,7 +156,7 @@ $(function(){
 	function checkValueDropdown(selector){
 		let inputValue = selector.find('.new-dropdown-input').val();
 		if ( inputValue != '' ) {
-			selector.find('.new-dropdown-value').html(inputValue);									
+			selector.find('.new-dropdown-value').html(inputValue.replace(',', ', '));									
 			selector.addClass('is-selected');
 		}else{
 			selector.removeClass('is-selected');
