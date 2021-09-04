@@ -90,6 +90,7 @@ projects.newtonteach_ui = {
 		src: [
 			'../node_modules/jquery/dist/jquery.min.js',
 			'../node_modules/slick-carousel/slick/slick.js',
+			'../node_modules/magnific-popup/dist/jquery.magnific-popup.js',
 			'src/js/app.js', // Custom scripts. Always at the end
 		],
 		dest:       'js',
