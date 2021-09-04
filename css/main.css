@@ -13600,6 +13600,10 @@ body {
   background-color: #E7EEF1;
 }
 
+.remove-btn {
+  cursor: pointer;
+}
+
 hr {
   opacity: 1;
 }

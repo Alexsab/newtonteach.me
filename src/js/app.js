@@ -165,6 +165,15 @@ $(function(){
 
 	// End Dropdown
 
+	// удаление элемента
+	function removeElement(btn){
+		$(btn).click(function(){
+			$(this).parent().remove();
+		})
+	}
+
+	removeElement('.remove-btn')
+
 });
 
 (function(w,d) {
