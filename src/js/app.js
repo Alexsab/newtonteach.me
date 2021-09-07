@@ -172,7 +172,21 @@ $(function(){
 		})
 	}
 
-	removeElement('.remove-btn')
+	removeElement('.remove-btn');
+
+	$('.hashtag-choose-link').click(function(){
+		let $th = $(this),
+			id = $th.attr('href');
+
+		$.magnificPopup.open({
+			items: {
+				src: id,
+				type: 'inline',
+				fixedContentPos: true,
+				preloader: false,
+			}
+		});
+	})
 
 });
 

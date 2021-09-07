@@ -14460,6 +14460,18 @@ textarea {
           filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.13));
 }
 
+.new-modal {
+  max-width: 600px;
+  width: 100%;
+  max-height: 660px;
+  position: relative;
+  top: 5%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
 .sidebar {
   height: 100vh;
   overflow-x: hidden;
