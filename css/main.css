@@ -13683,6 +13683,7 @@ textarea {
   height: 0;
   position: absolute;
   z-index: -1000;
+  opacity: 0;
 }
 .new-label input:checked ~ .new-primary {
   border-color: #3680A1;
