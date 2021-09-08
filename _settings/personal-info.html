@@ -157,12 +157,21 @@ active: true
 								<input type="hidden" name="grades" value="0,1,2">
 
 								<div class="hashtag-area-list">
-									<span class="hashtag hashtag-element rounded-pill text-white color-green-lighter-bg d-inline-flex justify-content-between align-items-center small-text mx-0 me-1 lh-1 mb-2" data-id="0">PreK<span class="ms-2 fs-6 lh-1 remove-btn">&times;</span></span>
-									<span class="hashtag hashtag-element rounded-pill text-white color-green-lighter-bg d-inline-flex justify-content-between align-items-center small-text mx-0 me-1 lh-1 mb-2" data-id="1">K<span class="ms-2 fs-6 lh-1 remove-btn">&times;</span></span>
-									<span class="hashtag hashtag-element rounded-pill text-white color-green-lighter-bg d-inline-flex justify-content-between align-items-center small-text mx-0 me-1 lh-1 mb-2" data-id="2">1st Grade<span class="ms-2 fs-6 lh-1 remove-btn">&times;</span></span>
+									<span class="hashtag hashtag-element rounded-pill text-white color-green-lighter-bg d-inline-flex justify-content-between align-items-center small-text mx-0 me-1 lh-1 mb-2" data-id="0">
+										<span class="hashtag-text">PreK</span>
+										<span class="ms-2 fs-6 lh-1 remove-btn">&times;</span>
+									</span>
+									<span class="hashtag hashtag-element rounded-pill text-white color-green-lighter-bg d-inline-flex justify-content-between align-items-center small-text mx-0 me-1 lh-1 mb-2" data-id="1">
+										<span class="hashtag-text">K</span>
+										<span class="ms-2 fs-6 lh-1 remove-btn">&times;</span>
+									</span>
+									<span class="hashtag hashtag-element rounded-pill text-white color-green-lighter-bg d-inline-flex justify-content-between align-items-center small-text mx-0 me-1 lh-1 mb-2" data-id="2">
+										<span class="hashtag-text">1st Grade</span>
+										<span class="ms-2 fs-6 lh-1 remove-btn">&times;</span>
+									</span>
 								</div>								
 
-								<a href="#grades" class="hashtag hashtag-choose-link rounded-pill text-white secondary_dark_bg text-white d-inline-flex justify-content-between align-items-center small-text mx-0 lh-1 mb-3">Add grade<span class="ms-2 fs-6 lh-1">&#43;</span></a>
+								<a href="#grades" class="hashtag hashtag-choose-link rounded-pill text-white secondary_dark_bg text-white d-inline-flex justify-content-between align-items-center small-text mx-0 lh-1 mb-3">Add Grade<span class="ms-2 fs-6 lh-1">&#43;</span></a>
 								
 							</div>
 
@@ -184,7 +193,7 @@ active: true
 	<div class="scroll-area mb-5">
 
 		<label class="new-label py-2 pe-3 w-100 d-flex flex-row-reverse align-items-center justify-content-between">
-			<input type="checkbox" data-id="0">
+			<input type="checkbox" data-id="0" data-name="PreK">
 			<span class="new-checkbox-radio new-primary new-checkbox"></span>
 			<span class="new-checkbox-radio-text fz-normal fw-semibold gray-color">
 				<img src="https://via.placeholder.com/32" class="rounded-circle me-2" alt="ALT">
@@ -192,7 +201,7 @@ active: true
 			</span>
 		</label>
 		<label class="new-label py-2 pe-3 w-100 d-flex flex-row-reverse align-items-center justify-content-between">
-			<input type="checkbox" data-id="1">
+			<input type="checkbox" data-id="1" data-name="K">
 			<span class="new-checkbox-radio new-primary new-checkbox"></span>
 			<span class="new-checkbox-radio-text fz-normal fw-semibold gray-color">
 				<img src="https://via.placeholder.com/32" class="rounded-circle me-2" alt="ALT">
@@ -200,7 +209,7 @@ active: true
 			</span>
 		</label>
 		<label class="new-label py-2 pe-3 w-100 d-flex flex-row-reverse align-items-center justify-content-between">
-			<input type="checkbox" data-id="2">
+			<input type="checkbox" data-id="2" data-name="1st Grade">
 			<span class="new-checkbox-radio new-primary new-checkbox"></span>
 			<span class="new-checkbox-radio-text fz-normal fw-semibold gray-color">
 				<img src="https://via.placeholder.com/32" class="rounded-circle me-2" alt="ALT">
@@ -208,7 +217,7 @@ active: true
 			</span>
 		</label>
 		<label class="new-label py-2 pe-3 w-100 d-flex flex-row-reverse align-items-center justify-content-between">
-			<input type="checkbox" data-id="3">
+			<input type="checkbox" data-id="3" data-name="2nd Grade">
 			<span class="new-checkbox-radio new-primary new-checkbox"></span>
 			<span class="new-checkbox-radio-text fz-normal fw-semibold gray-color">
 				<img src="https://via.placeholder.com/32" class="rounded-circle me-2" alt="ALT">
@@ -216,7 +225,7 @@ active: true
 			</span>
 		</label>
 		<label class="new-label py-2 pe-3 w-100 d-flex flex-row-reverse align-items-center justify-content-between">
-			<input type="checkbox" data-id="4">
+			<input type="checkbox" data-id="4" data-name="3rd Grade">
 			<span class="new-checkbox-radio new-primary new-checkbox"></span>
 			<span class="new-checkbox-radio-text fz-normal fw-semibold gray-color">
 				<img src="https://via.placeholder.com/32" class="rounded-circle me-2" alt="ALT">
@@ -224,7 +233,7 @@ active: true
 			</span>
 		</label>
 		<label class="new-label py-2 pe-3 w-100 d-flex flex-row-reverse align-items-center justify-content-between">
-			<input type="checkbox" data-id="5">
+			<input type="checkbox" data-id="5" data-name="5th Grade">
 			<span class="new-checkbox-radio new-primary new-checkbox"></span>
 			<span class="new-checkbox-radio-text fz-normal fw-semibold gray-color">
 				<img src="https://via.placeholder.com/32" class="rounded-circle me-2" alt="ALT">
@@ -232,7 +241,7 @@ active: true
 			</span>
 		</label>
 		<label class="new-label py-2 pe-3 w-100 d-flex flex-row-reverse align-items-center justify-content-between">
-			<input type="checkbox" data-id="6">
+			<input type="checkbox" data-id="6" data-name="6nd Grade">
 			<span class="new-checkbox-radio new-primary new-checkbox"></span>
 			<span class="new-checkbox-radio-text fz-normal fw-semibold gray-color">
 				<img src="https://via.placeholder.com/32" class="rounded-circle me-2" alt="ALT">
@@ -240,7 +249,7 @@ active: true
 			</span>
 		</label>
 		<label class="new-label py-2 pe-3 w-100 d-flex flex-row-reverse align-items-center justify-content-between">
-			<input type="checkbox" data-id="7">
+			<input type="checkbox" data-id="7" data-name="7nd Grade">
 			<span class="new-checkbox-radio new-primary new-checkbox"></span>
 			<span class="new-checkbox-radio-text fz-normal fw-semibold gray-color">
 				<img src="https://via.placeholder.com/32" class="rounded-circle me-2" alt="ALT">
@@ -248,7 +257,7 @@ active: true
 			</span>
 		</label>
 		<label class="new-label py-2 pe-3 w-100 d-flex flex-row-reverse align-items-center justify-content-between">
-			<input type="checkbox" data-id="8">
+			<input type="checkbox" data-id="8" data-name="8th Grade">
 			<span class="new-checkbox-radio new-primary new-checkbox"></span>
 			<span class="new-checkbox-radio-text fz-normal fw-semibold gray-color">
 				<img src="https://via.placeholder.com/32" class="rounded-circle me-2" alt="ALT">
@@ -256,7 +265,7 @@ active: true
 			</span>
 		</label>
 		<label class="new-label py-2 pe-3 w-100 d-flex flex-row-reverse align-items-center justify-content-between">
-			<input type="checkbox" data-id="9">
+			<input type="checkbox" data-id="9" data-name="9th Grade">
 			<span class="new-checkbox-radio new-primary new-checkbox"></span>
 			<span class="new-checkbox-radio-text fz-normal fw-semibold gray-color">
 				<img src="https://via.placeholder.com/32" class="rounded-circle me-2" alt="ALT">
@@ -264,7 +273,7 @@ active: true
 			</span>
 		</label>
 		<label class="new-label py-2 pe-3 w-100 d-flex flex-row-reverse align-items-center justify-content-between">
-			<input type="checkbox" data-id="10">
+			<input type="checkbox" data-id="10" data-name="10th Grade">
 			<span class="new-checkbox-radio new-primary new-checkbox"></span>
 			<span class="new-checkbox-radio-text fz-normal fw-semibold gray-color">
 				<img src="https://via.placeholder.com/32" class="rounded-circle me-2" alt="ALT">
@@ -275,7 +284,7 @@ active: true
 	</div>
 
 	<div class="text-center">
-		<a href="javascript:void(0)" class="btn btn-medium secondary_dark_bg text-white fz-normal fw-normal d-inline-block mx-auto">Add Grades</a>
+		<a href="javascript:void(0)" class="btn btn-medium secondary_dark_bg text-white fz-normal fw-normal d-inline-block mx-auto add">Add Grades</a>
 	</div>
 
 </div>

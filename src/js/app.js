@@ -165,24 +165,12 @@ $(function(){
 
 	// End Dropdown
 
-	// удаление элемента
-	function removeElement(btn){
-		$(btn).click(function(){
-			$(this).parent().remove();
-		})
-	}
-
-	removeElement('.remove-btn');
-
-	// hashtag_choose-area 
-	// Добавление элементов из попап окна  
-
+	// hashtag_choose-area --ADD--
 	$('body').on('click', '.hashtag-choose-link', function(){
 		let $th = $(this),
 			id = $th.attr('href');
 
 		checkElementsInBlock($th, id);
-
 		$.magnificPopup.open({
 			items: {
 				src: id,
@@ -195,12 +183,11 @@ $(function(){
 		return false;
 	});
 
+	// Устанавливаем checked, элементам в попап окне  
 	function checkElementsInBlock(th, blockId){
 		let elements = th.closest('.hashtag-area').find('.hashtag-element');
 		let inputs = $(blockId).find('.new-label input');
-
 		inputs.prop('checked', false);
-
 		elements.each(function(){
 			let id = $(this).data('id');
 			inputs.each(function(){
@@ -212,6 +199,65 @@ $(function(){
 
 		});
 	}
+
+	$('.add').click(function(){
+		let id = $(this).closest('.new-modal').attr('id');
+		const checked = $(this).parent().prev().find('.new-label input:checked'); 
+
+		let out = [];
+		let values = [];
+		let val = '';
+		// console.log(checked);
+		if (checked.length > 0) {
+			checked.each(function(){
+				let checkedId = $(this).data('id');
+				let name = $(this).data('name');
+				out.push(`<span class="hashtag hashtag-element rounded-pill text-white color-green-lighter-bg d-inline-flex justify-content-between align-items-center small-text mx-0 me-1 lh-1 mb-2" data-id="${checkedId}">${name}<span class="ms-2 fs-6 lh-1 remove-btn">&times;</span></span>`)
+				values.push(checkedId);
+			})
+			// console.log(out);
+
+			val = values.map(function(item) {
+				return item;
+			}).join(',');
+		}	
+
+		$('a[href="#'+id+'"').prev().html(out);
+		$('a[href="#'+id+'"').prev().prev().val(val);
+		$.magnificPopup.close();	
+
+		asd();
+
+	});
+
+
+	// удаление элемента
+	function removeElement(btn, check = false, inputParent){
+		if(check){
+			let parent = btn.closest(inputParent),
+				input = parent.find('input'),
+				id = btn.parent().data('id'),
+				values = input.val().split(',');
+
+			values = values.filter(function(item) {
+				return Number(item) !== id;
+			});
+			let out = values.map(function(item) {
+				return item;
+			}).join(',');
+			input.val(out);
+		}
+		btn.parent().remove();
+	}
+
+	function asd(){
+		$('.remove-btn').click(function(){
+		removeElement($(this), true, '.hashtag-area');
+	});
+	}
+
+	asd();
+	
 
 });
 
