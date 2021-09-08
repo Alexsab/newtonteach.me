@@ -13716,6 +13716,10 @@ textarea {
   opacity: 0.6;
 }
 
+.new-label-hover:hover {
+  background-color: #F4F8FF;
+}
+
 .new-checkbox-radio {
   position: relative;
   margin-right: 6px;
@@ -14486,16 +14490,16 @@ textarea {
   overflow-y: auto;
 }
 .new-modal .scroll-area {
-  height: 352px;
+  height: 322px;
 }
 @media screen and (min-width: 1441px) {
   .new-modal .scroll-area {
-    height: calc(24.6346555324vw - 2.9853862213px);
+    height: calc(22.5469728601vw - 2.9018789144px);
   }
 }
 @media screen and (min-width: 1920px) {
   .new-modal .scroll-area {
-    height: 470px;
+    height: 430px;
   }
 }
 .new-modal .scroll-area::-webkit-scrollbar {
