@@ -174,9 +174,14 @@ $(function(){
 
 	removeElement('.remove-btn');
 
-	$('.hashtag-choose-link').click(function(){
+	// hashtag_choose-area 
+	// Добавление элементов из попап окна  
+
+	$('body').on('click', '.hashtag-choose-link', function(){
 		let $th = $(this),
 			id = $th.attr('href');
+
+		checkElementsInBlock($th, id);
 
 		$.magnificPopup.open({
 			items: {
@@ -186,7 +191,27 @@ $(function(){
 				preloader: false,
 			}
 		});
-	})
+
+		return false;
+	});
+
+	function checkElementsInBlock(th, blockId){
+		let elements = th.closest('.hashtag-area').find('.hashtag-element');
+		let inputs = $(blockId).find('.new-label input');
+
+		inputs.prop('checked', false);
+
+		elements.each(function(){
+			let id = $(this).data('id');
+			inputs.each(function(){
+				let inputId = $(this).data('id');
+				if (inputId === id) {
+					$(this).prop('checked', true);
+				}
+			});			
+
+		});
+	}
 
 });
 

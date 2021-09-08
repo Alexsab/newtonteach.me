@@ -14461,15 +14461,91 @@ textarea {
 }
 
 .new-modal {
-  max-width: 600px;
   width: 100%;
-  max-height: 660px;
-  position: relative;
   top: 5%;
   left: 50%;
   -webkit-transform: translate(-50%);
       -ms-transform: translate(-50%);
           transform: translate(-50%);
+}
+.new-modal {
+  max-width: 450px;
+}
+@media screen and (min-width: 1441px) {
+  .new-modal {
+    max-width: calc(31.3152400835vw - 1.2526096033px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .new-modal {
+    max-width: 600px;
+  }
+}
+.new-modal .scroll-area {
+  overflow-y: auto;
+}
+.new-modal .scroll-area {
+  height: 352px;
+}
+@media screen and (min-width: 1441px) {
+  .new-modal .scroll-area {
+    height: calc(24.6346555324vw - 2.9853862213px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .new-modal .scroll-area {
+    height: 470px;
+  }
+}
+.new-modal .scroll-area::-webkit-scrollbar {
+  border-radius: 2px;
+}
+.new-modal .scroll-area::-webkit-scrollbar {
+  width: 2px;
+}
+@media screen and (min-width: 1441px) {
+  .new-modal .scroll-area::-webkit-scrollbar {
+    width: calc(0.1252609603vw + 0.1949895616px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .new-modal .scroll-area::-webkit-scrollbar {
+    width: 2.6px;
+  }
+}
+.new-modal .scroll-area::-webkit-scrollbar-track {
+  background-color: #F6F6F6;
+  border-radius: 2px;
+}
+.new-modal .scroll-area::-webkit-scrollbar-thumb {
+  background-color: #79C4D8;
+  border-radius: 2px;
+}
+.new-modal .scroll-area .new-checkbox-radio-text img {
+  width: 24px;
+}
+@media screen and (min-width: 1441px) {
+  .new-modal .scroll-area .new-checkbox-radio-text img {
+    width: calc(1.6701461378vw - 0.0668058455px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .new-modal .scroll-area .new-checkbox-radio-text img {
+    width: 32px;
+  }
+}
+.new-modal .scroll-area .new-checkbox-radio-text img {
+  height: 24px;
+}
+@media screen and (min-width: 1441px) {
+  .new-modal .scroll-area .new-checkbox-radio-text img {
+    height: calc(1.6701461378vw - 0.0668058455px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .new-modal .scroll-area .new-checkbox-radio-text img {
+    height: 32px;
+  }
 }
 
 .sidebar {

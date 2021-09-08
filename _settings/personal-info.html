@@ -154,10 +154,12 @@ active: true
 
 							<div class="hashtag-area d-flex flex-wrap">
 
+								<input type="hidden" name="grades" value="0,1,2">
+
 								<div class="hashtag-area-list">
-									<span class="hashtag rounded-pill text-white color-green-lighter-bg d-inline-flex justify-content-between align-items-center small-text mx-0 me-1 lh-1 mb-2">PreK<span class="ms-2 fs-6 lh-1 remove-btn">&times;</span></span>
-									<span class="hashtag rounded-pill text-white color-green-lighter-bg d-inline-flex justify-content-between align-items-center small-text mx-0 me-1 lh-1 mb-2">K<span class="ms-2 fs-6 lh-1 remove-btn">&times;</span></span>
-									<span class="hashtag rounded-pill text-white color-green-lighter-bg d-inline-flex justify-content-between align-items-center small-text mx-0 me-1 lh-1 mb-2">1st Grade<span class="ms-2 fs-6 lh-1 remove-btn">&times;</span></span>
+									<span class="hashtag hashtag-element rounded-pill text-white color-green-lighter-bg d-inline-flex justify-content-between align-items-center small-text mx-0 me-1 lh-1 mb-2" data-id="0">PreK<span class="ms-2 fs-6 lh-1 remove-btn">&times;</span></span>
+									<span class="hashtag hashtag-element rounded-pill text-white color-green-lighter-bg d-inline-flex justify-content-between align-items-center small-text mx-0 me-1 lh-1 mb-2" data-id="1">K<span class="ms-2 fs-6 lh-1 remove-btn">&times;</span></span>
+									<span class="hashtag hashtag-element rounded-pill text-white color-green-lighter-bg d-inline-flex justify-content-between align-items-center small-text mx-0 me-1 lh-1 mb-2" data-id="2">1st Grade<span class="ms-2 fs-6 lh-1 remove-btn">&times;</span></span>
 								</div>								
 
 								<a href="#grades" class="hashtag hashtag-choose-link rounded-pill text-white secondary_dark_bg text-white d-inline-flex justify-content-between align-items-center small-text mx-0 lh-1 mb-3">Add grade<span class="ms-2 fs-6 lh-1">&#43;</span></a>
@@ -165,7 +167,6 @@ active: true
 							</div>
 
 						</div>
-
 
 						<button type="submit" class="btn btn-medium secondary_dark_bg text-white fz-normal fw-normal d-inline-block mx-auto">Save Changes</button>
 
@@ -177,84 +178,104 @@ active: true
 	</div>
 </div>
 
-<div class="new-modal mfp-hide bg-white position-relative white-popup-block py-3 px-5" id="grades">
+<div class="new-modal mfp-hide bg-white position-relative rounded-3 white-popup-block py-4 ps-5 pe-4" id="grades">
 	<h4 class="text-center mb-24">Choose Grades</h4>
 
-	<div class="scroll-area h-100 overflow-auto mb-5">
+	<div class="scroll-area mb-5">
 
-		<label class="new-label py-2 w-100 d-flex flex-row-reverse align-items-center justify-content-between">
-			<input type="checkbox" checked>
+		<label class="new-label py-2 pe-3 w-100 d-flex flex-row-reverse align-items-center justify-content-between">
+			<input type="checkbox" data-id="0">
 			<span class="new-checkbox-radio new-primary new-checkbox"></span>
 			<span class="new-checkbox-radio-text fz-normal fw-semibold gray-color">
 				<img src="https://via.placeholder.com/32" class="rounded-circle me-2" alt="ALT">
 				PreK
 			</span>
 		</label>
-		<label class="new-label py-2 w-100 d-flex flex-row-reverse align-items-center justify-content-between">
-			<input type="checkbox" checked>
+		<label class="new-label py-2 pe-3 w-100 d-flex flex-row-reverse align-items-center justify-content-between">
+			<input type="checkbox" data-id="1">
 			<span class="new-checkbox-radio new-primary new-checkbox"></span>
 			<span class="new-checkbox-radio-text fz-normal fw-semibold gray-color">
 				<img src="https://via.placeholder.com/32" class="rounded-circle me-2" alt="ALT">
 				K
 			</span>
 		</label>
-		<label class="new-label py-2 w-100 d-flex flex-row-reverse align-items-center justify-content-between">
-			<input type="checkbox" checked>
+		<label class="new-label py-2 pe-3 w-100 d-flex flex-row-reverse align-items-center justify-content-between">
+			<input type="checkbox" data-id="2">
 			<span class="new-checkbox-radio new-primary new-checkbox"></span>
 			<span class="new-checkbox-radio-text fz-normal fw-semibold gray-color">
 				<img src="https://via.placeholder.com/32" class="rounded-circle me-2" alt="ALT">
 				1st Grade
 			</span>
 		</label>
-		<label class="new-label py-2 w-100 d-flex flex-row-reverse align-items-center justify-content-between">
-			<input type="checkbox">
+		<label class="new-label py-2 pe-3 w-100 d-flex flex-row-reverse align-items-center justify-content-between">
+			<input type="checkbox" data-id="3">
 			<span class="new-checkbox-radio new-primary new-checkbox"></span>
 			<span class="new-checkbox-radio-text fz-normal fw-semibold gray-color">
 				<img src="https://via.placeholder.com/32" class="rounded-circle me-2" alt="ALT">
-				1st Grade
+				2nd Grade
 			</span>
 		</label>
-		<label class="new-label py-2 w-100 d-flex flex-row-reverse align-items-center justify-content-between">
-			<input type="checkbox">
+		<label class="new-label py-2 pe-3 w-100 d-flex flex-row-reverse align-items-center justify-content-between">
+			<input type="checkbox" data-id="4">
 			<span class="new-checkbox-radio new-primary new-checkbox"></span>
 			<span class="new-checkbox-radio-text fz-normal fw-semibold gray-color">
 				<img src="https://via.placeholder.com/32" class="rounded-circle me-2" alt="ALT">
-				1st Grade
+				3rd Grade
 			</span>
 		</label>
-		<label class="new-label py-2 w-100 d-flex flex-row-reverse align-items-center justify-content-between">
-			<input type="checkbox">
+		<label class="new-label py-2 pe-3 w-100 d-flex flex-row-reverse align-items-center justify-content-between">
+			<input type="checkbox" data-id="5">
 			<span class="new-checkbox-radio new-primary new-checkbox"></span>
 			<span class="new-checkbox-radio-text fz-normal fw-semibold gray-color">
 				<img src="https://via.placeholder.com/32" class="rounded-circle me-2" alt="ALT">
-				1st Grade
+				5th Grade
 			</span>
 		</label>
-		<label class="new-label py-2 w-100 d-flex flex-row-reverse align-items-center justify-content-between">
-			<input type="checkbox">
+		<label class="new-label py-2 pe-3 w-100 d-flex flex-row-reverse align-items-center justify-content-between">
+			<input type="checkbox" data-id="6">
 			<span class="new-checkbox-radio new-primary new-checkbox"></span>
 			<span class="new-checkbox-radio-text fz-normal fw-semibold gray-color">
 				<img src="https://via.placeholder.com/32" class="rounded-circle me-2" alt="ALT">
-				1st Grade
+				6nd Grade
 			</span>
 		</label>
-		<label class="new-label py-2 w-100 d-flex flex-row-reverse align-items-center justify-content-between">
-			<input type="checkbox">
+		<label class="new-label py-2 pe-3 w-100 d-flex flex-row-reverse align-items-center justify-content-between">
+			<input type="checkbox" data-id="7">
 			<span class="new-checkbox-radio new-primary new-checkbox"></span>
 			<span class="new-checkbox-radio-text fz-normal fw-semibold gray-color">
 				<img src="https://via.placeholder.com/32" class="rounded-circle me-2" alt="ALT">
-				1st Grade
+				7nd Grade
 			</span>
 		</label>
-		<label class="new-label py-2 w-100 d-flex flex-row-reverse align-items-center justify-content-between">
-			<input type="checkbox">
+		<label class="new-label py-2 pe-3 w-100 d-flex flex-row-reverse align-items-center justify-content-between">
+			<input type="checkbox" data-id="8">
 			<span class="new-checkbox-radio new-primary new-checkbox"></span>
 			<span class="new-checkbox-radio-text fz-normal fw-semibold gray-color">
 				<img src="https://via.placeholder.com/32" class="rounded-circle me-2" alt="ALT">
-				1st Grade
+				8th Grade
+			</span>
+		</label>
+		<label class="new-label py-2 pe-3 w-100 d-flex flex-row-reverse align-items-center justify-content-between">
+			<input type="checkbox" data-id="9">
+			<span class="new-checkbox-radio new-primary new-checkbox"></span>
+			<span class="new-checkbox-radio-text fz-normal fw-semibold gray-color">
+				<img src="https://via.placeholder.com/32" class="rounded-circle me-2" alt="ALT">
+				9th Grade
+			</span>
+		</label>
+		<label class="new-label py-2 pe-3 w-100 d-flex flex-row-reverse align-items-center justify-content-between">
+			<input type="checkbox" data-id="10">
+			<span class="new-checkbox-radio new-primary new-checkbox"></span>
+			<span class="new-checkbox-radio-text fz-normal fw-semibold gray-color">
+				<img src="https://via.placeholder.com/32" class="rounded-circle me-2" alt="ALT">
+				10th Grade
 			</span>
 		</label>
 
+	</div>
+
+	<div class="text-center">
+		<a href="javascript:void(0)" class="btn btn-medium secondary_dark_bg text-white fz-normal fw-normal d-inline-block mx-auto">Add Grades</a>
 	</div>
 
 </div>

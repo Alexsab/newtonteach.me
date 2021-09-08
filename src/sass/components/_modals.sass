@@ -1,8 +1,23 @@
 .new-modal
-	max-width: 600px
+	@include interpolate(max-width, $LP, $fullHD, 450px, 600px)
 	width: 100%
-	max-height: 660px
-	position: relative
+	// @include interpolate(height, $LP, $fullHD, 495px, 660px)
 	top: 5%
 	left: 50%
 	transform: translate(-50%)
+	.scroll-area
+		@include interpolate(height, $LP, $fullHD, 352px, 470px)
+		overflow-y: auto
+		&::-webkit-scrollbar
+			@include interpolate(width, $LP, $fullHD, 2px, 2.6px)
+			border-radius: 2px
+		&::-webkit-scrollbar-track
+			background-color: $color_primary_lighter
+			border-radius: 2px
+		&::-webkit-scrollbar-thumb
+			background-color: $primary_lightest
+			border-radius: 2px
+		.new-checkbox-radio-text
+			img
+				@include interpolate(width, $LP, $fullHD, 24px, 32px)
+				@include interpolate(height, $LP, $fullHD, 24px, 32px)
