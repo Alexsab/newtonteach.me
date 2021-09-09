@@ -14553,6 +14553,33 @@ textarea {
   }
 }
 
+.category-info img {
+  width: 24px;
+}
+@media screen and (min-width: 1441px) {
+  .category-info img {
+    width: calc(1.6701461378vw - 0.0668058455px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .category-info img {
+    width: 32px;
+  }
+}
+.category-info img {
+  height: 24px;
+}
+@media screen and (min-width: 1441px) {
+  .category-info img {
+    height: calc(1.6701461378vw - 0.0668058455px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .category-info img {
+    height: 32px;
+  }
+}
+
 .sidebar {
   height: 100vh;
   overflow-x: hidden;
