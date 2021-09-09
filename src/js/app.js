@@ -258,6 +258,36 @@ $(function(){
 	}
 
 	asd();
+
+	// Загрузка аватарки (визуал)
+	let files = [];
+	$('input[type="file"]').on('change', function (event, files, label) {
+		if (!event.target.files.length) {
+			console.log('ERROR');
+			return;
+		}
+
+		let sizeMb = event.target.files[0].size/1000000; // мегабайты
+
+		if (sizeMb > 5) { // больше 5Мб
+			console.log('ERROR SIZE');
+			return;
+		}
+
+		files = Array.from(event.target.files); 
+		// files[0] - работаем только с одним(первым) файлом, для мультизагрузки используем forEach
+
+		if (!files[0].type.match('image')) {
+			console.log('ERROR TYPE');
+			return;
+		}
+		const reader = new FileReader();
+		reader.onload = ev => {
+			const src = ev.target.result
+			$(this).next().attr('src', src);
+		}
+		reader.readAsDataURL(files[0]);
+	});
 	
 
 });

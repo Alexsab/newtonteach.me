@@ -16,8 +16,8 @@ active: true
 					<form class="mx-auto">
 						
 						<div class="user-avatar-block mb-48">
-							<img src="https://via.placeholder.com/156x156" alt="ALT" class="mx-auto rounded-circle mb-16 d-block">
-							<input type="file" id="user-avatar" class="d-none">
+							<input type="file" id="user-avatar" class="d-none" accept=".jpg, .jpeg, .png, .gif">
+							<img src="https://via.placeholder.com/156x156" alt="ALT" class="mx-auto rounded-circle mb-16 d-block" onclick="document.getElementById('user-avatar').click();" style="cursor: pointer;">
 							<a href="javascript:void(0)" class="primary-lightest fw-semibold fz-normal" onclick="document.getElementById('user-avatar').click();">Update photo</a>
 						</div>
 
@@ -208,7 +208,7 @@ active: true
 </div>
 
 <div class="new-modal mfp-hide bg-white position-relative rounded-3 white-popup-block py-4 ps-5 pe-4" id="subjects">
-	<h4 class="text-center mb-24">Choose Subjects</h4>
+	<h4 class="text-center mb-24 pe-3">Choose Subjects</h4>
 
 	<div class="scroll-area mb-5 pe-2">
 
@@ -282,7 +282,7 @@ active: true
 </div>
 
 <div class="new-modal mfp-hide bg-white position-relative rounded-3 white-popup-block py-4 ps-5 pe-4" id="grades">
-	<h4 class="text-center mb-24">Choose Grades</h4>
+	<h4 class="text-center mb-24 pe-3">Choose Grades</h4>
 
 	<div class="scroll-area mb-5 pe-2">
 
