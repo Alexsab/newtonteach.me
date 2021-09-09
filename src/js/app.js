@@ -169,6 +169,7 @@ $(function(){
 	$('body').on('click', '.hashtag-choose-link', function(){
 		let $th = $(this),
 			id = $th.attr('href');
+		bg = $th.data('bg');
 
 		checkElementsInBlock($th, id);
 		$.magnificPopup.open({
@@ -212,7 +213,7 @@ $(function(){
 			checked.each(function(){
 				let checkedId = $(this).data('id');
 				let name = $(this).data('name');
-				out.push(`<span class="hashtag hashtag-element rounded-pill text-white color-green-lighter-bg d-inline-flex justify-content-between align-items-center small-text mx-0 me-1 lh-1 mb-2" data-id="${checkedId}">${name}<span class="ms-2 fs-6 lh-1 remove-btn">&times;</span></span>`)
+				out.push(`<span class="hashtag hashtag-element rounded-pill text-white ${bg} d-inline-flex justify-content-between align-items-center small-text mx-0 me-1 lh-1 mb-2" data-id="${checkedId}">${name}<span class="ms-2 fs-6 lh-1 remove-btn">&times;</span></span>`)
 				values.push(checkedId);
 			})
 			// console.log(out);
