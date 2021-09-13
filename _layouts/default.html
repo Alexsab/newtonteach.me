@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "ru" }}">
-
+<html lang="{{ page.lang | default: site.lang | default: 'ru' }}">
+<head>
 {%- include head.html -%}
+</head>
 
 <body {% if page.layout == 'auth' %}class="bg-white"{% endif %}>
 
