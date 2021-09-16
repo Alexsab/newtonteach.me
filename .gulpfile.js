@@ -58,7 +58,7 @@ projects.newtonteach_ui = {
 
 	styles: {
 		src:	basename + '/src/' + preprocessor + '/main.'+preprocessor,
-		watch:    basename + '/src/' + preprocessor + '/**/*.'+preprocessor,
+		watch:  basename + '/src/' + preprocessor + '/**/*.'+preprocessor,
 		dest:   basename + '/css',
 		output: 'main.min.css',
 	},
@@ -81,7 +81,7 @@ projects.newtonteach_ui = {
 
 	styles_jekyll: {
 		src:	'src/' + preprocessor + '/main.'+preprocessor,
-		watch:    'src/' + preprocessor + '/**/*',
+		watch:  'src/' + preprocessor + '/**/*',
 		dest:   'css',
 		output: 'main.min.css',
 	},

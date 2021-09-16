@@ -15207,3 +15207,25 @@ textarea {
     height: 156px;
   }
 }
+
+@media (max-width: 991.98px) {
+  .touch .sidebar {
+    display: none;
+  }
+  .touch .wrapper {
+    margin-left: auto;
+    overflow: hidden;
+  }
+  .touch .content {
+    max-width: 100%;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  .touch .blocks {
+    margin-top: 0;
+  }
+  .touch .row > * {
+    width: 100%;
+  }
+}

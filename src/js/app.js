@@ -288,6 +288,17 @@ $(function(){
 		}
 		reader.readAsDataURL(files[0]);
 	});
+
+	const isTouchDevice = () => {
+		return (('ontouchstart' in window) ||
+			(navigator.maxTouchPoints > 0) ||
+			(navigator.msMaxTouchPoints > 0));
+	}
+	console.log(isTouchDevice())
+
+	if (isTouchDevice()) {
+		document.querySelector('html').classList.add('touch');
+	}
 	
 
 });
