@@ -12,7 +12,7 @@
 						{% assign links = item.docs | reverse %}
 						{% for elem in links %}
 						<li>
-							<a href="/{{ elem.url }}" target="_blank">{{ elem.title }}</a>
+							<a href="{{ elem.url }}" target="_blank">{{ elem.title }}</a>
 						</li>
 						{% endfor %}
 					</ul>
