@@ -12,14 +12,14 @@
 						{% assign links = item.docs | reverse %}
 						{% for elem in links %}
 						<li>
-							<a href="/newtonteach.me{{ elem.url }}" target="_blank">{{ elem.title }}</a>
+							<a href="/{{ elem.url }}" target="_blank">{{ elem.title }}</a>
 						</li>
-						{% endfor %}							
+						{% endfor %}
 					</ul>
 				</div>
-				{% endif %}				
+				{% endif %}
 				{% endfor %}
-			</div>			
+			</div>
 		</div>
 	</div>
 </div>

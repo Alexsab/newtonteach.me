@@ -23,7 +23,7 @@ title: Newtonteach UI
 # email: example@yandex.ru
 description: >- # this means to ignore newlines until "baseurl:"
   Description Site
-baseurl: "/newtonteach.me" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 # url: "https://newtonteach.me" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
